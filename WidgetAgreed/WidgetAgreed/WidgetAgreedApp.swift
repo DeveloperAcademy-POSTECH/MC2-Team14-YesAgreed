@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// testing branch protection
+
 @main
 struct WidgetAgreedApp: App {
     var body: some Scene {
