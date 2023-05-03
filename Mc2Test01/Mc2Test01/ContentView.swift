@@ -22,8 +22,8 @@ struct ContentView: View {
                         let state = Mc2WidgetsAttributes.ContentState(startTime: .now)
                         
                         activity = try? Activity<Mc2WidgetsAttributes>.request(
-                            attributes: attributes, contentState:
-                        state, pushType: nil)
+                            attributes: attributes,
+                            contentState: state)
                     } else {
                         //End the live Activity
                         guard let startTime else{return}

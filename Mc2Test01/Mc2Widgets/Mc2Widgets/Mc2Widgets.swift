@@ -6,11 +6,14 @@ struct Mc2Widgets: Widget {
     let kind: String = "Mc2Widgets"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            Mc2WidgetsEntryView(entry: entry)
+        IntentConfiguration(
+            kind: kind,
+            intent: ConfigurationIntent.self,
+            provider: Provider()) { entry in
+                Mc2WidgetsEntryView(entry: entry)   //위젯 엔트리 설정하는 곳
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("My Widget")      //위젯 꺼낼 때 표시되는 곳
+        .description("This is an example widget.")  //위젯 꺼낼 때 설명되는 곳
     }
 }
 

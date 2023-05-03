@@ -12,17 +12,22 @@ struct Mc2WidgetsLiveActivity: Widget{
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Rectangle()
+                        .scaledToFill()
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Rectangle()
+                        .scaledToFill()
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom")
-                    // more content
+                    VStack{
+                        Text("helllo")
+                        Text("gladtomeetyou")
+                    }
                 }
             } compactLeading: {
-                Text("L")
+                    Rectangle()
+                        .scaledToFit()
             } compactTrailing: {
                 Text("T")
             } minimal: {

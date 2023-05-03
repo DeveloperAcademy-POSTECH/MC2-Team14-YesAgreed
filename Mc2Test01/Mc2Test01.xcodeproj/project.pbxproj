@@ -30,6 +30,8 @@
 		73ADC3172A024E0500987B4B /* PhantomOfOpera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3122A024DCC00987B4B /* PhantomOfOpera.swift */; };
 		73ADC31A2A02507100987B4B /* Mc2WidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */; };
 		73ADC3AC2A02897B00987B4B /* Mc2WidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */; };
+		73ADC3AE2A02A16000987B4B /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC30D2A024AD700987B4B /* SimpleEntry.swift */; };
+		73ADC3AF2A02A17E00987B4B /* Mc2WidgetsEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3092A024AC300987B4B /* Mc2WidgetsEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73ADC3AE2A02A16000987B4B /* SimpleEntry.swift in Sources */,
 				73ADC3162A024E0300987B4B /* PhantomOfOperaBoat.swift in Sources */,
+				73ADC3AF2A02A17E00987B4B /* Mc2WidgetsEntryView.swift in Sources */,
 				73ADC3172A024E0500987B4B /* PhantomOfOpera.swift in Sources */,
 				73ADC2DF2A024A5600987B4B /* ContentView.swift in Sources */,
 				73ADC3AC2A02897B00987B4B /* Mc2WidgetsAttributes.swift in Sources */,

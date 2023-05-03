@@ -4,9 +4,11 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
+        //return SimpleEntry()
         SimpleEntry()
     }
 
+    // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1)
         completion(entry)

@@ -16,7 +16,7 @@ struct Mc2WidgetsEntryView : View {
 }
 
 
-struct MCcWidgetsEntryView_Previews: PreviewProvider {
+struct Mc2WidgetsEntryView_Previews: PreviewProvider {
     static var previews: some View {
         Mc2WidgetsEntryView(entry: SimpleEntry(scene: "mask"))
         Mc2WidgetsEntryView(entry: SimpleEntry(scene: "boat"))
