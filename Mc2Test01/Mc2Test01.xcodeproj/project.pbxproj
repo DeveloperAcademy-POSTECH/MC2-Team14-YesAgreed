@@ -28,8 +28,8 @@
 		73ADC3152A024DF800987B4B /* PhantomOfOperaBoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3142A024DF800987B4B /* PhantomOfOperaBoat.swift */; };
 		73ADC3162A024E0300987B4B /* PhantomOfOperaBoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3142A024DF800987B4B /* PhantomOfOperaBoat.swift */; };
 		73ADC3172A024E0500987B4B /* PhantomOfOpera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3122A024DCC00987B4B /* PhantomOfOpera.swift */; };
-		73ADC3192A02507100987B4B /* Mc2WidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */; };
 		73ADC31A2A02507100987B4B /* Mc2WidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */; };
+		73ADC3AC2A02897B00987B4B /* Mc2WidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,9 +151,8 @@
 		73ADC2F42A024A9700987B4B /* Mc2Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				73ADC3AB2A02893E00987B4B /* Mc2LiveActivity */,
 				73ADC2F52A024A9700987B4B /* Mc2WidgetsBundle.swift */,
-				73ADC2F72A024A9700987B4B /* Mc2WidgetsLiveActivity.swift */,
-				73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */,
 				73ADC3082A024AA800987B4B /* Mc2Widgets */,
 				73ADC2FB2A024A9700987B4B /* Mc2Widgets.intentdefinition */,
 				73ADC2FC2A024A9800987B4B /* Assets.xcassets */,
@@ -181,6 +180,15 @@
 				73ADC3142A024DF800987B4B /* PhantomOfOperaBoat.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		73ADC3AB2A02893E00987B4B /* Mc2LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				73ADC2F72A024A9700987B4B /* Mc2WidgetsLiveActivity.swift */,
+				73ADC3182A02507100987B4B /* Mc2WidgetsAttributes.swift */,
+			);
+			path = Mc2LiveActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +296,7 @@
 				73ADC3162A024E0300987B4B /* PhantomOfOperaBoat.swift in Sources */,
 				73ADC3172A024E0500987B4B /* PhantomOfOpera.swift in Sources */,
 				73ADC2DF2A024A5600987B4B /* ContentView.swift in Sources */,
-				73ADC3192A02507100987B4B /* Mc2WidgetsAttributes.swift in Sources */,
+				73ADC3AC2A02897B00987B4B /* Mc2WidgetsAttributes.swift in Sources */,
 				73ADC3002A024A9800987B4B /* Mc2Widgets.intentdefinition in Sources */,
 				73ADC2DD2A024A5600987B4B /* Mc2Test01App.swift in Sources */,
 			);
