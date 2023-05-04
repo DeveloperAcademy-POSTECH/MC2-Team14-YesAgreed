@@ -11,7 +11,40 @@
 		73472F0C2A034BB900389862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F0B2A034BB900389862 /* ContentView.swift */; };
 		73472F0E2A034BBA00389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F0D2A034BBA00389862 /* Assets.xcassets */; };
 		73472F112A034BBA00389862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F102A034BBA00389862 /* Preview Assets.xcassets */; };
+		73472F1E2A034C2700389862 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73472F1D2A034C2700389862 /* WidgetKit.framework */; };
+		73472F202A034C2700389862 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73472F1F2A034C2700389862 /* SwiftUI.framework */; };
+		73472F232A034C2700389862 /* MukkuWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F222A034C2700389862 /* MukkuWidgetsBundle.swift */; };
+		73472F252A034C2700389862 /* MukkuWidgetsLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F242A034C2700389862 /* MukkuWidgetsLiveActivity.swift */; };
+		73472F272A034C2700389862 /* MukkuWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F262A034C2700389862 /* MukkuWidgets.swift */; };
+		73472F2A2A034C2800389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F292A034C2800389862 /* Assets.xcassets */; };
+		73472F2C2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 73472F282A034C2700389862 /* MukkuWidgets.intentdefinition */; };
+		73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 73472F282A034C2700389862 /* MukkuWidgets.intentdefinition */; };
+		73472F302A034C2800389862 /* MukkuWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73472F1B2A034C2700389862 /* MukkuWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73472F2E2A034C2800389862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73472EFE2A034BB900389862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73472F1A2A034C2700389862;
+			remoteInfo = MukkuWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73472F342A034C2800389862 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				73472F302A034C2800389862 /* MukkuWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		73472F062A034BB900389862 /* Mukku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mukku.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +52,15 @@
 		73472F0B2A034BB900389862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73472F0D2A034BBA00389862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73472F102A034BBA00389862 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73472F1B2A034C2700389862 /* MukkuWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MukkuWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		73472F1D2A034C2700389862 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		73472F1F2A034C2700389862 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		73472F222A034C2700389862 /* MukkuWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsBundle.swift; sourceTree = "<group>"; };
+		73472F242A034C2700389862 /* MukkuWidgetsLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsLiveActivity.swift; sourceTree = "<group>"; };
+		73472F262A034C2700389862 /* MukkuWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgets.swift; sourceTree = "<group>"; };
+		73472F282A034C2700389862 /* MukkuWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MukkuWidgets.intentdefinition; sourceTree = "<group>"; };
+		73472F292A034C2800389862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73472F2B2A034C2800389862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +71,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73472F182A034C2700389862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73472F202A034C2700389862 /* SwiftUI.framework in Frameworks */,
+				73472F1E2A034C2700389862 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				73472F082A034BB900389862 /* Mukku */,
+				73472F212A034C2700389862 /* MukkuWidgets */,
+				73472F1C2A034C2700389862 /* Frameworks */,
 				73472F072A034BB900389862 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				73472F062A034BB900389862 /* Mukku.app */,
+				73472F1B2A034C2700389862 /* MukkuWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +121,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		73472F1C2A034C2700389862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73472F1D2A034C2700389862 /* WidgetKit.framework */,
+				73472F1F2A034C2700389862 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73472F212A034C2700389862 /* MukkuWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				73472F222A034C2700389862 /* MukkuWidgetsBundle.swift */,
+				73472F242A034C2700389862 /* MukkuWidgetsLiveActivity.swift */,
+				73472F262A034C2700389862 /* MukkuWidgets.swift */,
+				73472F282A034C2700389862 /* MukkuWidgets.intentdefinition */,
+				73472F292A034C2800389862 /* Assets.xcassets */,
+				73472F2B2A034C2800389862 /* Info.plist */,
+			);
+			path = MukkuWidgets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +153,34 @@
 				73472F022A034BB900389862 /* Sources */,
 				73472F032A034BB900389862 /* Frameworks */,
 				73472F042A034BB900389862 /* Resources */,
+				73472F342A034C2800389862 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				73472F2F2A034C2800389862 /* PBXTargetDependency */,
 			);
 			name = Mukku;
 			productName = Mukku;
 			productReference = 73472F062A034BB900389862 /* Mukku.app */;
 			productType = "com.apple.product-type.application";
+		};
+		73472F1A2A034C2700389862 /* MukkuWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73472F312A034C2800389862 /* Build configuration list for PBXNativeTarget "MukkuWidgetsExtension" */;
+			buildPhases = (
+				73472F172A034C2700389862 /* Sources */,
+				73472F182A034C2700389862 /* Frameworks */,
+				73472F192A034C2700389862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MukkuWidgetsExtension;
+			productName = MukkuWidgetsExtension;
+			productReference = 73472F1B2A034C2700389862 /* MukkuWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +193,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					73472F052A034BB900389862 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					73472F1A2A034C2700389862 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
@@ -116,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				73472F052A034BB900389862 /* Mukku */,
+				73472F1A2A034C2700389862 /* MukkuWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +229,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73472F192A034C2700389862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73472F2A2A034C2800389862 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +245,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				73472F0C2A034BB900389862 /* ContentView.swift in Sources */,
+				73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73472F172A034C2700389862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73472F252A034C2700389862 /* MukkuWidgetsLiveActivity.swift in Sources */,
+				73472F232A034C2700389862 /* MukkuWidgetsBundle.swift in Sources */,
+				73472F2C2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
+				73472F272A034C2700389862 /* MukkuWidgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73472F2F2A034C2800389862 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73472F1A2A034C2700389862 /* MukkuWidgetsExtension */;
+			targetProxy = 73472F2E2A034C2800389862 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		73472F122A034BBA00389862 /* Debug */ = {
@@ -262,6 +389,7 @@
 		73472F152A034BBA00389862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +418,7 @@
 		73472F162A034BBA00389862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +444,58 @@
 			};
 			name = Release;
 		};
+		73472F322A034C2800389862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MukkuWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MukkuWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.MukkuWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73472F332A034C2800389862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MukkuWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MukkuWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.MukkuWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +513,15 @@
 			buildConfigurations = (
 				73472F152A034BBA00389862 /* Debug */,
 				73472F162A034BBA00389862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73472F312A034C2800389862 /* Build configuration list for PBXNativeTarget "MukkuWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73472F322A034C2800389862 /* Debug */,
+				73472F332A034C2800389862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
