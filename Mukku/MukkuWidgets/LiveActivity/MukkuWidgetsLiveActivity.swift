@@ -46,9 +46,17 @@ struct MukkuWidgetsLiveActivity: Widget {
     }
 }
 
+struct TimeTrackingWidgetView : View {
+    let context: ActivityViewContext<MukkuWidgetsAttributes>
+    
+    var body: some View{
+        Text(context.state.startTime, style: .relative)
+    }
+}
+
 struct MukkuWidgetsLiveActivity_Previews: PreviewProvider {
-    static let attributes = MukkuWidgetsAttributes(name: "Me")
-    static let contentState = MukkuWidgetsAttributes.ContentState(value: 3)
+    static let attributes = MukkuWidgetsAttributes()
+    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date())
 
     static var previews: some View {
         attributes
