@@ -75,6 +75,7 @@
 		73472F3A2A034D8000389862 /* MukkuWidgetsEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsEntryView.swift; sourceTree = "<group>"; };
 		73472F412A0354CC00389862 /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
 		73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaBoat.swift; sourceTree = "<group>"; };
+		73472F472A0356D100389862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 		73472F082A034BB900389862 /* Mukku */ = {
 			isa = PBXGroup;
 			children = (
+				73472F472A0356D100389862 /* Info.plist */,
 				73472F092A034BB900389862 /* MukkuApp.swift */,
 				73472F0B2A034BB900389862 /* ContentView.swift */,
 				73472F0D2A034BBA00389862 /* Assets.xcassets */,
@@ -441,6 +443,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mukku/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mukku/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -470,6 +473,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mukku/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mukku/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
