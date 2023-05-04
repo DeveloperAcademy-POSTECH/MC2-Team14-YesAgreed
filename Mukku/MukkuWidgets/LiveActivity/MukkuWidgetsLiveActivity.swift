@@ -1,28 +1,17 @@
 //
-//  MusicalWidgetLiveActivity.swift
-//  MusicalWidget
+//  MukkuWidgetsLiveActivity.swift
+//  MukkuWidgets
 //
-//  Created by polyappledev on 2023/05/01.
+//  Created by Kihyun Roh on 2023/05/04.
 //
 
 import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct MusicalWidgetAttributes: ActivityAttributes {
-    public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var value: Int
-    }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
-}
-
-
-struct MusicalWidgetLiveActivity: Widget {
+struct MukkuWidgetsLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: MusicalWidgetAttributes.self) { context in
+        ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
                 Text("Hello")
@@ -35,11 +24,7 @@ struct MusicalWidgetLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Image("mask1")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .scaledToFit()
-//                    Text("Leading")
+                    Text("Leading")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Text("Trailing")
@@ -49,11 +34,7 @@ struct MusicalWidgetLiveActivity: Widget {
                     // more content
                 }
             } compactLeading: {
-                Image("mask1")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .scaledToFit()
-//                Text("L")
+                Text("L")
             } compactTrailing: {
                 Text("T")
             } minimal: {
@@ -65,9 +46,17 @@ struct MusicalWidgetLiveActivity: Widget {
     }
 }
 
-struct MusicalWidgetLiveActivity_Previews: PreviewProvider {
-    static let attributes = MusicalWidgetAttributes(name: "Me")
-    static let contentState = MusicalWidgetAttributes.ContentState(value: 3)
+struct TimeTrackingWidgetView : View {
+    let context: ActivityViewContext<MukkuWidgetsAttributes>
+    
+    var body: some View{
+        Text(context.state.startTime, style: .relative)
+    }
+}
+
+struct MukkuWidgetsLiveActivity_Previews: PreviewProvider {
+    static let attributes = MukkuWidgetsAttributes()
+    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date())
 
     static var previews: some View {
         attributes
