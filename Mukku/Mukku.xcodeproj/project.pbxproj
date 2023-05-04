@@ -153,9 +153,8 @@
 		73472F212A034C2700389862 /* MukkuWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				73472F4D2A0361D900389862 /* LiveActivity */,
 				73472F222A034C2700389862 /* MukkuWidgetsBundle.swift */,
-				73472F242A034C2700389862 /* MukkuWidgetsLiveActivity.swift */,
-				73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */,
 				73472F352A034CDB00389862 /* HomeWidgets */,
 				73472F282A034C2700389862 /* MukkuWidgets.intentdefinition */,
 				73472F292A034C2800389862 /* Assets.xcassets */,
@@ -183,6 +182,15 @@
 				73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		73472F4D2A0361D900389862 /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				73472F242A034C2700389862 /* MukkuWidgetsLiveActivity.swift */,
+				73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */,
+			);
+			path = LiveActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,7 +460,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
-				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,7 +491,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
-				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
