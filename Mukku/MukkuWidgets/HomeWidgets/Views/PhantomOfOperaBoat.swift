@@ -14,6 +14,6 @@ struct PhantomOfOperaBoat: View {
 
 struct PhantomOfOperaBoat_Previews: PreviewProvider {
     static var previews: some View {
-        PhantomOfOperaBoat(count: 0)
+        PhantomOfOperaBoat(count: 1)
     }
 }
