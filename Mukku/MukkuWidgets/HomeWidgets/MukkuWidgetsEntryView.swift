@@ -11,7 +11,9 @@ struct MukkuWidgetsEntryView : View {
 }
 
 struct MukkuWidgetsEntryView_Preview: PreviewProvider {
-    static var previews: some View {
-        MukkuWidgetsEntryView(entry: SimpleEntry())
+        static var previews: some View {
+            MukkuWidgetsEntryView(entry: SimpleEntry(scene: "mask"))
+            MukkuWidgetsEntryView(entry: SimpleEntry(scene: "boat"))
+        }
     }
-}
+
