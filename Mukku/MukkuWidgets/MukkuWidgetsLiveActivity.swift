@@ -9,16 +9,6 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct MukkuWidgetsAttributes: ActivityAttributes {
-    public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var value: Int
-    }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
-}
-
 struct MukkuWidgetsLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in

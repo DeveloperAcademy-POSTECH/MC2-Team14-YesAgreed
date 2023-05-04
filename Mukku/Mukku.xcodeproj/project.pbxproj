@@ -30,6 +30,8 @@
 		73472F452A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */; };
 		73472F462A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */; };
 		73472F482A03588700389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F0D2A034BBA00389862 /* Assets.xcassets */; };
+		73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */; };
+		73472F4B2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,7 @@
 		73472F412A0354CC00389862 /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
 		73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaBoat.swift; sourceTree = "<group>"; };
 		73472F472A0356D100389862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,7 @@
 			children = (
 				73472F222A034C2700389862 /* MukkuWidgetsBundle.swift */,
 				73472F242A034C2700389862 /* MukkuWidgetsLiveActivity.swift */,
+				73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */,
 				73472F352A034CDB00389862 /* HomeWidgets */,
 				73472F282A034C2700389862 /* MukkuWidgets.intentdefinition */,
 				73472F292A034C2800389862 /* Assets.xcassets */,
@@ -285,6 +289,7 @@
 			files = (
 				73472F0C2A034BB900389862 /* ContentView.swift in Sources */,
 				73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
+				73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 				73472F3F2A034F4A00389862 /* SimpleEntry.swift in Sources */,
 				73472F452A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */,
@@ -305,6 +310,7 @@
 				73472F372A034D3500389862 /* Provider.swift in Sources */,
 				73472F462A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */,
 				73472F3B2A034D8000389862 /* MukkuWidgetsEntryView.swift in Sources */,
+				73472F4B2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
 				73472F272A034C2700389862 /* MukkuWidgets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +452,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,7 +483,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSSupportsLiveActivities = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
