@@ -45,6 +45,7 @@
 		B4A209272A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */; };
 		B4A209282A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */; };
 		B4A2092B2A08A65C00D3042A /* MukkuWatchExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B4A2091D2A08A65B00D3042A /* MukkuWatchExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4A209342A091C2200D3042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD02A089C1000BE37FE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A209342A091C2200D3042A /* Assets.xcassets in Resources */,
 				B4A209252A08A65C00D3042A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

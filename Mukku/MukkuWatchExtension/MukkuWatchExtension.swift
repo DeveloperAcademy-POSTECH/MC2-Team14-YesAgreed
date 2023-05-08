@@ -36,7 +36,7 @@ struct Provider: IntentTimelineProvider {
 
     func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
         return [
-            IntentRecommendation(intent: ConfigurationIntent(), description: "My Intent Widget")
+            IntentRecommendation(intent: ConfigurationIntent(), description: "Mukku Complication")
         ]
     }
 }
@@ -50,7 +50,8 @@ struct MukkuWatchExtensionEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+//        PhantomOfOperaMask(count: 1)
+        Image("mask_watch")
     }
 }
 

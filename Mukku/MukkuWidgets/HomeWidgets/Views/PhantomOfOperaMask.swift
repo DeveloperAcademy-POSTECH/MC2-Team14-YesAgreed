@@ -78,6 +78,14 @@ struct PhantomOfOperaMask: View {
                 .widgetAccentable(true)
                 .unredacted()
             
+        case .accessoryCorner:
+            Image(systemName: "theatermasks.fill")
+                .widgetLabel {
+                    Text("Sing For Me!")
+                }
+                .widgetAccentable(true)
+                .unredacted()
+            
         default:
             Text("Widget Not Supported)")
         }
@@ -99,7 +107,6 @@ struct PhantomOfOperaMask_Previews: PreviewProvider {
             .previewContext(WidgetPreviewContext(family: .accessoryCircular))
         PhantomOfOperaMask(count:1)
             .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        
     }
 }
 
