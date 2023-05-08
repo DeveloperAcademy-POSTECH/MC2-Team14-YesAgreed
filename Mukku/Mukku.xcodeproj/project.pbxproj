@@ -38,6 +38,13 @@
 		B402EFD42A089C1000BE37FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD32A089C1000BE37FE /* Preview Assets.xcassets */; };
 		B402EFD72A089C1000BE37FE /* MukkuWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B402EFCA2A089C0F00BE37FE /* MukkuWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B4A208F72A089FAD00D3042A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402EFCE2A089C0F00BE37FE /* ContentView.swift */; };
+		B4A2091E2A08A65B00D3042A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73472F1D2A034C2700389862 /* WidgetKit.framework */; };
+		B4A2091F2A08A65B00D3042A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73472F1F2A034C2700389862 /* SwiftUI.framework */; };
+		B4A209222A08A65B00D3042A /* MukkuWatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209212A08A65B00D3042A /* MukkuWatchExtension.swift */; };
+		B4A209252A08A65C00D3042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A209242A08A65C00D3042A /* Assets.xcassets */; };
+		B4A209272A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */; };
+		B4A209282A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */; };
+		B4A2092B2A08A65C00D3042A /* MukkuWatchExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B4A2091D2A08A65B00D3042A /* MukkuWatchExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B402EFC92A089C0F00BE37FE;
 			remoteInfo = "MukkuWatch Watch App";
+		};
+		B4A209292A08A65C00D3042A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73472EFE2A034BB900389862 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4A2091C2A08A65B00D3042A;
+			remoteInfo = MukkuWatchExtensionExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -78,6 +92,17 @@
 				B402EFD72A089C1000BE37FE /* MukkuWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4A2092C2A08A65C00D3042A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B4A2092B2A08A65C00D3042A /* MukkuWatchExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -110,6 +135,11 @@
 		B402EFD02A089C1000BE37FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B402EFD32A089C1000BE37FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4A208F62A089F8C00D3042A /* MukkuWidgetsExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MukkuWidgetsExtension copy-Info.plist"; path = "/Users/jaehoyoon/Documents/GitHub/MC2-Team14-YesAgreed/Mukku/MukkuWidgetsExtension copy-Info.plist"; sourceTree = "<absolute>"; };
+		B4A2091D2A08A65B00D3042A /* MukkuWatchExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MukkuWatchExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A209212A08A65B00D3042A /* MukkuWatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWatchExtension.swift; sourceTree = "<group>"; };
+		B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MukkuWatchExtension.intentdefinition; sourceTree = "<group>"; };
+		B4A209242A08A65C00D3042A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4A209262A08A65C00D3042A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +166,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4A2091A2A08A65B00D3042A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A2091F2A08A65B00D3042A /* SwiftUI.framework in Frameworks */,
+				B4A2091E2A08A65B00D3042A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +184,7 @@
 				73472F082A034BB900389862 /* Mukku */,
 				73472F212A034C2700389862 /* MukkuWidgets */,
 				B402EFCB2A089C0F00BE37FE /* MukkuWatch Watch App */,
+				B4A209202A08A65B00D3042A /* MukkuWatchExtension */,
 				73472F1C2A034C2700389862 /* Frameworks */,
 				73472F072A034BB900389862 /* Products */,
 				B4A208F62A089F8C00D3042A /* MukkuWidgetsExtension copy-Info.plist */,
@@ -157,6 +197,7 @@
 				73472F062A034BB900389862 /* Mukku.app */,
 				73472F1B2A034C2700389862 /* MukkuWidgetsExtension.appex */,
 				B402EFCA2A089C0F00BE37FE /* MukkuWatch Watch App.app */,
+				B4A2091D2A08A65B00D3042A /* MukkuWatchExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +293,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B4A209202A08A65B00D3042A /* MukkuWatchExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B4A209212A08A65B00D3042A /* MukkuWatchExtension.swift */,
+				B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */,
+				B4A209242A08A65C00D3042A /* Assets.xcassets */,
+				B4A209262A08A65C00D3042A /* Info.plist */,
+			);
+			path = MukkuWatchExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,15 +352,34 @@
 				B402EFC62A089C0F00BE37FE /* Sources */,
 				B402EFC72A089C0F00BE37FE /* Frameworks */,
 				B402EFC82A089C0F00BE37FE /* Resources */,
+				B4A2092C2A08A65C00D3042A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B4A2092A2A08A65C00D3042A /* PBXTargetDependency */,
 			);
 			name = "MukkuWatch Watch App";
 			productName = "MukkuWatch Watch App";
 			productReference = B402EFCA2A089C0F00BE37FE /* MukkuWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B4A2091C2A08A65B00D3042A /* MukkuWatchExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4A2092F2A08A65C00D3042A /* Build configuration list for PBXNativeTarget "MukkuWatchExtensionExtension" */;
+			buildPhases = (
+				B4A209192A08A65B00D3042A /* Sources */,
+				B4A2091A2A08A65B00D3042A /* Frameworks */,
+				B4A2091B2A08A65B00D3042A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MukkuWatchExtensionExtension;
+			productName = MukkuWatchExtensionExtension;
+			productReference = B4A2091D2A08A65B00D3042A /* MukkuWatchExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -329,6 +400,9 @@
 					B402EFC92A089C0F00BE37FE = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					B4A2091C2A08A65B00D3042A = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = 73472F012A034BB900389862 /* Build configuration list for PBXProject "Mukku" */;
@@ -347,6 +421,7 @@
 				73472F052A034BB900389862 /* Mukku */,
 				73472F1A2A034C2700389862 /* MukkuWidgetsExtension */,
 				B402EFC92A089C0F00BE37FE /* MukkuWatch Watch App */,
+				B4A2091C2A08A65B00D3042A /* MukkuWatchExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -376,6 +451,14 @@
 			files = (
 				B402EFD42A089C1000BE37FE /* Preview Assets.xcassets in Resources */,
 				B402EFD12A089C1000BE37FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4A2091B2A08A65B00D3042A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A209252A08A65C00D3042A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,8 +502,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A209282A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */,
 				B402EFCF2A089C0F00BE37FE /* ContentView.swift in Sources */,
 				B402EFCD2A089C0F00BE37FE /* MukkuWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4A209192A08A65B00D3042A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A209272A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */,
+				B4A209222A08A65B00D3042A /* MukkuWatchExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +529,11 @@
 			isa = PBXTargetDependency;
 			target = B402EFC92A089C0F00BE37FE /* MukkuWatch Watch App */;
 			targetProxy = B402EFD52A089C1000BE37FE /* PBXContainerItemProxy */;
+		};
+		B4A2092A2A08A65C00D3042A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4A2091C2A08A65B00D3042A /* MukkuWatchExtensionExtension */;
+			targetProxy = B4A209292A08A65C00D3042A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -671,6 +769,7 @@
 		B402EFD92A089C1000BE37FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -700,6 +799,7 @@
 		B402EFDA2A089C1000BE37FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -716,6 +816,64 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		B4A2092D2A08A65C00D3042A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MukkuWatchExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatchExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp.MukkuWatchExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		B4A2092E2A08A65C00D3042A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MukkuWatchExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatchExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp.MukkuWatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -761,6 +919,15 @@
 			buildConfigurations = (
 				B402EFD92A089C1000BE37FE /* Debug */,
 				B402EFDA2A089C1000BE37FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4A2092F2A08A65C00D3042A /* Build configuration list for PBXNativeTarget "MukkuWatchExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4A2092D2A08A65C00D3042A /* Debug */,
+				B4A2092E2A08A65C00D3042A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
