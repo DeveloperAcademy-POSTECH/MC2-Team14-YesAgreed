@@ -22,7 +22,7 @@ struct MainView: View {
                     ForEach(0..<2) { ind in
                         Text(names[ind])
                             .bold()
-                            .font(.system(size:25))
+                            .font(.system(size: 25))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 20)
                             .padding(.top, 20)
@@ -57,6 +57,7 @@ struct MainView: View {
                                     }
                                 }
                             Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
+                                .font(.system(size: 15))
                         }
                     }
                 }
