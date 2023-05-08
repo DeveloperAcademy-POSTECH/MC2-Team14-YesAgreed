@@ -43,6 +43,21 @@ struct MainView: View {
                                 Text("Dynamic Island")
                             }
                         }
+                        Section() {
+                                ZStack{
+                                    HStack{
+                                        Image(systemName: "info.circle")
+                                            .foregroundColor(.blue)
+                                        Spacer()
+                                    }
+                                    HStack{
+                                        Text("      Widget Instruction")
+                                            .foregroundColor(.blue)
+                                        Spacer()
+                                    }
+                                }
+                            Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
+                        }
                     }
                 }
             }
