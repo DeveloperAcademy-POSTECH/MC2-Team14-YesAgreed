@@ -7,46 +7,45 @@
 
 import SwiftUI
 
-struct ObjectView: View {
-    var text: String
-    var imageName: String
-    
-    var body: some View {
-        VStack{
-            Image(imageName)
-                .resizable()
-                .frame(width: 60, height: 60)
-                .cornerRadius(14)
-            Text(text)
-                .font(.system(size: 15))
-                .multilineTextAlignment(.center)
-        }
-    }
-}
-
 struct MainView: View {
-    var texts: [String] = ["Mask", "Chandelier", "Boat", "Rose"]
-    var images: [String] = ["PhantomIcon1", "PhantomIcon2", "PhantomIcon3", "PhantomIcon4"]
+    @State var dynamicEnabled: Bool = true
+    var texts: [String] = ["Mask", "Chandelier", "Boat", "Rose","Sunflower", "Rapier", "Windmill", "Typo"]
+    var images: [String] = ["PhantomIcon1", "PhantomIcon2", "PhantomIcon3", "PhantomIcon4", "LamanchaIcon1", "LamanchaIcon2", "LamanchaIcon3", "LamanchaIcon4"]
+    var names: [String] = ["Phantom of the Opera", "Man of La Mancha"]
     
     var body: some View {
         NavigationView{
-            VStack {
-                Text("Phantom of the Opera")
-                    .bold()
-                    .font(.system(size:25))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 20)
-                HStack(alignment: .center, spacing: 25){
-                    ForEach(0..<4) { num in
-                        ObjectView(text: texts[num], imageName: images[num])
+            ZStack{
+                Color(.systemGray6)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    ForEach(0..<2) { ind in
+                        Text(names[ind])
+                            .bold()
+                            .font(.system(size:25))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 20)
+                            .padding(.top, 20)
+                        HStack(alignment: .center, spacing: 15){
+                            ForEach(0..<4) { num in
+                                ObjectView(text: texts[ind*4 + num], imageName: images[ind*4 + num])
+                            }
+                            .padding(.bottom, 20)
+                        }
+                        Divider()
+                            .frame(width: 370, height: 0.7)
+                            .background(.gray)
+                    }
+                    .navigationBarTitle("MuKku", displayMode: .inline)
+                    Form{
+                        Section(header: Text("Dynamic Island Setting")) {
+                            Toggle(isOn: $dynamicEnabled) {
+                                Text("Dynamic Island")
+                            }
+                        }
                     }
                 }
-                .padding()
-                Divider()
-                    .frame(width: 370, height: 0.7)
-                    .background(.gray)
             }
-            .navigationBarTitle("CCC", displayMode: .inline)
         }
     }
 }

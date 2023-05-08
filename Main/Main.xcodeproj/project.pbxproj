@@ -14,6 +14,7 @@
 		C5CF643E2A08841700D24B61 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF643D2A08841700D24B61 /* MainTests.swift */; };
 		C5CF64482A08841700D24B61 /* MainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64472A08841700D24B61 /* MainUITests.swift */; };
 		C5CF644A2A08841700D24B61 /* MainUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64492A08841700D24B61 /* MainUITestsLaunchTests.swift */; };
+		C5CF64582A08865D00D24B61 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64572A08865D00D24B61 /* ObjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C5CF64432A08841700D24B61 /* MainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF64472A08841700D24B61 /* MainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITests.swift; sourceTree = "<group>"; };
 		C5CF64492A08841700D24B61 /* MainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5CF64572A08865D00D24B61 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				C5CF642C2A08841600D24B61 /* MainApp.swift */,
 				C5CF642E2A08841600D24B61 /* MainView.swift */,
 				C5CF64302A08841700D24B61 /* Assets.xcassets */,
+				C5CF64562A08864200D24B61 /* Component */,
 				C5CF64322A08841700D24B61 /* Preview Content */,
 			);
 			path = Main;
@@ -125,6 +128,14 @@
 				C5CF64492A08841700D24B61 /* MainUITestsLaunchTests.swift */,
 			);
 			path = MainUITests;
+			sourceTree = "<group>";
+		};
+		C5CF64562A08864200D24B61 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF64572A08865D00D24B61 /* ObjectView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CF642F2A08841600D24B61 /* MainView.swift in Sources */,
+				C5CF64582A08865D00D24B61 /* ObjectView.swift in Sources */,
 				C5CF642D2A08841600D24B61 /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
