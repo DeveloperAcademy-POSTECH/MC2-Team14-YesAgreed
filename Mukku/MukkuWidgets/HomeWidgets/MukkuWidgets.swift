@@ -14,11 +14,7 @@ struct MukkuWidgets: Widget {
             }
             .configurationDisplayName("My Widget")
             .description("This is an example widget.")
-#if os(watchOS)
-            .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline])
-#else
             .supportedFamilies([.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular])
-#endif
     }
 }
 

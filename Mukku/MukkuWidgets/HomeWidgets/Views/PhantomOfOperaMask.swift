@@ -66,24 +66,13 @@ struct PhantomOfOperaMask: View {
                     .resizable()
                     .scaledToFit()
                 Text("Sing For Me!")
-                    .foregroundColor(.white)
                 Spacer()
             }
             .padding(.leading, 6)
-            .widgetAccentable(true)
             .unredacted()
             
         case .accessoryInline:
             Text("|  Sing For Me!")
-                .widgetAccentable(true)
-                .unredacted()
-            
-        case .accessoryCorner:
-            Image(systemName: "theatermasks.fill")
-                .widgetLabel {
-                    Text("Sing For Me!")
-                }
-                .widgetAccentable(true)
                 .unredacted()
             
         default:

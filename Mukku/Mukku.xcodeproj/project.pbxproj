@@ -46,6 +46,8 @@
 		B4A209282A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */; };
 		B4A2092B2A08A65C00D3042A /* MukkuWatchExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B4A2091D2A08A65B00D3042A /* MukkuWatchExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B4A209342A091C2200D3042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD02A089C1000BE37FE /* Assets.xcassets */; };
+		B4A209392A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
+		B4A2093A2A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,7 @@
 		B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MukkuWatchExtension.intentdefinition; sourceTree = "<group>"; };
 		B4A209242A08A65C00D3042A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A209262A08A65C00D3042A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,10 +302,19 @@
 			children = (
 				B4A209212A08A65B00D3042A /* MukkuWatchExtension.swift */,
 				B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */,
+				B4A209362A09227A00D3042A /* Views_Watch */,
 				B4A209242A08A65C00D3042A /* Assets.xcassets */,
 				B4A209262A08A65C00D3042A /* Info.plist */,
 			);
 			path = MukkuWatchExtension;
+			sourceTree = "<group>";
+		};
+		B4A209362A09227A00D3042A /* Views_Watch */ = {
+			isa = PBXGroup;
+			children = (
+				B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */,
+			);
+			path = Views_Watch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +518,7 @@
 			files = (
 				B4A209282A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */,
 				B402EFCF2A089C0F00BE37FE /* ContentView.swift in Sources */,
+				B4A2093A2A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */,
 				B402EFCD2A089C0F00BE37FE /* MukkuWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A209272A08A65C00D3042A /* MukkuWatchExtension.intentdefinition in Sources */,
+				B4A209392A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */,
 				B4A209222A08A65B00D3042A /* MukkuWatchExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
