@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ObjectView: View {
+    @State private var isTapped = false
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     var text: String
     var imageName: String
@@ -18,8 +19,13 @@ struct ObjectView: View {
                 .resizable()
                 .frame(width: 60, height: 60)
                 .cornerRadius(14)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                        .stroke(isTapped ? Color.green: Color.clear, lineWidth: 3)
+                )
                 .onTapGesture{
                     feedbackGenerator.impactOccurred()
+                    self.isTapped.toggle()
                 }
             Text(text)
                 .font(.system(size: 15))
