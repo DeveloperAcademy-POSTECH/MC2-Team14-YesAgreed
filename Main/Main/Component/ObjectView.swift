@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ObjectView: View {
+    let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     var text: String
     var imageName: String
     
@@ -17,6 +18,9 @@ struct ObjectView: View {
                 .resizable()
                 .frame(width: 60, height: 60)
                 .cornerRadius(14)
+                .onTapGesture{
+                    feedbackGenerator.impactOccurred()
+                }
             Text(text)
                 .font(.system(size: 15))
                 .multilineTextAlignment(.center)
