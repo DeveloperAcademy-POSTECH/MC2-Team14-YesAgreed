@@ -74,12 +74,21 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B4A2091C2A08A65B00D3042A"
+            BuildableName = "MukkuWatchExtensionExtension.appex"
+            BlueprintName = "MukkuWatchExtensionExtension"
+            ReferencedContainer = "container:Mukku.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
             BlueprintIdentifier = "73472F052A034BB900389862"
             BuildableName = "Mukku.app"
             BlueprintName = "Mukku"
             ReferencedContainer = "container:Mukku.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"

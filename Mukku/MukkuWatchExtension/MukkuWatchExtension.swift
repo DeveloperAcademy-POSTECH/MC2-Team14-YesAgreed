@@ -36,7 +36,7 @@ struct Provider: IntentTimelineProvider {
     
     func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
         return [
-            IntentRecommendation(intent: ConfigurationIntent(), description: "Mukku Complication")
+            IntentRecommendation(intent: ConfigurationIntent(), description: "The Phantom of the Opera")
         ]
     }
 }
@@ -54,7 +54,6 @@ struct MukkuWatchExtensionEntryView : View {
     }
 }
 
-@main
 struct MukkuWatchExtension: Widget {
     let kind: String = "MukkuWatchExtension"
     
@@ -62,15 +61,15 @@ struct MukkuWatchExtension: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             MukkuWatchExtensionEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Phantom Complication")
+        .description("The Phantom of the Opera - Complication")
         .supportedFamilies([.accessoryCircular, .accessoryRectangular, .accessoryInline, .accessoryCorner])
     }
 }
 
-struct MukkuWatchExtension_Previews: PreviewProvider {
-    static var previews: some View {
-        MukkuWatchExtensionEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-    }
-}
+//struct MukkuWatchExtension_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MukkuWatchExtensionEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+//            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+//    }
+//}
