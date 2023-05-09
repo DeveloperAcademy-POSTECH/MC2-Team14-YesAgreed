@@ -20,17 +20,19 @@ struct ContentView: View {
                         //Start the live Activity
                         let attributes = MukkuWidgetsAttributes()
                         let state = MukkuWidgetsAttributes.ContentState(startTime: .now)
+                        let content =
+                        ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                         
                         activity = try? Activity<MukkuWidgetsAttributes>.request(
                             attributes: attributes,
-                            contentState: state)
+                            content: content )
                     } else {
                         //End the live Activity
                         guard let startTime else{return}
                         let state = MukkuWidgetsAttributes.ContentState(startTime: startTime)
-    
+                        let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                         Task{
-                            await activity?.end(using: state, dismissalPolicy: .immediate)
+                            await activity?.end(content, dismissalPolicy: .immediate)
                         }
             
                         self.startTime = nil
