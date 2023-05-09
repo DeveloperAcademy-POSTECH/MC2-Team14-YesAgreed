@@ -10,11 +10,16 @@ import WidgetKit
 import SwiftUI
 
 struct MukkuWidgetsLiveActivity: Widget {
+//    @Environment(\.선택한뮤지컬이름) var 선택한뮤지컬이름
+    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("Hello")
+                Image("mask1")
+                    .resizable()
+                    .scaledToFit()
+//                Text("Hello")
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
@@ -24,7 +29,10 @@ struct MukkuWidgetsLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+//                    Text("Leading")
+                    Image("mask1")
+                        .resizable()
+                        .scaledToFit()
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Text("Trailing")
@@ -34,11 +42,21 @@ struct MukkuWidgetsLiveActivity: Widget {
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+//                Text("L")
+                Image("mask1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 20)
             } compactTrailing: {
-                Text("T")
+//                Text("T")
+//                Image("mask1")
+//                    .resizable()
+//                    .scaledToFit()
             } minimal: {
-                Text("Min")
+//                Text("Min")
+                Image("mask1")
+                    .resizable()
+                    .scaledToFit()
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
