@@ -57,7 +57,6 @@ struct PhantomOfOperaMask: View {
             Image("mask\(count)")
                 .resizable()
                 .scaledToFit()
-                .widgetAccentable(true)
                 .unredacted()
             
         case .accessoryRectangular:

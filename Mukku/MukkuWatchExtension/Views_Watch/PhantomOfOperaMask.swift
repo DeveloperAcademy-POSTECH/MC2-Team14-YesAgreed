@@ -39,8 +39,8 @@ struct PhantomOfOperaMask: View {
                 .scaledToFit()
                 .widgetLabel {
                     Text("Sing For Me!")
+                        .widgetAccentable(true)
                 }
-                .widgetAccentable(true)
                 .unredacted()
             
         default:
