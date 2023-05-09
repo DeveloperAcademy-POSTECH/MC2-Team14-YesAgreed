@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ObjectView: View {
     @State private var isTapped = false
-    let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    var isSelected : Bool = false
     var text: String
     var imageName: String
     
@@ -21,17 +21,13 @@ struct ObjectView: View {
                 .cornerRadius(14)
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
-                        .stroke(isTapped ? Color.green: Color.clear, lineWidth: 3)
+                        .stroke(isSelected ? Color.green: Color.clear, lineWidth: 3)
                 )
-                .onTapGesture{
-                    feedbackGenerator.impactOccurred()
-                    self.isTapped.toggle()
-                }
             Text(text)
                 .font(.system(size: 15))
+                .foregroundColor(.black)
                 .multilineTextAlignment(.center)
         }
         .frame(width: 75, height: 80)
     }
 }
-
