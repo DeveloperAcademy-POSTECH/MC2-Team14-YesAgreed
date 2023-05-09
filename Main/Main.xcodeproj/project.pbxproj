@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73D4FBF72A09D4B900170744 /* MusicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4FBF62A09D4B900170744 /* MusicalModel.swift */; };
 		C5CF642D2A08841600D24B61 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF642C2A08841600D24B61 /* MainApp.swift */; };
 		C5CF642F2A08841600D24B61 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF642E2A08841600D24B61 /* MainView.swift */; };
 		C5CF64312A08841700D24B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CF64302A08841700D24B61 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73D4FBF62A09D4B900170744 /* MusicalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalModel.swift; sourceTree = "<group>"; };
 		C5CF64292A08841600D24B61 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CF642C2A08841600D24B61 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		C5CF642E2A08841600D24B61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				C5CF642C2A08841600D24B61 /* MainApp.swift */,
 				C5CF642E2A08841600D24B61 /* MainView.swift */,
+				73D4FBF62A09D4B900170744 /* MusicalModel.swift */,
 				C5CF64302A08841700D24B61 /* Assets.xcassets */,
 				C5CF64562A08864200D24B61 /* Component */,
 				C5CF64322A08841700D24B61 /* Preview Content */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D4FBF72A09D4B900170744 /* MusicalModel.swift in Sources */,
 				C5CF642F2A08841600D24B61 /* MainView.swift in Sources */,
 				C5CF64582A08865D00D24B61 /* ObjectView.swift in Sources */,
 				C5CF642D2A08841600D24B61 /* MainApp.swift in Sources */,

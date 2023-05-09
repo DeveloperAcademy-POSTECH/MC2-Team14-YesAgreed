@@ -9,26 +9,31 @@ import SwiftUI
 
 struct MainView: View {
     @State var dynamicEnabled: Bool = true
-    var texts: [String] = ["Mask", "Chandelier", "Boat", "Rose","Sunflower", "Rapier", "Windmill", "Typo"]
-    var images: [String] = ["PhantomIcon1", "PhantomIcon2", "PhantomIcon3", "PhantomIcon4", "LamanchaIcon1", "LamanchaIcon2", "LamanchaIcon3", "LamanchaIcon4"]
-    var names: [String] = ["Phantom of the Opera", "Man of La Mancha"]
-    
+    @State var isSelectedd: String = ""
+    let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     var body: some View {
         NavigationView{
             ZStack{
                 Color(.systemGray6)
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    ForEach(0..<2) { ind in
-                        Text(names[ind])
+                    ForEach(MusicalModel.musicalModels, id:\.self){ musical in
+                        Text(musical.title)
                             .bold()
                             .font(.system(size: 25))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 20)
                             .padding(.top, 20)
                         HStack(alignment: .center, spacing: 15){
-                            ForEach(0..<4) { num in
-                                ObjectView(text: texts[ind*4 + num], imageName: images[ind*4 + num])
+                            ForEach(musical.scene, id:\.self) { scene in
+                                Button{
+                                    isSelectedd = musical.title + scene.name
+                                    print(isSelectedd)
+                                } label: {
+                                    ObjectView(isSelected : isSelectedd == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
+                                .onTapGesture{
+                                    feedbackGenerator.impactOccurred()
+                                }
                             }
                             .padding(.bottom, 20)
                         }
