@@ -34,11 +34,17 @@ struct MukkuWidgetsLiveActivity: Widget {
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+                Image("mask_watch")
+                    .resizable()
+                    .scaledToFit()
             } compactTrailing: {
-                Text("T")
+                Image("mask_watch")
+                    .resizable()
+                    .scaledToFit()
             } minimal: {
-                Text("Min")
+                Image("mask_watch")
+                    .resizable()
+                    .scaledToFit()
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
