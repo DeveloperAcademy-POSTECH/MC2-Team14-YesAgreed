@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F092A034BB900389862 /* MukkuApp.swift */; };
-		73472F0C2A034BB900389862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F0B2A034BB900389862 /* ContentView.swift */; };
 		73472F0E2A034BBA00389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F0D2A034BBA00389862 /* Assets.xcassets */; };
 		73472F112A034BBA00389862 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F102A034BBA00389862 /* Preview Assets.xcassets */; };
 		73472F1E2A034C2700389862 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73472F1D2A034C2700389862 /* WidgetKit.framework */; };
@@ -116,7 +115,6 @@
 /* Begin PBXFileReference section */
 		73472F062A034BB900389862 /* Mukku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mukku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73472F092A034BB900389862 /* MukkuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuApp.swift; sourceTree = "<group>"; };
-		73472F0B2A034BB900389862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73472F0D2A034BBA00389862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73472F102A034BBA00389862 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73472F1B2A034C2700389862 /* MukkuWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MukkuWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,7 +217,6 @@
 				73472F092A034BB900389862 /* MukkuApp.swift */,
 				C5CF64602A09E62400D24B61 /* MusicalModel.swift */,
 				C5CF64622A09E66900D24B61 /* Views */,
-				73472F0B2A034BB900389862 /* ContentView.swift */,
 				73472F0D2A034BBA00389862 /* Assets.xcassets */,
 				73472F0F2A034BBA00389862 /* Preview Content */,
 			);
@@ -500,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73472F0C2A034BB900389862 /* ContentView.swift in Sources */,
 				C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */,
 				73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
 				73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
