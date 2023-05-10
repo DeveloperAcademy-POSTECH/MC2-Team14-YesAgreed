@@ -23,7 +23,7 @@ extension MusicalModel{
                         MyScene(name: "Mask", icon: "PhantomIcon1"),
                         MyScene(name: "Chandelier", icon: "PhantomIcon2"),
                         MyScene(name: "Boat",icon: "PhantomIcon3"),
-                        MyScene(name: "Sunflower", icon: "PhantomIcon4"),
+                        MyScene(name: "Rose", icon: "PhantomIcon4"),
                      ]),
         //Man of La Mancha
         MusicalModel(title: "Man of La Mancha",
