@@ -27,7 +27,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>phantom of opera 1</string>
+					<string>phantom of opera mask</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>eVNTPc</string>
 					<key>INEnumValueIndex</key>
@@ -37,7 +37,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>phantom of opera 2</string>
+					<string>phantom of opera boat</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>qo3yrH</string>
 					<key>INEnumValueIndex</key>
@@ -47,7 +47,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>phantom of opera 3</string>
+					<string>phantom of opera chandelier</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>BfQySt</string>
 					<key>INEnumValueIndex</key>
@@ -57,7 +57,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>phantom of opera 4</string>
+					<string>phantom of opera rose</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CurjRx</string>
 					<key>INEnumValueIndex</key>
@@ -141,7 +141,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Mc 2 Enum</string>
+					<string>Select Item</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>Mj8LwZ</string>
 					<key>INIntentParameterDisplayPriority</key>
