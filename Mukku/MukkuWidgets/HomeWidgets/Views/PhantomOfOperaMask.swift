@@ -33,7 +33,7 @@ struct PhantomOfOperaMask: View {
             
         case .systemMedium:
             ZStack {
-                Image("boat1")
+                Image("bg_medium")
                     .resizable()
                     .scaledToFit()
                 Image("mask\(count)")
