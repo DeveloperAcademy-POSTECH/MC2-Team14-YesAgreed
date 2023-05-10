@@ -34,17 +34,11 @@ struct MukkuWidgetsLiveActivity: Widget {
                     // more content
                 }
             } compactLeading: {
-                Image("mask_watch")
-                    .resizable()
-                    .scaledToFit()
+                Text("L")
             } compactTrailing: {
-                Image("mask_watch")
-                    .resizable()
-                    .scaledToFit()
+                Text("T")
             } minimal: {
-                Image("mask_watch")
-                    .resizable()
-                    .scaledToFit()
+                Text("M")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -62,7 +56,7 @@ struct TimeTrackingWidgetView : View {
 
 struct MukkuWidgetsLiveActivity_Previews: PreviewProvider {
     static let attributes = MukkuWidgetsAttributes()
-    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date())
+    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date(), scene:"mask")
 
     static var previews: some View {
         attributes

@@ -14,6 +14,7 @@ struct MainView: View {
     @State private var startTime : Date? = nil
     @State var dynamicEnabled: Bool = true
     @State var isSelectedd: String = ""
+    @State var selectedScene: String = ""
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     var body: some View {
         NavigationView{
@@ -33,6 +34,7 @@ struct MainView: View {
                                 Button{
                                     isSelectedd = musical.title + scene.name
                                     print(isSelectedd)
+                                    selectedScene = scene.name.lowercased()
                                 } label: {
                                     ObjectView(isSelected : isSelectedd == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
                                 .onTapGesture{
@@ -55,7 +57,7 @@ struct MainView: View {
                                     startTime = .now
                                     //Start the live Activity
                                     let attributes = MukkuWidgetsAttributes()
-                                    let state = MukkuWidgetsAttributes.ContentState(startTime: .now)
+                                    let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
                                     let content =
                                     ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                                     
@@ -65,7 +67,7 @@ struct MainView: View {
                                 } else {
                                     //End the live Activity
                                     guard let startTime else{return}
-                                    let state = MukkuWidgetsAttributes.ContentState(startTime: startTime)
+                                    let state = MukkuWidgetsAttributes.ContentState(startTime: startTime, scene: "boat")
                                     let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                                     Task{await activity?.end(content, dismissalPolicy: .immediate)}
                                     self.startTime = nil
