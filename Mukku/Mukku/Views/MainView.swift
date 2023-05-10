@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import ActivityKit
 
 struct MainView: View {
+    @State private var isTrackingTime : Bool = false
+    @State private var activity : Activity<MukkuWidgetsAttributes>? = nil
+    @State private var startTime : Date? = nil
     @State var dynamicEnabled: Bool = true
     @State var isSelectedd: String = ""
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
@@ -44,8 +48,28 @@ struct MainView: View {
                     .navigationBarTitle("MuKku", displayMode: .inline)
                     Form{
                         Section(header: Text("Dynamic Island Setting")) {
-                            Toggle(isOn: $dynamicEnabled) {
-                                Text("Dynamic Island")
+                            Toggle(
+                                "Dynamic Island",
+                                isOn: $isTrackingTime).onChange(of:isTrackingTime) { _ in
+                                if isTrackingTime {
+                                    startTime = .now
+                                    //Start the live Activity
+                                    let attributes = MukkuWidgetsAttributes()
+                                    let state = MukkuWidgetsAttributes.ContentState(startTime: .now)
+                                    let content =
+                                    ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
+                                    
+                                    activity = try? Activity<MukkuWidgetsAttributes>.request(
+                                        attributes: attributes,
+                                        content: content )
+                                } else {
+                                    //End the live Activity
+                                    guard let startTime else{return}
+                                    let state = MukkuWidgetsAttributes.ContentState(startTime: startTime)
+                                    let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
+                                    Task{await activity?.end(content, dismissalPolicy: .immediate)}
+                                    self.startTime = nil
+                                }
                             }
                         }
                         Section() {
