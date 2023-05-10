@@ -10,16 +10,11 @@ import WidgetKit
 import SwiftUI
 
 struct MukkuWidgetsLiveActivity: Widget {
-//    @Environment(\.선택한뮤지컬이름) var 선택한뮤지컬이름
-    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Image("mask1")
-                    .resizable()
-                    .scaledToFit()
-//                Text("Hello")
+                Text("Hello")
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
@@ -29,10 +24,7 @@ struct MukkuWidgetsLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-//                    Text("Leading")
-                    Image("mask1")
-                        .resizable()
-                        .scaledToFit()
+                    Text("Leading")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Text("Trailing")
@@ -42,21 +34,11 @@ struct MukkuWidgetsLiveActivity: Widget {
                     // more content
                 }
             } compactLeading: {
-//                Text("L")
-                Image("mask1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 20)
+                Text("L")
             } compactTrailing: {
-//                Text("T")
-//                Image("mask1")
-//                    .resizable()
-//                    .scaledToFit()
+                Text("T")
             } minimal: {
-//                Text("Min")
-                Image("mask1")
-                    .resizable()
-                    .scaledToFit()
+                Text("M")
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -74,7 +56,7 @@ struct TimeTrackingWidgetView : View {
 
 struct MukkuWidgetsLiveActivity_Previews: PreviewProvider {
     static let attributes = MukkuWidgetsAttributes()
-    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date())
+    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date(), scene:"mask")
 
     static var previews: some View {
         attributes
