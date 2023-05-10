@@ -45,6 +45,66 @@
 					<key>INEnumValueName</key>
 					<string>PhantomOfOpera2</string>
 				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>phantom of opera 3</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>BfQySt</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>PhantomOfOpera3</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>phantom of opera 4</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>CurjRx</string>
+					<key>INEnumValueIndex</key>
+					<integer>4</integer>
+					<key>INEnumValueName</key>
+					<string>PhantomOfOpera4</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>man of la mancha sunflower</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>INbm6h</string>
+					<key>INEnumValueIndex</key>
+					<integer>5</integer>
+					<key>INEnumValueName</key>
+					<string>ManOfLaMancha1</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>man of la mancha rapier</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>BwzkAN</string>
+					<key>INEnumValueIndex</key>
+					<integer>6</integer>
+					<key>INEnumValueName</key>
+					<string>ManOfLaMancha2</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>man of la mancha windmill</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>z9uEcb</string>
+					<key>INEnumValueIndex</key>
+					<integer>7</integer>
+					<key>INEnumValueName</key>
+					<string>ManOfLaMancha3</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>man of la mancha typo</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>aqIzoK</string>
+					<key>INEnumValueIndex</key>
+					<integer>8</integer>
+					<key>INEnumValueName</key>
+					<string>ManOfLaMancha4</string>
+				</dict>
 			</array>
 		</dict>
 	</array>
