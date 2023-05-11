@@ -24,13 +24,13 @@
 		73472F3B2A034D8000389862 /* MukkuWidgetsEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F3A2A034D8000389862 /* MukkuWidgetsEntryView.swift */; };
 		73472F3E2A034EE200389862 /* MukkuWidgetsEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F3A2A034D8000389862 /* MukkuWidgetsEntryView.swift */; };
 		73472F3F2A034F4A00389862 /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F382A034D5000389862 /* SimpleEntry.swift */; };
-		73472F422A0354CC00389862 /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F412A0354CC00389862 /* PhantomOfOperaMask.swift */; };
-		73472F432A0354CC00389862 /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F412A0354CC00389862 /* PhantomOfOperaMask.swift */; };
-		73472F452A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */; };
-		73472F462A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */; };
+		73472F422A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F412A0354CC00389862 /* PhantomOfOperaItem.swift */; };
+		73472F432A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F412A0354CC00389862 /* PhantomOfOperaItem.swift */; };
 		73472F482A03588700389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F0D2A034BBA00389862 /* Assets.xcassets */; };
 		73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */; };
 		73472F4B2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */; };
+		73A32C222A0BA9D10065A73B /* ManOfLaManchaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A32C212A0BA9D10065A73B /* ManOfLaManchaItem.swift */; };
+		73A32C232A0BA9D10065A73B /* ManOfLaManchaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A32C212A0BA9D10065A73B /* ManOfLaManchaItem.swift */; };
 		B402EFCD2A089C0F00BE37FE /* MukkuWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402EFCC2A089C0F00BE37FE /* MukkuWatchApp.swift */; };
 		B402EFCF2A089C0F00BE37FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402EFCE2A089C0F00BE37FE /* ContentView.swift */; };
 		B402EFD12A089C1000BE37FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD02A089C1000BE37FE /* Assets.xcassets */; };
@@ -133,10 +133,10 @@
 		73472F362A034D3500389862 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		73472F382A034D5000389862 /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
 		73472F3A2A034D8000389862 /* MukkuWidgetsEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsEntryView.swift; sourceTree = "<group>"; };
-		73472F412A0354CC00389862 /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
-		73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaBoat.swift; sourceTree = "<group>"; };
+		73472F412A0354CC00389862 /* PhantomOfOperaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaItem.swift; sourceTree = "<group>"; };
 		73472F472A0356D100389862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsAttributes.swift; sourceTree = "<group>"; };
+		73A32C212A0BA9D10065A73B /* ManOfLaManchaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManOfLaManchaItem.swift; sourceTree = "<group>"; };
 		B402EFCA2A089C0F00BE37FE /* MukkuWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MukkuWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B402EFCC2A089C0F00BE37FE /* MukkuWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWatchApp.swift; sourceTree = "<group>"; };
 		B402EFCE2A089C0F00BE37FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -275,8 +275,8 @@
 		73472F402A0354B100389862 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				73472F412A0354CC00389862 /* PhantomOfOperaMask.swift */,
-				73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */,
+				73472F412A0354CC00389862 /* PhantomOfOperaItem.swift */,
+				73A32C212A0BA9D10065A73B /* ManOfLaManchaItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -513,9 +513,9 @@
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 				C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */,
 				73472F3F2A034F4A00389862 /* SimpleEntry.swift in Sources */,
+				73A32C222A0BA9D10065A73B /* ManOfLaManchaItem.swift in Sources */,
 				C5CF64612A09E62400D24B61 /* MusicalModel.swift in Sources */,
-				73472F452A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */,
-				73472F422A0354CC00389862 /* PhantomOfOperaMask.swift in Sources */,
+				73472F422A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */,
 				73472F3E2A034EE200389862 /* MukkuWidgetsEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,11 +527,11 @@
 				73472F392A034D5000389862 /* SimpleEntry.swift in Sources */,
 				B4A208F72A089FAD00D3042A /* ContentView.swift in Sources */,
 				73472F252A034C2700389862 /* MukkuWidgetsLiveActivity.swift in Sources */,
-				73472F432A0354CC00389862 /* PhantomOfOperaMask.swift in Sources */,
+				73A32C232A0BA9D10065A73B /* ManOfLaManchaItem.swift in Sources */,
+				73472F432A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */,
 				73472F232A034C2700389862 /* MukkuWidgetsBundle.swift in Sources */,
 				73472F2C2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
 				73472F372A034D3500389862 /* Provider.swift in Sources */,
-				73472F462A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */,
 				73472F3B2A034D8000389862 /* MukkuWidgetsEntryView.swift in Sources */,
 				73472F4B2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
 				73472F272A034C2700389862 /* MukkuWidgets.swift in Sources */,

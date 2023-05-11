@@ -13,12 +13,13 @@ struct MainView: View {
     @State private var activity : Activity<MukkuWidgetsAttributes>? = nil
     @State private var startTime : Date? = nil
     @State var dynamicEnabled: Bool = true
-    @State var isSelectedd: String = ""
+    @State var dynamicIslandScene: String = ""
+    @State var selectedScene: String = ""
+
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     
     var body: some View {
-        
         Form {
             
             Section (header:
@@ -35,16 +36,24 @@ struct MainView: View {
                     HStack(alignment: .center, spacing: 15){
                         ForEach(musical.scene, id:\.self) { scene in
                             Button{
-                                isSelectedd = musical.title + scene.name
-                                print(isSelectedd)
+                                dynamicIslandScene = musical.title + scene.name
+                                selectedScene = scene.name.lowercased()
+                                // Dynamic island update
+                                let updatedState = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
+                                let updatedContent = ActivityContent(state: updatedState, staleDate: .now.advanced(by: 1800.0))
+
+                                Task {
+                                    await activity?.update(updatedContent)
+                                }
+
                             } label: {
-                                ObjectView(isSelected : isSelectedd == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
+                                ObjectView(isSelected : dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
                             //                                    .onTapGesture{
                             //                                        feedbackGenerator.impactOccurred()
                             //                                    }
+
                         }
                     }
-                    //                                .padding(.bottom, 20)
                 }
             }){
             }
@@ -58,7 +67,7 @@ struct MainView: View {
                             startTime = .now
                             //Start the live Activity
                             let attributes = MukkuWidgetsAttributes()
-                            let state = MukkuWidgetsAttributes.ContentState(startTime: .now)
+                            let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
                             let content =
                             ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                             
@@ -68,12 +77,13 @@ struct MainView: View {
                         } else {
                             //End the live Activity
                             guard let startTime else{return}
-                            let state = MukkuWidgetsAttributes.ContentState(startTime: startTime)
+                            let state = MukkuWidgetsAttributes.ContentState(startTime: startTime, scene: selectedScene)
                             let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                             Task{await activity?.end(content, dismissalPolicy: .immediate)}
                             self.startTime = nil
+
                         }
-                    }
+                  }
             }
             Section() {
                 ZStack{

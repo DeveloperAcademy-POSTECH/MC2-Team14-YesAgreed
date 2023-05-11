@@ -44,6 +44,12 @@ struct Provider: IntentTimelineProvider {
         switch mC2WidgetEnum {
         case.phantomOfOpera1: return "mask"
         case.phantomOfOpera2: return "boat"
+        case.phantomOfOpera3: return "chandelier"
+        case.phantomOfOpera4: return "rose"
+        case.manOfLaMancha1: return "sunflower"
+        case.manOfLaMancha2: return "rapier"
+        case.manOfLaMancha3: return "windmill"
+        case.manOfLaMancha4: return "typo"
         case.unknown: return "mask"
         }
     }

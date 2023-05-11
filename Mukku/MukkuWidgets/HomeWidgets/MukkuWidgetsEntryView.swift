@@ -6,12 +6,10 @@ struct MukkuWidgetsEntryView : View {
     var entry: SimpleEntry
     var body: some View {
         switch entry.scene{
-        case "mask":
-            PhantomOfOperaMask(count: entry.count)
-        case "boat":
-            PhantomOfOperaBoat(count: entry.count)
+        case "mask","boat","rose","chandelier" :
+            PhantomOfOperaItem(entry: entry)
         default:
-            PhantomOfOperaMask(count: entry.count)
+            ManOfLaManchaItem(entry: entry)
         }
     }
 }
