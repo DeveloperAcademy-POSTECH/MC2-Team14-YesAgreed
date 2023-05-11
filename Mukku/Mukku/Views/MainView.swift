@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ActivityKit
+import PhotosUI
 
 struct MainView: View {
     @State private var isTrackingTime : Bool = false
@@ -15,7 +16,8 @@ struct MainView: View {
     @State var dynamicEnabled: Bool = true
     @State var dynamicIslandScene: String = ""
     @State var selectedScene: String = ""
-
+    @State var selectedItems: [PhotosPickerItem] = []
+    @State public var data: Data?
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     
@@ -101,7 +103,39 @@ struct MainView: View {
                 Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
                     .font(.system(size: 15))
             }
+            VStack {
+                if let data = data, let uiimage = UIImage(data:data){
+                    Image(uiImage: uiimage).resizable().scaledToFit()
+                }
+                Spacer()
+                PhotosPicker(selection: $selectedItems,
+                             maxSelectionCount: 1,
+                             matching: .images
+                             // matching: .any(of:[.panoramas])로 대체 가능함
+                ) {
+                    Text("Pick Background Photo")
+                }
+                .onChange(of: selectedItems) { newValue in
+                    guard let item = selectedItems.first else {
+                        return
+                    }
+                    item.loadTransferable(type: Data.self) { result in
+                        switch result {
+                        case .success(let data):
+                            if let data = data {
+                                self.data = data
+                                print(data)
+                            } else {
+                                print("Data is nil")
+                            }
+                        case .failure(let failure):
+                            fatalError("\(failure)")
+                        }
+                    }
+                }
+            }
         }
+        
     }
 }
 
