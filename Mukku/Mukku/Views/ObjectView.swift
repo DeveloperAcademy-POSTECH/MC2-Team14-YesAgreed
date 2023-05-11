@@ -24,9 +24,10 @@ struct ObjectView: View {
                         .stroke(isSelected ? Color.green: Color.clear, lineWidth: 3)
                 )
             Text(text)
-                .font(.system(size: 13))
+                .font(.system(size: 15))
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
+                .textCase(nil)
         }
         .frame(width: 75, height: 80)
     }
