@@ -9,6 +9,12 @@ import SwiftUI
 import ActivityKit
 import PhotosUI
 
+extension UIScreen{
+    static let imageBoxSize = UIScreen.main.bounds.size.width / CGFloat(twoColumnsGrid.count) - 10
+}
+
+private var twoColumnsGrid = [GridItem(.flexible()), GridItem(.flexible())]
+
 struct MainView: View {
     @State private var isTrackingTime : Bool = false
     @State private var activity : Activity<MukkuWidgetsAttributes>? = nil
@@ -17,7 +23,11 @@ struct MainView: View {
     @State var dynamicIslandScene: String = ""
     @State var selectedScene: String = ""
     @State var selectedItems: [PhotosPickerItem] = []
-    @State public var data: Data?
+    @State var data: Data?
+    @EnvironmentObject var imageManager: ImageManager
+    @State private var showImagePicker = false
+    @State private var image = UIImage()
+    
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     
@@ -103,36 +113,65 @@ struct MainView: View {
                 Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
                     .font(.system(size: 15))
             }
-            VStack {
-                if let data = data, let uiimage = UIImage(data:data){
-                    Image(uiImage: uiimage).resizable().scaledToFit()
-                }
-                Spacer()
-                PhotosPicker(selection: $selectedItems,
-                             maxSelectionCount: 1,
-                             matching: .images
-                             // matching: .any(of:[.panoramas])로 대체 가능함
-                ) {
-                    Text("Pick Background Photo")
-                }
-                .onChange(of: selectedItems) { newValue in
-                    guard let item = selectedItems.first else {
-                        return
-                    }
-                    item.loadTransferable(type: Data.self) { result in
-                        switch result {
-                        case .success(let data):
-                            if let data = data {
-                                self.data = data
-                                print(data)
-                            } else {
-                                print("Data is nil")
-                            }
-                        case .failure(let failure):
-                            fatalError("\(failure)")
+            /**
+             VStack {
+                 if let data = data, let uiimage = UIImage(data:data){
+                     Image(uiImage: uiimage).resizable().scaledToFit()
+                 }
+                 Spacer()
+                 PhotosPicker(selection: $selectedItems,
+                              maxSelectionCount: 1,
+                              matching: .images
+                              // matching: .any(of:[.panoramas])로 대체 가능함
+                 ) {
+                     Text("Pick Background Photo")
+                 }
+                 .onChange(of: selectedItems) { newValue in
+                     guard let item = selectedItems.first else {
+                         return
+                     }
+                     item.loadTransferable(type: Data.self) { result in
+                         switch result {
+                         case .success(let data):
+                             if let data = data {
+                                 self.data = data
+                                 print(data)
+                             } else {
+                                 print("Data is nil")
+                             }
+                         case .failure(let failure):
+                             fatalError("\(failure)")
+                         }
+                     }
+                 }
+             }
+             */
+            
+            ZStack(alignment: .bottom){
+                    VStack {
+                        if (imageManager.photos.count != 0){
+                            let photo = imageManager.photos.last!
+                            Image(uiImage: Helper.getImageFromUserDefaults(key: photo))
+                                .resizable()
+                                .scaledToFit()
                         }
                     }
+
+                Button {
+                    self.showImagePicker.toggle()
+                } label: {
+                    Text("Add Photo")
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(25)
                 }
+                .sheet(isPresented: $showImagePicker, content:{
+                    ImagePicker(selectedImage: self.$image)
+                })
+                .onChange(of:image){
+                    _ in imageManager.appendImage(image: image)
+                }
+
             }
         }
         
@@ -141,7 +180,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(ImageManager())
     }
 }
 
