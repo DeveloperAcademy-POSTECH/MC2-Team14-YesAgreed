@@ -1,51 +1,47 @@
 import SwiftUI
 import WidgetKit
 
-struct PhantomOfOperaMask: View {
+struct ManOfLaManchaItem: View {
     
     @Environment(\.widgetFamily) var widgetFamily
-    
-    var count : Int
+    var entry : SimpleEntry = SimpleEntry(scene: "sunflower")
     var body: some View {
         
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                Image("bg_small")
+                Image("lamancha_bg_small")
                     .resizable()
                     .scaledToFit()
-                Image("mask\(count)")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .scaledToFit()
-                    .offset(y: -15)
-                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
-                
-                VStack {
-                    Spacer()
-                    Text("Sing For Me!")
-                        .foregroundColor(.white)
-                        .font(.system(size: 10))
+                VStack{
+                    Spacer().frame(height: 20)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
                 }
-                .padding(.bottom, 20)
+                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
             }
             .unredacted()
             
         case .systemMedium:
             ZStack {
-                Image("bg_medium")
+                Image("lamancha_bg_medium")
                     .resizable()
                     .scaledToFit()
-                Image("mask\(count)")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .scaledToFit()
-                    .offset(y: -15)
+                VStack{
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                }
                 LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 
                 VStack {
                     Spacer()
-                    Text("Sing For Me!")
+                    Text("The Impossible Dream")
                         .foregroundColor(.white)
                         .font(.system(size: 10))
                 }
@@ -54,24 +50,24 @@ struct PhantomOfOperaMask: View {
             .unredacted()
             
         case .accessoryCircular:
-            Image("mask\(count)")
+            Image("\(entry.scene)\(entry.count)")
                 .resizable()
                 .scaledToFit()
                 .unredacted()
             
         case .accessoryRectangular:
             HStack {
-                Image("mask\(count)")
+                Image("\(entry.scene)\(entry.count)")
                     .resizable()
                     .scaledToFit()
-                Text("Sing For Me!")
+                Text("The Impossible Dream")
                 Spacer()
             }
             .padding(.leading, 6)
             .unredacted()
             
         case .accessoryInline:
-            Text("|  Sing For Me!")
+            Text("|  The Impossible Dream")
                 .unredacted()
             
         default:
@@ -83,17 +79,17 @@ struct PhantomOfOperaMask: View {
 }
 
 
-struct PhantomOfOperaMask_Previews: PreviewProvider {
+struct ManOfLaManchaItem_Previews: PreviewProvider {
     static var previews: some View {
-        PhantomOfOperaMask(count:1)
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-        PhantomOfOperaMask(count:1)
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
-        PhantomOfOperaMask(count:1)
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
             .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        PhantomOfOperaMask(count:1)
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
             .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        PhantomOfOperaMask(count:1)
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
             .previewContext(WidgetPreviewContext(family: .accessoryInline))
     }
 }
