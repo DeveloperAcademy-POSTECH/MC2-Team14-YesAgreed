@@ -27,6 +27,7 @@ struct ObjectView: View {
                 .font(.system(size: 15))
                 .foregroundColor(.black)
                 .multilineTextAlignment(.center)
+                .textCase(nil)
         }
         .frame(width: 75, height: 80)
     }
