@@ -35,6 +35,7 @@
 		955DE9392A0B15C1007F1D75 /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DE9382A0B15C1007F1D75 /* MaskView.swift */; };
 		955DE93D2A0B746A007F1D75 /* ChandelierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DE93C2A0B746A007F1D75 /* ChandelierView.swift */; };
 		955DE93F2A0B8883007F1D75 /* BoatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DE93E2A0B8883007F1D75 /* BoatView.swift */; };
+		959992992A0DCA0A0073D7A7 /* RapierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959992982A0DCA0A0073D7A7 /* RapierView.swift */; };
 		95BF01492A0C689300791D19 /* RoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF01482A0C689300791D19 /* RoseView.swift */; };
 		B402EFCD2A089C0F00BE37FE /* MukkuWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402EFCC2A089C0F00BE37FE /* MukkuWatchApp.swift */; };
 		B402EFCF2A089C0F00BE37FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402EFCE2A089C0F00BE37FE /* ContentView.swift */; };
@@ -142,6 +143,7 @@
 		955DE9382A0B15C1007F1D75 /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
 		955DE93C2A0B746A007F1D75 /* ChandelierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChandelierView.swift; sourceTree = "<group>"; };
 		955DE93E2A0B8883007F1D75 /* BoatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatView.swift; sourceTree = "<group>"; };
+		959992982A0DCA0A0073D7A7 /* RapierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapierView.swift; sourceTree = "<group>"; };
 		95BF01482A0C689300791D19 /* RoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoseView.swift; sourceTree = "<group>"; };
 		B402EFCA2A089C0F00BE37FE /* MukkuWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MukkuWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B402EFCC2A089C0F00BE37FE /* MukkuWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWatchApp.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				955DE93C2A0B746A007F1D75 /* ChandelierView.swift */,
 				955DE93E2A0B8883007F1D75 /* BoatView.swift */,
 				95BF01482A0C689300791D19 /* RoseView.swift */,
+				959992982A0DCA0A0073D7A7 /* RapierView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				95BF01492A0C689300791D19 /* RoseView.swift in Sources */,
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 				C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */,
+				959992992A0DCA0A0073D7A7 /* RapierView.swift in Sources */,
 				73472F3F2A034F4A00389862 /* SimpleEntry.swift in Sources */,
 				C5CF64612A09E62400D24B61 /* MusicalModel.swift in Sources */,
 				73472F452A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */,

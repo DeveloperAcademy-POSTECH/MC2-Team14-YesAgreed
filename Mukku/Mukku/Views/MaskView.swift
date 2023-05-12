@@ -8,11 +8,11 @@
 import SwiftUI
 
 let maskPositions: [CGPoint] = [
-    CGPoint(x: 0.55, y: 0.005),
-    CGPoint(x: 0.35, y: 0.005),
-    CGPoint(x: 0.5, y: 0.005),
-    CGPoint(x: 0.6, y: 0.005),
-    CGPoint(x: 0.4, y: 0.005),
+    CGPoint(x: 0.55, y: 0.0054),
+    CGPoint(x: 0.35, y: 0.0054),
+    CGPoint(x: 0.5, y: 0.0054),
+    CGPoint(x: 0.6, y: 0.0054),
+    CGPoint(x: 0.4, y: 0.0054),
 ]
 
 struct MaskView: View {
@@ -26,11 +26,11 @@ struct MaskView: View {
                     Spacer()
                     ZStack{
                         ForEach(maskPositions.indices, id: \.self) { index in
-                            if animationTime == index {                                
+                            if animationTime == index {
                                 Image("mask1")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(width: 17, height: 17)
+                                    .frame(width: 15, height: 15)
                                     .opacity(maskOpacity)
                                     .position(x: maskPositions[index].x * geometry.size.width, y: maskPositions[index].y * geometry.size.height)
                                     .onAppear {
