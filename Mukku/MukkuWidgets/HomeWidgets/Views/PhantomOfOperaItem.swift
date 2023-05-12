@@ -13,7 +13,6 @@ extension UIImage {
 }
 struct PhantomOfOperaItem: View {
     var entry : SimpleEntry = SimpleEntry()
-    var imageID: String?
 //    var imageID: String?
     @Environment(\.widgetFamily) var widgetFamily
     
@@ -22,16 +21,18 @@ struct PhantomOfOperaItem: View {
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-
-                if imageID != nil {
-
-
-                } else {
-                    
-                    let image = Helper.getImageFromUserDefaults(key: "6E101B68-DDAC-4D13-86EA-16B691D8476D")
+                // Transparent background
+                if entry.imageID != "" {
+                    let imageID = entry.imageID
+                    let image = Helper.getImageFromUserDefaults(key: imageID)
                     let newImage = image.resized(toWidth: 120)
                     
                     Image(uiImage: newImage!)
+                        .resizable()
+                        .scaledToFit()
+
+                } else {
+                    Image("phantom_bg_small")
                         .resizable()
                         .scaledToFit()
                 }
@@ -56,6 +57,16 @@ struct PhantomOfOperaItem: View {
             
         case .systemMedium:
             ZStack {
+                if entry.imageID != "" {
+                    let imageID = entry.imageID
+                    let image = Helper.getImageFromUserDefaults(key: imageID)
+                    let newImage = image.resized(toWidth: 120)
+                    
+                    Image(uiImage: newImage!)
+                        .resizable()
+                        .scaledToFit()
+
+                }
                 Image("phantom_bg_medium")
                     .resizable()
                     .scaledToFit()

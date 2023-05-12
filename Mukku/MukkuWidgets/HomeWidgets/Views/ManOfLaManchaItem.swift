@@ -3,7 +3,7 @@ import WidgetKit
 
 struct ManOfLaManchaItem: View {
     var entry : SimpleEntry = SimpleEntry(scene: "sunflower")
-    var imageID: String?
+//    var imageID: String?
     @Environment(\.widgetFamily) var widgetFamily
     
     var body: some View {
@@ -11,9 +11,21 @@ struct ManOfLaManchaItem: View {
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                Image("lamancha_bg_small")
-                    .resizable()
-                    .scaledToFit()
+                if entry.imageID != "" {
+                    let imageID = entry.imageID
+                    let image = Helper.getImageFromUserDefaults(key: imageID)
+                    let newImage = image.resized(toWidth: 120)
+                    
+                    Image(uiImage: newImage!)
+                        .resizable()
+                        .scaledToFit()
+
+                } else {
+                    Image("lamancha_bg_small")
+                        .resizable()
+                        .scaledToFit()
+                }
+                
                 VStack{
                     Spacer().frame(height: 20)
                     Image("\(entry.scene)\(entry.count)")
@@ -28,14 +40,21 @@ struct ManOfLaManchaItem: View {
             
         case .systemMedium:
             ZStack {
-//                if (isTransparent){
-//                    Image(uiImage: transparentBackground!)
-//                        .resizable()
-//                        .scaledToFill()
-//                }
-                Image("lamancha_bg_medium")
-                    .resizable()
+                if entry.imageID != "" {
+                    let imageID = entry.imageID
+                    let image = Helper.getImageFromUserDefaults(key: imageID)
+                    let newImage = image.resized(toWidth: 120)
+                    
+                    Image(uiImage: newImage!)
+                        .resizable()
+                        .scaledToFit()
+
+                } else {
+                    Image("lamancha_bg_medium")
+                        .resizable()
                     .scaledToFit()
+                    
+                }
                 VStack{
                     Image("\(entry.scene)\(entry.count)")
                         .resizable()
