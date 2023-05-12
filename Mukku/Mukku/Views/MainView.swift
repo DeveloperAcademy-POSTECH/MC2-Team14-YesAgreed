@@ -147,6 +147,7 @@ struct MainView: View {
              }
              */
             
+            // 저장도 한개만 하도록 변경 필요함
             ZStack(alignment: .bottom){
                     VStack {
                         if (imageManager.photos.count != 0){

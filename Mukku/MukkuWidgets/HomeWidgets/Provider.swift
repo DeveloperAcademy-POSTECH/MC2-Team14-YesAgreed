@@ -5,12 +5,12 @@ import Intents
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         //return SimpleEntry()
-        SimpleEntry()
+        SimpleEntry(imageID:nil)
     }
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1)
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: nil)
         completion(entry)
     }
 
@@ -22,10 +22,18 @@ struct Provider: IntentTimelineProvider {
         let topic =  matching(by: configuration.mc2Enum)
         let imgNum = countImgNum(name : topic)
         
+        // transparentbackground 정보
+        let imageIds = Helper.getImageIdsFromUserDefault()
+        print("ho")
+        print("this is imageIds", imageIds)
+        if !imageIds.isEmpty{
+            print("this is imageIds last", imageIds.last!)
+        }
+        
         //120 개에 가까운 img 생성
         for imgCount in 0 ..< (120/imgNum)*imgNum {
             let entryDate = Calendar.current.date(byAdding: .second, value: imgCount, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1))
+            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: imageIds.last)
             entries.append(entry)
         }
         //print("Done in \(Date())")

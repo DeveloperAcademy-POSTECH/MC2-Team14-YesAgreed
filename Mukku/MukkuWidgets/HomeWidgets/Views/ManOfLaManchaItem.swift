@@ -2,9 +2,10 @@ import SwiftUI
 import WidgetKit
 
 struct ManOfLaManchaItem: View {
-    
-    @Environment(\.widgetFamily) var widgetFamily
     var entry : SimpleEntry = SimpleEntry(scene: "sunflower")
+    var imageID: String?
+    @Environment(\.widgetFamily) var widgetFamily
+    
     var body: some View {
         
         switch widgetFamily {
@@ -27,6 +28,11 @@ struct ManOfLaManchaItem: View {
             
         case .systemMedium:
             ZStack {
+//                if (isTransparent){
+//                    Image(uiImage: transparentBackground!)
+//                        .resizable()
+//                        .scaledToFill()
+//                }
                 Image("lamancha_bg_medium")
                     .resizable()
                     .scaledToFit()
@@ -79,18 +85,18 @@ struct ManOfLaManchaItem: View {
 }
 
 
-struct ManOfLaManchaItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .accessoryInline))
-    }
-}
-
+//struct ManOfLaManchaItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"), transparentBackground: nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"), transparentBackground: nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .systemMedium))
+//        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"), transparentBackground: nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+//        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"), transparentBackground: nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+//        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"), transparentBackground: nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .accessoryInline))
+//    }
+//}
+//

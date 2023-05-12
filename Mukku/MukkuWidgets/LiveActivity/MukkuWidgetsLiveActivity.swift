@@ -1,20 +1,16 @@
-//
-//  MukkuWidgetsLiveActivity.swift
-//  MukkuWidgets
-//
-//  Created by Kihyun Roh on 2023/05/04.
-//
-
 import ActivityKit
 import WidgetKit
 import SwiftUI
 
 struct MukkuWidgetsLiveActivity: Widget {
+
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("Hello")
+                Image("\(context.state.scene)_dynamic")
+                    .resizable()
+                    .scaledToFit()
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
@@ -24,21 +20,33 @@ struct MukkuWidgetsLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Image("\(context.state.scene)_dynamic")
+                        .resizable()
+                        .scaledToFit()
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Image("\(context.state.scene)_dynamic")
+                        .resizable()
+                        .scaledToFit()
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom")
+                    Image("\(context.state.scene)_dynamic")
+                        .resizable()
+                        .scaledToFit()
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+                Image("\(context.state.scene)_dynamic")
+                    .resizable()
+                    .scaledToFit()
             } compactTrailing: {
-                Text("T")
+                Image("\(context.state.scene)_dynamic")
+                    .resizable()
+                    .scaledToFit()
             } minimal: {
-                Text("M")
+                Image("\(context.state.scene)_dynamic")
+                    .resizable()
+                    .scaledToFit()
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
