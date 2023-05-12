@@ -10,8 +10,7 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let imageIds = Helper.getImageIdsFromUserDefault()
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: imageIds.last!)
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: "")
         completion(entry)
     }
 
