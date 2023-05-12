@@ -1,17 +1,10 @@
-//
-//  MainView.swift
-//  Mukku
-//
-//  Created by 김혜린 on 2023/05/09.
-//
-
 import SwiftUI
 import ActivityKit
 
 struct MainView: View {
     @State private var isTrackingTime : Bool = false
-    @State private var activity : Activity<MukkuWidgetsAttributes>? = nil
-    @State private var startTime : Date? = nil
+    @State private var activity: Activity<MukkuWidgetsAttributes>? = nil
+    @State private var startTime: Date? = nil
     @State var dynamicEnabled: Bool = true
     @State var dynamicIslandScene: String = ""
     @State var selectedScene: String = ""
@@ -22,7 +15,6 @@ struct MainView: View {
     
     var body: some View {
         Form {
-            
             Section (header:
                         VStack {
                 ForEach(MusicalModel.musicalModels, id:\.self){ musical in
@@ -42,15 +34,12 @@ struct MainView: View {
                                 // Dynamic island update
                                 let updatedState = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
                                 let updatedContent = ActivityContent(state: updatedState, staleDate: .now.advanced(by: 1800.0))
-                                
                                 Task {
                                     await activity?.update(updatedContent)
                                 }
-                                
                             } label: {
-                                ObjectView(isSelected : dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
+                                ObjectView(isSelected: dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
                             .padding(.bottom, 20)
-                            
                         }
                     }
                 }
@@ -82,23 +71,22 @@ struct MainView: View {
                             let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                             Task{await activity?.end(content, dismissalPolicy: .immediate)}
                             self.startTime = nil
-                            
                         }
                     }
             }
+            // 위젯 설정 방법
             Section() {
-                ZStack{
-                    HStack{
-                        Image(systemName: "info.circle")
-                            .foregroundColor(.blue)
-                        Spacer()
-                    }
-                    HStack{
-                        Text("      Widget Instruction")
-                            .foregroundColor(.blue)
-                        Spacer()
-                    }
+                Label {
+                    Text("Widget Instruction")
+                        .padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: 0))
+                } icon: {
+                    Image(systemName: "info.circle")
+                        .padding(EdgeInsets(top: 0, leading: -15, bottom: 0, trailing: 0))
                 }
+                    .alignmentGuide(.listRowSeparatorLeading) {
+                        ViewDimensions in
+                        return -20
+                    }
                 Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
                     .font(.system(size: 15))
             }
