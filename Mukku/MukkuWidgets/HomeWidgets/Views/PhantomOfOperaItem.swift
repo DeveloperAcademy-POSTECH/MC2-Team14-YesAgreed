@@ -1,18 +1,41 @@
 import SwiftUI
 import WidgetKit
 
+extension UIImage {
+  func resized(toWidth width: CGFloat, isOpaque: Bool = true) -> UIImage? {
+    let canvas = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+    let format = imageRendererFormat
+    format.opaque = isOpaque
+    return UIGraphicsImageRenderer(size: canvas, format: format).image {
+      _ in draw(in: CGRect(origin: .zero, size: canvas))
+    }
+  }
+}
 struct PhantomOfOperaItem: View {
-    
-    @Environment(\.widgetFamily) var widgetFamily
     var entry : SimpleEntry = SimpleEntry()
+    var imageID: String?
+//    var imageID: String?
+    @Environment(\.widgetFamily) var widgetFamily
+    
     var body: some View {
         
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                Image("phantom_bg_small")
-                    .resizable()
-                    .scaledToFit()
+
+                if imageID != nil {
+
+
+                } else {
+                    
+                    let image = Helper.getImageFromUserDefaults(key: "6E101B68-DDAC-4D13-86EA-16B691D8476D")
+                    let newImage = image.resized(toWidth: 120)
+                    
+                    Image(uiImage: newImage!)
+                        .resizable()
+                        .scaledToFit()
+                }
+
                 Image("\(entry.scene)\(entry.count)")
                     .resizable()
                     .frame(width: 120, height: 120)
@@ -22,6 +45,7 @@ struct PhantomOfOperaItem: View {
                 
                 VStack {
                     Spacer()
+                    Text("Check this out")
                     Text("Sing For Me!")
                         .foregroundColor(.white)
                         .font(.system(size: 10))
@@ -44,6 +68,7 @@ struct PhantomOfOperaItem: View {
                 
                 VStack {
                     Spacer()
+//                    Text(String(isTransparent))
                     Text("Sing For Me!")
                         .foregroundColor(.white)
                         .font(.system(size: 10))
@@ -82,18 +107,18 @@ struct PhantomOfOperaItem: View {
 }
 
 
-struct PhantomOfOperaItem_Previews: PreviewProvider {
-    static var previews: some View {
-        PhantomOfOperaItem(entry:SimpleEntry())
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-        PhantomOfOperaItem(entry:SimpleEntry())
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-        PhantomOfOperaItem(entry:SimpleEntry())
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        PhantomOfOperaItem(entry:SimpleEntry())
-            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        PhantomOfOperaItem(entry:SimpleEntry())
-            .previewContext(WidgetPreviewContext(family: .accessoryInline))
-    }
-}
+//struct PhantomOfOperaItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground: nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .systemMedium))
+//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
+//            .previewContext(WidgetPreviewContext(family: .accessoryInline))
+//    }
+//}
 
