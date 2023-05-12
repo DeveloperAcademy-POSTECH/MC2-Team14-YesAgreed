@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ChandelierView: View {
     @State var animationStart = true
-    @State var animationOffset : Int = 0
+    @State var animationOffset : Double = 0
     @State var chandelierDegrees : Double = 5
     
     var body: some View {
@@ -24,7 +24,7 @@ struct ChandelierView: View {
                                 .scaledToFit()
                                 .frame(width: 17, height: 17)
                                 .position(x: 0.49 * geometry.size.width, y: 0.067 * geometry.size.height)
-                                .offset(y: CGFloat(animationOffset))
+                                .offset(y: CGFloat(animationOffset) * geometry.size.height)
                                 .rotationEffect(.degrees(chandelierDegrees), anchor: .top)
                                 .onAppear {
                                     var animationCycle: () -> Void = {}
@@ -36,7 +36,7 @@ struct ChandelierView: View {
                                                 chandelierDegrees = 0
                                             }
                                             withAnimation(Animation.easeIn(duration: 0.7).delay(3)) {
-                                                animationOffset = 1000
+                                                animationOffset = 1.2
                                             }
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                                                 chandelierDegrees = 5
