@@ -25,7 +25,7 @@ struct ObjectView: View {
                 )
             Text(text)
                 .font(.system(size: 15))
-                .foregroundColor(.black)
+                .foregroundColor(Color("color_font_black"))
                 .multilineTextAlignment(.center)
                 .textCase(nil)
         }
