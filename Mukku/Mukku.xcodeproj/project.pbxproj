@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7334D8902A0C89B600C757DA /* SunFlowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7334D88F2A0C89B600C757DA /* SunFlowerView.swift */; };
 		73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F092A034BB900389862 /* MukkuApp.swift */; };
 		73472F0C2A034BB900389862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F0B2A034BB900389862 /* ContentView.swift */; };
 		73472F0E2A034BBA00389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F0D2A034BBA00389862 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		73472F482A03588700389862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73472F0D2A034BBA00389862 /* Assets.xcassets */; };
 		73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */; };
 		73472F4B2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */; };
+		737CB8112A0CC6E6002DDC2E /* WindmillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CB8102A0CC6E6002DDC2E /* WindmillView.swift */; };
+		737CB8132A0D1F44002DDC2E /* TypoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737CB8122A0D1F44002DDC2E /* TypoView.swift */; };
 		955DE9392A0B15C1007F1D75 /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DE9382A0B15C1007F1D75 /* MaskView.swift */; };
 		955DE93D2A0B746A007F1D75 /* ChandelierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DE93C2A0B746A007F1D75 /* ChandelierView.swift */; };
 		955DE93F2A0B8883007F1D75 /* BoatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DE93E2A0B8883007F1D75 /* BoatView.swift */; };
@@ -119,6 +122,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7334D88F2A0C89B600C757DA /* SunFlowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunFlowerView.swift; sourceTree = "<group>"; };
 		73472F062A034BB900389862 /* Mukku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mukku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73472F092A034BB900389862 /* MukkuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuApp.swift; sourceTree = "<group>"; };
 		73472F0B2A034BB900389862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		73472F442A0354DB00389862 /* PhantomOfOperaBoat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaBoat.swift; sourceTree = "<group>"; };
 		73472F472A0356D100389862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73472F492A035E0300389862 /* MukkuWidgetsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MukkuWidgetsAttributes.swift; sourceTree = "<group>"; };
+		737CB8102A0CC6E6002DDC2E /* WindmillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindmillView.swift; sourceTree = "<group>"; };
+		737CB8122A0D1F44002DDC2E /* TypoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoView.swift; sourceTree = "<group>"; };
 		955DE9382A0B15C1007F1D75 /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
 		955DE93C2A0B746A007F1D75 /* ChandelierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChandelierView.swift; sourceTree = "<group>"; };
 		955DE93E2A0B8883007F1D75 /* BoatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoatView.swift; sourceTree = "<group>"; };
@@ -344,6 +350,9 @@
 				955DE93C2A0B746A007F1D75 /* ChandelierView.swift */,
 				955DE93E2A0B8883007F1D75 /* BoatView.swift */,
 				95BF01482A0C689300791D19 /* RoseView.swift */,
+				7334D88F2A0C89B600C757DA /* SunFlowerView.swift */,
+				737CB8102A0CC6E6002DDC2E /* WindmillView.swift */,
+				737CB8122A0D1F44002DDC2E /* TypoView.swift */,
 				959992982A0DCA0A0073D7A7 /* RapierView.swift */,
 			);
 			path = Views;
@@ -515,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737CB8132A0D1F44002DDC2E /* TypoView.swift in Sources */,
 				955DE93D2A0B746A007F1D75 /* ChandelierView.swift in Sources */,
 				955DE9392A0B15C1007F1D75 /* MaskView.swift in Sources */,
 				73472F0C2A034BB900389862 /* ContentView.swift in Sources */,
@@ -524,12 +534,14 @@
 				95BF01492A0C689300791D19 /* RoseView.swift in Sources */,
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 				C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */,
+				737CB8112A0CC6E6002DDC2E /* WindmillView.swift in Sources */,
 				959992992A0DCA0A0073D7A7 /* RapierView.swift in Sources */,
 				73472F3F2A034F4A00389862 /* SimpleEntry.swift in Sources */,
 				C5CF64612A09E62400D24B61 /* MusicalModel.swift in Sources */,
 				73472F452A0354DB00389862 /* PhantomOfOperaBoat.swift in Sources */,
 				73472F422A0354CC00389862 /* PhantomOfOperaMask.swift in Sources */,
 				955DE93F2A0B8883007F1D75 /* BoatView.swift in Sources */,
+				7334D8902A0C89B600C757DA /* SunFlowerView.swift in Sources */,
 				73472F3E2A034EE200389862 /* MukkuWidgetsEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
