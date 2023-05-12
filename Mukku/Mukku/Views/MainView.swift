@@ -3,8 +3,8 @@ import ActivityKit
 
 struct MainView: View {
     @State private var isTrackingTime : Bool = false
-    @State private var activity : Activity<MukkuWidgetsAttributes>? = nil
-    @State private var startTime : Date? = nil
+    @State private var activity: Activity<MukkuWidgetsAttributes>? = nil
+    @State private var startTime: Date? = nil
     @State var dynamicEnabled: Bool = true
     @State var dynamicIslandScene: String = ""
     @State var selectedScene: String = ""
@@ -38,7 +38,7 @@ struct MainView: View {
                                     await activity?.update(updatedContent)
                                 }
                             } label: {
-                                ObjectView(isSelected : dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
+                                ObjectView(isSelected: dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
                             .padding(.bottom, 20)
                         }
                     }
