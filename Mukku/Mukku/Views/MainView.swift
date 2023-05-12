@@ -15,15 +15,16 @@ struct MainView: View {
     @State var dynamicEnabled: Bool = true
     @State var dynamicIslandScene: String = ""
     @State var selectedScene: String = ""
-
-    let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
+    let screenWidth = UIScreen.main.bounds.size.width
+    let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10), count: 4) // 그리드 여백
+    let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     var body: some View {
         Form {
             
             Section (header:
-                        VStack{
+                        VStack {
                 ForEach(MusicalModel.musicalModels, id:\.self){ musical in
                     Text(musical.title)
                         .bold()
@@ -31,33 +32,33 @@ struct MainView: View {
                         .font(.system(size: 23))
                         .textCase(nil)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    //                                .padding(.leading, 20)
-                        .padding(.top, 20)
-                    HStack(alignment: .center, spacing: 15){
+                    
+                    LazyVGrid(columns: columns) {
                         ForEach(musical.scene, id:\.self) { scene in
-                            Button{
+                            Button {
+                                feedbackGenerator.impactOccurred()
                                 dynamicIslandScene = musical.title + scene.name
                                 selectedScene = scene.name.lowercased()
                                 // Dynamic island update
                                 let updatedState = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
                                 let updatedContent = ActivityContent(state: updatedState, staleDate: .now.advanced(by: 1800.0))
-
+                                
                                 Task {
                                     await activity?.update(updatedContent)
                                 }
-
+                                
                             } label: {
                                 ObjectView(isSelected : dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
-                            //                                    .onTapGesture{
-                            //                                        feedbackGenerator.impactOccurred()
-                            //                                    }
-
+                            .padding(.bottom, 20)
+                            
                         }
                     }
                 }
-            }){
             }
-            
+                .frame(width: screenWidth * 0.85) // 그리드 폭 조절
+                .padding(.bottom, -20)
+            ){
+            }
             
             Section(header: Text("Dynamic Island Setting")) {
                 Toggle(
@@ -81,9 +82,9 @@ struct MainView: View {
                             let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                             Task{await activity?.end(content, dismissalPolicy: .immediate)}
                             self.startTime = nil
-
+                            
                         }
-                  }
+                    }
             }
             Section() {
                 ZStack{
@@ -108,6 +109,16 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .previewDevice("iPhone 14 Pro")
+            .previewDisplayName("iPhone 14 Pro")
+        
+        MainView()
+            .previewDevice("iPhone 14 Pro Max")
+            .previewDisplayName("iPhone 14 Pro Max")
+        
+        MainView()
+            .previewDevice("iPhone SE (3rd generation)")
+            .previewDisplayName("iPhone SE")
     }
 }
 
