@@ -10,7 +10,8 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: nil)
+        let imageIds = Helper.getImageIdsFromUserDefault()
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: imageIds.last!)
         completion(entry)
     }
 
@@ -22,18 +23,27 @@ struct Provider: IntentTimelineProvider {
         let topic =  matching(by: configuration.mc2Enum)
         let imgNum = countImgNum(name : topic)
         
+        // bg
+        let bg = backgrounding(by: configuration.backgroundEnum)
+//        let bg = matching(by: configuration.transparentEnum)
+//        if bg
+//        print(bg)
+//        switch bg{
+//        case.upperright
+//        }
+        
         // transparentbackground 정보
-        let imageIds = Helper.getImageIdsFromUserDefault()
-        print("ho")
-        print("this is imageIds", imageIds)
-        if !imageIds.isEmpty{
-            print("this is imageIds last", imageIds.last!)
-        }
+//        let imageIds = Helper.getImageIdsFromUserDefault()
+//        print("ho")
+//        print("this is imageIds", imageIds)
+//        if !imageIds.isEmpty{
+//            print("this is imageIds last", imageIds.last!)
+//        }
         
         //120 개에 가까운 img 생성
         for imgCount in 0 ..< (120/imgNum)*imgNum {
             let entryDate = Calendar.current.date(byAdding: .second, value: imgCount, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: imageIds.last)
+            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg)
             entries.append(entry)
         }
         //print("Done in \(Date())")
@@ -61,4 +71,27 @@ struct Provider: IntentTimelineProvider {
         case.unknown: return "mask"
         }
     }
+    fileprivate func backgrounding(by mC2BackgroundEnum: BackgroundEnum)->String{
+        let imageIds = Helper.getImageIdsFromUserDefault()
+        switch mC2BackgroundEnum {
+        case.transparent: return imageIds.last!
+        case.topicDefault: return ""
+        case.unknown: return ""
+        }
+
+    }
+//    fileprivate func matching(by mCTransparentnum: BackgroundEnum)->String{
+//        switch mCTransparentnum {
+//        case.phantomOfOpera1: return "mask"
+//        case.phantomOfOpera2: return "boat"
+//        case.phantomOfOpera3: return "chandelier"
+//        case.phantomOfOpera4: return "rose"
+//        case.manOfLaMancha1: return "sunflower"
+//        case.manOfLaMancha2: return "rapier"
+//        case.manOfLaMancha3: return "windmill"
+//        case.manOfLaMancha4: return "typo"
+//        case.unknown: return "nil"
+//        }
+//    }
+    
 }

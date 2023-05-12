@@ -107,6 +107,49 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>Background Enum</string>
+			<key>INEnumDisplayNameID</key>
+			<string>wCzb4v</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>BackgroundEnum</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>unknown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>WQP9zd</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>topic default</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>VQZK8A</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>TopicDefault</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>transparent</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>tXd5ck</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>Transparent</string>
+				</dict>
+			</array>
+		</dict>
 	</array>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.2</string>
@@ -130,15 +173,13 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>2</integer>
+			<integer>5</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
 					<key>INIntentParameterConfigurable</key>
-					<true/>
-					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Select Item</string>
@@ -152,6 +193,26 @@
 					<string>88xZPY</string>
 					<key>INIntentParameterName</key>
 					<string>mc2Enum</string>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Select Background</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>nQNutz</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>BackgroundEnum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterName</key>
+					<string>backgroundEnum</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
@@ -170,9 +231,9 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${mc2Enum}’.</string>
+							<string>There are ${count} options matching ‘${backgroundEnum}’.</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>KEwl0k</string>
+							<string>yjMt3z</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>DisambiguationIntroduction</string>
 						</dict>
@@ -180,17 +241,15 @@
 							<key>INIntentParameterPromptDialogCustom</key>
 							<true/>
 							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${mc2Enum}’?</string>
+							<string>Just to confirm, you wanted ‘${backgroundEnum}’?</string>
 							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>Opr29I</string>
+							<string>VOHkai</string>
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Confirmation</string>
 						</dict>
 					</array>
-					<key>INIntentParameterSupportsResolution</key>
-					<true/>
 					<key>INIntentParameterTag</key>
-					<integer>2</integer>
+					<integer>5</integer>
 					<key>INIntentParameterType</key>
 					<string>Integer</string>
 				</dict>
