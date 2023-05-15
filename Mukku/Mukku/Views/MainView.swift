@@ -14,6 +14,7 @@ struct MainView: View {
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     var body: some View {
+        ZStack{
         Form {
             Section (header:
                         VStack {
@@ -83,12 +84,39 @@ struct MainView: View {
                     Image(systemName: "info.circle")
                         .padding(EdgeInsets(top: 0, leading: -15, bottom: 0, trailing: 0))
                 }
-                    .alignmentGuide(.listRowSeparatorLeading) {
-                        ViewDimensions in
-                        return -20
-                    }
+                .alignmentGuide(.listRowSeparatorLeading) {
+                    ViewDimensions in
+                    return -20
+                }
                 Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
                     .font(.system(size: 15))
+            }
+        }
+            // Dynamic Object 애니메이션
+            switch dynamicIslandScene {
+            case let scene where scene.contains("Mask"):
+                MaskView()
+            case let scene where scene.contains("Chandelier"):
+                if UIDevice.current.name == "iPhone 14 Pro Max" {
+                        ChandelierView()
+                            .offset(y: -42)
+                    } else {
+                        ChandelierView()
+                    }
+            case let scene where scene.contains("Boat"):
+                BoatView()
+            case let scene where scene.contains("Rose"):
+                RoseView()
+            case let scene where scene.contains("Sunflower"):
+                SunFlowerView()
+            case let scene where scene.contains("Rapier"):
+                RapierView()
+            case let scene where scene.contains("Windmill"):
+                WindMillView()
+//            case let scene where scene.contains("Typo"):
+//                TypoView()
+            default:
+                EmptyView()
             }
         }
     }
