@@ -76,21 +76,7 @@ struct MainView: View {
                     }
             }
             // 위젯 설정 방법
-            Section() {
-                Label {
-                    Text("Widget Instruction")
-                        .padding(EdgeInsets(top: 0, leading: -20, bottom: 0, trailing: 0))
-                } icon: {
-                    Image(systemName: "info.circle")
-                        .padding(EdgeInsets(top: 0, leading: -15, bottom: 0, trailing: 0))
-                }
-                .alignmentGuide(.listRowSeparatorLeading) {
-                    ViewDimensions in
-                    return -20
-                }
-                Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
-                    .font(.system(size: 15))
-            }
+            WidgetInstruction()
         }
             // Dynamic Object 애니메이션
             switch dynamicIslandScene {
