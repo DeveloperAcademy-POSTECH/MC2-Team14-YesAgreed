@@ -40,6 +40,7 @@ struct MainView: View {
                                 }
                             } label: {
                                 ObjectView(isSelected: dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
+                            .animation(nil, value: self.dynamicIslandScene)
                             .padding(.bottom, 20)
                         }
                     }
