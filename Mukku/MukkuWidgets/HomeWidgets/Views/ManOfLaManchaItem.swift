@@ -13,6 +13,7 @@ struct ManOfLaManchaItem: View {
                 Image("lamancha_bg_small")
                     .resizable()
                     .scaledToFit()
+                Color(entry.bgColor)
                 VStack{
                     Spacer().frame(height: 20)
                     Image("\(entry.scene)\(entry.count)")
