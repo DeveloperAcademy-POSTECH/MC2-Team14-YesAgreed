@@ -26,26 +26,65 @@ struct MaskView: View {
                     Spacer()
                     ZStack{
                         ForEach(maskPositions.indices, id: \.self) { index in
-                            if animationTime == index {
-                                Image("mask1")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 15, height: 15)
-                                    .opacity(maskOpacity)
-                                    .position(x: maskPositions[index].x * geometry.size.width, y: maskPositions[index].y * geometry.size.height)
-                                    .onAppear {
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                            withAnimation(Animation.easeInOut(duration: 0.1).delay(2).repeatForever(autoreverses: false)) {
+                            Image("mask1")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15, height: 15)
+                                .opacity(maskOpacity)
+                                .position(x: maskPositions[animationTime].x * geometry.size.width, y: maskPositions[animationTime].y * geometry.size.height)
+                                .onAppear {
+                                    var animationCycle: () -> Void = {}
+                                        animationCycle = {
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(1)) {
                                                 maskOpacity = 0
                                             }
-                                            withAnimation(nil) {
-                                                animationTime = (animationTime + 1) % maskPositions.count
+                                            DispatchQueue.main.asyncAfter(deadline: .now()+1.4) {
+                                                animationTime = 1
                                             }
-                                            maskOpacity = 1
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(2)) {
+                                                maskOpacity = 1
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(3)) {
+                                                maskOpacity = 0
+                                            }
+                                            DispatchQueue.main.asyncAfter(deadline: .now()+3.4) {
+                                                animationTime = 2
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(4)) {
+                                                maskOpacity = 1
+
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(5)) {
+                                                maskOpacity = 0
+                                            }
+                                            DispatchQueue.main.asyncAfter(deadline: .now()+5.4) {
+                                                animationTime = 3
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(6)) {
+                                                maskOpacity = 1
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(7)) {
+                                                maskOpacity = 0
+                                            }
+                                            DispatchQueue.main.asyncAfter(deadline: .now()+7.4) {
+                                                animationTime = 4
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(8)) {
+                                                maskOpacity = 1
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(9)) {
+                                                maskOpacity = 0
+                                            }
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 9.4) {
+                                                animationTime = 0
+                                                animationCycle()
+                                            }
+                                            withAnimation(Animation.easeInOut(duration: 0.3).delay(10)) {
+                                                maskOpacity = 1
+                                            }
                                         }
-                                    }
-                            }
-                            
+                                        animationCycle()
+                                }
                         }
                     }
                     Spacer()
