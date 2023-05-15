@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.Mukku</string>
+		<string>group.com.ada2023.Mukku</string>
 	</array>
 </dict>
 </plist>

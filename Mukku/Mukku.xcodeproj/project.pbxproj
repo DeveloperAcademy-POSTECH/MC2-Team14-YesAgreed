@@ -165,6 +165,7 @@
 		C421C1612A0C96C0000D0461 /* MukkuWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MukkuWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		C421C1622A0C96D1000D0461 /* MukkuWatchExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MukkuWatchExtensionExtension.entitlements; sourceTree = "<group>"; };
 		C471A8392A0DD55100BF35DE /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C4C570802A11B5BF009C6349 /* MukkuWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MukkuWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C5CF645E2A09E60300D24B61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C5CF64602A09E62400D24B61 /* MusicalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalModel.swift; sourceTree = "<group>"; };
 		C5CF64632A09E68100D24B61 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
@@ -310,6 +311,7 @@
 		B402EFCB2A089C0F00BE37FE /* MukkuWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				C4C570802A11B5BF009C6349 /* MukkuWatch Watch App.entitlements */,
 				B402EFCC2A089C0F00BE37FE /* MukkuWatchApp.swift */,
 				B402EFCE2A089C0F00BE37FE /* ContentView.swift */,
 				B402EFD02A089C1000BE37FE /* Assets.xcassets */,
@@ -862,6 +864,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MukkuWatch Watch App/MukkuWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MukkuWatch Watch App/Preview Content\"";
@@ -893,6 +896,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MukkuWatch Watch App/MukkuWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MukkuWatch Watch App/Preview Content\"";
