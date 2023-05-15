@@ -15,30 +15,27 @@ struct MukkuWidgetsLiveActivity: Widget {
                     Image("\(context.state.scene)_dynamic")
                         .resizable()
                         .scaledToFit()
-                }
-                DynamicIslandExpandedRegion(.trailing) {
-                    Image("\(context.state.scene)_dynamic")
-                        .resizable()
-                        .scaledToFit()
-                }
-                DynamicIslandExpandedRegion(.bottom) {
-                    Image("\(context.state.scene)_dynamic")
-                        .resizable()
-                        .scaledToFit()
-                    // more content
+                        .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                        .clipShape(Circle())
                 }
             } compactLeading: {
                 Image("\(context.state.scene)_dynamic")
                     .resizable()
                     .scaledToFit()
+                    .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                    .clipShape(Circle())
             } compactTrailing: {
                 Image("\(context.state.scene)_dynamic")
                     .resizable()
                     .scaledToFit()
+                    .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                    .clipShape(Circle())
             } minimal: {
                 Image("\(context.state.scene)_dynamic")
                     .resizable()
                     .scaledToFit()
+                    .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                    .clipShape(Circle())
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
