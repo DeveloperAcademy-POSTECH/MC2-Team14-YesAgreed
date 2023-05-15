@@ -62,6 +62,7 @@
 		C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF645E2A09E60300D24B61 /* MainView.swift */; };
 		C5CF64612A09E62400D24B61 /* MusicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64602A09E62400D24B61 /* MusicalModel.swift */; };
 		C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64632A09E68100D24B61 /* ObjectView.swift */; };
+		CDCAE16B2A11BC6700ED9A06 /* WidgetInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCAE16A2A11BC6700ED9A06 /* WidgetInstruction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		C5CF645E2A09E60300D24B61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C5CF64602A09E62400D24B61 /* MusicalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalModel.swift; sourceTree = "<group>"; };
 		C5CF64632A09E68100D24B61 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
+		CDCAE16A2A11BC6700ED9A06 /* WidgetInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInstruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,10 +238,10 @@
 		73472F082A034BB900389862 /* Mukku */ = {
 			isa = PBXGroup;
 			children = (
+				CDCAE1672A11B84800ED9A06 /* Model */,
 				73472F472A0356D100389862 /* Info.plist */,
 				73472F092A034BB900389862 /* MukkuApp.swift */,
-				C5CF64602A09E62400D24B61 /* MusicalModel.swift */,
-				C5CF64622A09E66900D24B61 /* Views */,
+				C5CF64622A09E66900D24B61 /* View */,
 				73472F0D2A034BBA00389862 /* Assets.xcassets */,
 				73472F0F2A034BBA00389862 /* Preview Content */,
 			);
@@ -281,20 +283,20 @@
 			children = (
 				73472F262A034C2700389862 /* MukkuWidgets.swift */,
 				73472F3A2A034D8000389862 /* MukkuWidgetsEntryView.swift */,
-				73472F402A0354B100389862 /* Views */,
+				73472F402A0354B100389862 /* WidgetsView */,
 				73472F362A034D3500389862 /* Provider.swift */,
 				73472F382A034D5000389862 /* SimpleEntry.swift */,
 			);
 			path = HomeWidgets;
 			sourceTree = "<group>";
 		};
-		73472F402A0354B100389862 /* Views */ = {
+		73472F402A0354B100389862 /* WidgetsView */ = {
 			isa = PBXGroup;
 			children = (
 				73472F412A0354CC00389862 /* PhantomOfOperaItem.swift */,
 				73A32C212A0BA9D10065A73B /* ManOfLaManchaItem.swift */,
 			);
-			path = Views;
+			path = WidgetsView;
 			sourceTree = "<group>";
 		};
 		73472F4D2A0361D900389862 /* LiveActivity */ = {
@@ -332,27 +334,52 @@
 				B413D2F02A0A398300EC34DC /* MukkuWatchExtension2.swift */,
 				B413D2F22A0A3BF900EC34DC /* MukkuWatchBundle.swift */,
 				B4A209232A08A65B00D3042A /* MukkuWatchExtension.intentdefinition */,
-				B4A209362A09227A00D3042A /* Views_Watch */,
+				B4A209362A09227A00D3042A /* WatchView */,
 				B4A209242A08A65C00D3042A /* Assets.xcassets */,
 				B4A209262A08A65C00D3042A /* Info.plist */,
 			);
 			path = MukkuWatchExtension;
 			sourceTree = "<group>";
 		};
-		B4A209362A09227A00D3042A /* Views_Watch */ = {
+		B4A209362A09227A00D3042A /* WatchView */ = {
 			isa = PBXGroup;
 			children = (
 				B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */,
 				B413D2EA2A09F8A200EC34DC /* LaManchaTypo.swift */,
 			);
-			path = Views_Watch;
+			path = WatchView;
 			sourceTree = "<group>";
 		};
-		C5CF64622A09E66900D24B61 /* Views */ = {
+		C5CF64622A09E66900D24B61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CDCAE1692A11B98700ED9A06 /* AnimationView */,
+				CDCAE1682A11B97400ED9A06 /* Conponents */,
 				C5CF645E2A09E60300D24B61 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDCAE1672A11B84800ED9A06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF64602A09E62400D24B61 /* MusicalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDCAE1682A11B97400ED9A06 /* Conponents */ = {
+			isa = PBXGroup;
+			children = (
 				C5CF64632A09E68100D24B61 /* ObjectView.swift */,
+				CDCAE16A2A11BC6700ED9A06 /* WidgetInstruction.swift */,
+			);
+			path = Conponents;
+			sourceTree = "<group>";
+		};
+		CDCAE1692A11B98700ED9A06 /* AnimationView */ = {
+			isa = PBXGroup;
+			children = (
 				953C60CC2A0DEBAC00E56DD5 /* MaskView.swift */,
 				953C60CB2A0DEBAC00E56DD5 /* RapierView.swift */,
 				953C60D52A0DED6300E56DD5 /* BoatView.swift */,
@@ -362,7 +389,7 @@
 				953C60C92A0DEBAC00E56DD5 /* TypoView.swift */,
 				953C60C82A0DEBAC00E56DD5 /* WindmillView.swift */,
 			);
-			path = Views;
+			path = AnimationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,6 +567,7 @@
 				953C60D02A0DEBAD00E56DD5 /* RoseView.swift in Sources */,
 				73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
 				953C60CE2A0DEBAD00E56DD5 /* WindmillView.swift in Sources */,
+				CDCAE16B2A11BC6700ED9A06 /* WidgetInstruction.swift in Sources */,
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 				C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */,
 				953C60D12A0DEBAD00E56DD5 /* RapierView.swift in Sources */,

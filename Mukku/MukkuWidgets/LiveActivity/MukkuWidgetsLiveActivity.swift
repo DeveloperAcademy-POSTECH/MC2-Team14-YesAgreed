@@ -7,14 +7,6 @@ struct MukkuWidgetsLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                Image("\(context.state.scene)_dynamic")
-                    .resizable()
-                    .scaledToFit()
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
-
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through

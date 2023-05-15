@@ -1,10 +1,3 @@
-//
-//  RoseView.swift
-//  Mukku
-//
-//  Created by polyappledev on 2023/05/11.
-//
-
 import SwiftUI
 
 let rosePositions: [CGPoint] = [

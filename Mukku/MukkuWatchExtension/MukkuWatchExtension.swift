@@ -1,10 +1,3 @@
-//
-//  MukkuWatchExtension.swift
-//  MukkuWatchExtension
-//
-//  Created by Jae Ho Yoon on 2023/05/08.
-//
-
 import WidgetKit
 import SwiftUI
 import Intents

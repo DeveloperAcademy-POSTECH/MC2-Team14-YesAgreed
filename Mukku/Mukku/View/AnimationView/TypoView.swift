@@ -22,20 +22,6 @@ struct ThrowAnimationWrapper<Content: View>: UIViewRepresentable{
     func makeUIView(context: Context) -> UIView {
         UIHostingController(rootView: content()).view
     }
-//    fileprivate func hello(_ uiView: UIView, x:Int, startTime:Double) {
-//        UIView.addKeyframe(withRelativeStartTime: startTime, relativeDuration: 2, animations: {
-//            uiView.center =  CGPoint(x: x, y: 290)
-//            uiView.transform = CGAffineTransform(rotationAngle: 0)
-//        })
-//        UIView.addKeyframe(withRelativeStartTime: startTime + 0.1, relativeDuration: 3, animations: {
-//            uiView.center =  CGPoint(x: x + 20, y: 280 )
-//            uiView.transform = CGAffineTransform(rotationAngle: -0.4)
-//        })
-//        UIView.addKeyframe(withRelativeStartTime: startTime + 0.2, relativeDuration: 2, animations: {
-//            uiView.center =  CGPoint(x: x + 40, y: 300)
-//            uiView.transform = CGAffineTransform(rotationAngle: 0)
-//        })
-//    }
     
     func updateUIView(_ uiView: UIView, context: Context) {
         let totalStep : Double = 15
