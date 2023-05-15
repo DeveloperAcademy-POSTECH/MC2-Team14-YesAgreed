@@ -99,8 +99,8 @@ struct MainView: View {
                 RapierView()
             case let scene where scene.contains("Windmill"):
                 WindMillView()
-//            case let scene where scene.contains("Typo"):
-//                TypoView()
+            case let scene where scene.contains("Typo"):
+                TypoView()
             default:
                 EmptyView()
             }
