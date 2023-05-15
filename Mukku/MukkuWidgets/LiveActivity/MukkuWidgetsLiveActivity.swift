@@ -56,7 +56,7 @@ struct TimeTrackingWidgetView : View {
 
 struct MukkuWidgetsLiveActivity_Previews: PreviewProvider {
     static let attributes = MukkuWidgetsAttributes()
-    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date(), scene:"mask")
+    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date(), scene:"typo")
 
     static var previews: some View {
         attributes
