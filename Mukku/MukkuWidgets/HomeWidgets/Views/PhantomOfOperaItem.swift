@@ -22,14 +22,16 @@ struct PhantomOfOperaItem: View {
         case .systemSmall:
             ZStack {
                 // Transparent background
-                if entry.imageID != "" {
-                    let imageID = entry.imageID
-                    let image = Helper.getImageFromUserDefaults(key: imageID)
-                    let newImage = image.resized(toWidth: 120)
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                        let imageID = entry.imageID?.last!
+                        let image = Helper.getImageFromUserDefaults(key: imageID!)
+                        let newImage = image.resized(toWidth: 120)
+                        
+                        Image(uiImage: newImage!)
+                            .resizable()
+                            .scaledToFit()
+//                    }
                     
-                    Image(uiImage: newImage!)
-                        .resizable()
-                        .scaledToFit()
 
                 } else {
                     Image("phantom_bg_small")
@@ -57,16 +59,16 @@ struct PhantomOfOperaItem: View {
             
         case .systemMedium:
             ZStack {
-                if entry.imageID != "" {
-                    let imageID = entry.imageID
-                    let image = Helper.getImageFromUserDefaults(key: imageID)
-                    let newImage = image.resized(toWidth: 120)
-                    
-                    Image(uiImage: newImage!)
-                        .resizable()
-                        .scaledToFit()
-
-                }
+//                if entry.imageID != "" {
+//                    let imageID = entry.imageID
+//                    let image = Helper.getImageFromUserDefaults(key: imageID)
+//                    let newImage = image.resized(toWidth: 120)
+//                    
+//                    Image(uiImage: newImage!)
+//                        .resizable()
+//                        .scaledToFit()
+//
+//                }
                 Image("phantom_bg_medium")
                     .resizable()
                     .scaledToFit()

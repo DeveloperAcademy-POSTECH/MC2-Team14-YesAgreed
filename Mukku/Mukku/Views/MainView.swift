@@ -27,7 +27,7 @@ struct MainView: View {
     @EnvironmentObject var imageManager: ImageManager
     @State private var showImagePicker = false
     @State private var image = UIImage()
-    
+    @State var backgroundEnabled: Bool = false
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     
@@ -146,7 +146,10 @@ struct MainView: View {
                  }
              }
              */
-            
+//            Section(header: Text("Use custom Background Image")) {
+//                Toggle("Custom Background Image", isOn: $backgroundEnabled)
+//                
+//            }
             // 저장도 한개만 하도록 변경 필요함
             ZStack(alignment: .bottom){
                     VStack {

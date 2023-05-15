@@ -11,14 +11,17 @@ struct ManOfLaManchaItem: View {
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                if entry.imageID != "" {
-                    let imageID = entry.imageID
-                    let image = Helper.getImageFromUserDefaults(key: imageID)
-                    let newImage = image.resized(toWidth: 120)
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+//                    if {
+                        let imageID = entry.imageID!.last!
+                        let image = Helper.getImageFromUserDefaults(key: imageID)
+                        let newImage = image.resized(toWidth: 120)
+                        
+                        Image(uiImage: newImage!)
+                            .resizable()
+                            .scaledToFit()
+//                    }
                     
-                    Image(uiImage: newImage!)
-                        .resizable()
-                        .scaledToFit()
 
                 } else {
                     Image("lamancha_bg_small")
@@ -40,8 +43,8 @@ struct ManOfLaManchaItem: View {
             
         case .systemMedium:
             ZStack {
-                if entry.imageID != "" {
-                    let imageID = entry.imageID
+                if entry.imageID != [""] {
+                    let imageID = entry.imageID!.last!
                     let image = Helper.getImageFromUserDefaults(key: imageID)
                     let newImage = image.resized(toWidth: 120)
                     

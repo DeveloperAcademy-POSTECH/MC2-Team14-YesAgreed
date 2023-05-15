@@ -10,7 +10,7 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: "")
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""])
         completion(entry)
     }
 
@@ -26,7 +26,7 @@ struct Provider: IntentTimelineProvider {
         let bg = backgrounding(by: configuration.backgroundEnum)
 //        let bg = matching(by: configuration.transparentEnum)
 //        if bg
-//        print(bg)
+        print("bg:", bg)
 //        switch bg{
 //        case.upperright
 //        }
@@ -70,27 +70,15 @@ struct Provider: IntentTimelineProvider {
         case.unknown: return "mask"
         }
     }
-    fileprivate func backgrounding(by mC2BackgroundEnum: BackgroundEnum)->String{
+    fileprivate func backgrounding(by mC2BackgroundEnum: BackgroundEnum)->[String]{
         let imageIds = Helper.getImageIdsFromUserDefault()
+        print("imageIds:", imageIds)
+//        print("imageIds last:", imageIds.last!)
         switch mC2BackgroundEnum {
-        case.transparent: return imageIds.last!
-        case.topicDefault: return ""
-        case.unknown: return ""
+        case.transparent: return imageIds
+        case.topicDefault: return [""]
+        case.unknown: return [""]
         }
 
     }
-//    fileprivate func matching(by mCTransparentnum: BackgroundEnum)->String{
-//        switch mCTransparentnum {
-//        case.phantomOfOpera1: return "mask"
-//        case.phantomOfOpera2: return "boat"
-//        case.phantomOfOpera3: return "chandelier"
-//        case.phantomOfOpera4: return "rose"
-//        case.manOfLaMancha1: return "sunflower"
-//        case.manOfLaMancha2: return "rapier"
-//        case.manOfLaMancha3: return "windmill"
-//        case.manOfLaMancha4: return "typo"
-//        case.unknown: return "nil"
-//        }
-//    }
-    
 }
