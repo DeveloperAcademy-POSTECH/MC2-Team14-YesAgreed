@@ -4,7 +4,7 @@ import WidgetKit
 struct ManOfLaManchaItem: View {
     
     @Environment(\.widgetFamily) var widgetFamily
-    var entry : SimpleEntry = SimpleEntry(scene: "sunflower")
+    var entry : SimpleEntry = SimpleEntry()
     var body: some View {
         
         switch widgetFamily {
