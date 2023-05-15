@@ -4,29 +4,10 @@ struct TypoView: View {
     @State private var isAnimating = false
     var body: some View {
             VStack{
-                if UIDevice.current.name == "iPhone 14 Pro Max" {
-                    Image("typo1")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height:15)
-                        .throwAnimation(isAnimating: $isAnimating)
-                        .onAppear {
-                            isAnimating.toggle()
-                        }
-                    } else {
-                        Image("typo1")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height:15)
-                            .animation(
-                            Animation.easeInOut(duration: 3)
-                                .repeatForever(autoreverses: true),
-                            value: isAnimating)
-                            .onAppear {self.isAnimating = true}
-                            .onAppear()
-                        
-                    }
-                
+                Image("typo1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height:15)
                 Spacer()
             }.ignoresSafeArea()
     }
