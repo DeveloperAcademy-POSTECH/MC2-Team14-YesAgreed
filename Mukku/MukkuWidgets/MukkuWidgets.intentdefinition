@@ -208,6 +208,16 @@
 					<key>INEnumValueName</key>
 					<string>Black</string>
 				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>default theme</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>xWO8jM</string>
+					<key>INEnumValueIndex</key>
+					<integer>9</integer>
+					<key>INEnumValueName</key>
+					<string>DefaultTheme</string>
+				</dict>
 			</array>
 		</dict>
 	</array>

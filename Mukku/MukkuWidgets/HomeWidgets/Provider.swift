@@ -65,7 +65,8 @@ struct Provider: IntentTimelineProvider {
         case .purple: return UIColor(Color.purple)
         case .gray: return UIColor(Color.gray)
         case .black: return UIColor(Color.black)
-        case.unknown: return UIColor(Color.black)
+        case .defaultTheme: return UIColor(Color.clear)
+        case.unknown: return UIColor(Color.clear)
         }
     }
 }
