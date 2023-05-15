@@ -1,139 +1,111 @@
 import SwiftUI
 
 struct TypoView: View {
-    @State private var isAnimating = false
+    @State var yOffset : CGFloat = 6
+    @State var xOffset : CGFloat = 30
+    @State var xScale : CGFloat = -1
+    
     var body: some View {
-            VStack{
+        GeometryReader{ geometry in
                 Image("typo1")
                     .resizable()
                     .scaledToFit()
-                    .frame(height:15)
-                Spacer()
-            }.ignoresSafeArea()
-    }
-}
-
-struct ThrowAnimationWrapper<Content: View>: UIViewRepresentable{
-    @ViewBuilder let content: () -> Content
-    @Binding var isAnimating: Bool
-    func makeUIView(context: Context) -> UIView {
-        UIHostingController(rootView: content()).view
-    }
-    
-    func updateUIView(_ uiView: UIView, context: Context) {
-        let totalStep : Double = 15
-        if isAnimating{
-            UIView.animateKeyframes(withDuration: 4, delay: 0.0, options: [.repeat], animations: {
-                //시작 01
-                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration:0.0, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center = CGPoint(x: 340, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-                //Move to right 02
-                UIView.addKeyframe(withRelativeStartTime: 1/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center = CGPoint(x: 340+12.5, y: -416-8)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-//                //Move to right 03
-                UIView.addKeyframe(withRelativeStartTime: 2/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 340+25, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-//                //Move to right 04
-                UIView.addKeyframe(withRelativeStartTime: 3/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 340+37.5, y: -416-8)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-//                //05
-                UIView.addKeyframe(withRelativeStartTime: 4/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 340+50, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-                //06
-                UIView.addKeyframe(withRelativeStartTime: 5/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 340+60, y: -416-8)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-                //07
-                UIView.addKeyframe(withRelativeStartTime: 6/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 340+70, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
-                //08
-                UIView.addKeyframe(withRelativeStartTime: 7/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //Rotate to left
-                //09
-                UIView.addKeyframe(withRelativeStartTime: 8/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80-12.5, y: -416-8)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //10
-                UIView.addKeyframe(withRelativeStartTime: 9/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80-25, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //10
-                UIView.addKeyframe(withRelativeStartTime: 10/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80-37.5, y: -416-8)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //11
-                UIView.addKeyframe(withRelativeStartTime: 11/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80-50, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //11
-                UIView.addKeyframe(withRelativeStartTime: 12/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80-60, y: -416-8)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //12
-                UIView.addKeyframe(withRelativeStartTime: 13/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 80-70, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                })
-                //13
-                UIView.addKeyframe(withRelativeStartTime: 14/totalStep, relativeDuration:1/totalStep, animations: {
-                    uiView.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 100, height: 100))
-                    uiView.center =  CGPoint(x: 340, y: -416-4)
-                    uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-                })
+                    .frame(height: 17)
+                    .position(x: xOffset+(geometry.size.width)/2,y:yOffset) //180
+                    .scaleEffect(
+                        x:xScale,
+                        anchor: UnitPoint(
+                            x: (xOffset/geometry.size.width) + 0.5,
+                            y: 0.5)) //전체 위치중 중간값
+                    .onAppear {
+                        let totalTime : CGFloat = 2
+                        let totalStep : CGFloat = 15
+                        let tmPrStp = totalTime/totalStep
+                        var animationCycle: () -> Void = {}
+                            animationCycle = {
+                                // 01
+                                withAnimation(Animation.linear(duration : tmPrStp).delay(0*tmPrStp)) {
+                                    xOffset = -40+12.5*0
+                                    yOffset = 6
+                                }
+                                // 02
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(1*tmPrStp)) {
+                                    xOffset = -40+12.5*1
+                                    yOffset = 0
+                                }
+                                // 03
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(2*tmPrStp)) {
+                                    xOffset = -40+12.5*2
+                                    yOffset = 6
+                                }
+                                //04
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(3*tmPrStp)) {
+                                    xOffset = -40+12.5*3
+                                    yOffset = 0
+                                }
+                                //05
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(4*tmPrStp)) {
+                                    xOffset = -40+12.5*4
+                                    yOffset = 6
+                                }
+                                //06
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(5*tmPrStp)) {
+                                    xOffset = -40+12.5*5
+                                    yOffset = 0
+                                }
+                                //07
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(6*tmPrStp)) {
+                                    xOffset = -40+12.5*6
+                                    yOffset = 6
+                                }
+                                //08
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(7*tmPrStp)) {
+                                    xOffset = -40+12.5*6
+                                    yOffset = 6
+                                    xScale = 1
+                                }
+                                //09
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(9*tmPrStp)) {
+                                    xOffset = -40+12.5*5
+                                    yOffset = 0
+                                }
+                                //10
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(10*tmPrStp)) {
+                                    xOffset = -40+12.5*4
+                                    yOffset = 6
+                                }
+                                //11
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(11*tmPrStp)) {
+                                    xOffset = -40+12.5*3
+                                    yOffset = 0
+                                }
+                                //12
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(12*tmPrStp)) {
+                                    xOffset = -40+12.5*2
+                                    yOffset = 6
+                                }
+                                //13
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(13*tmPrStp)) {
+                                    xOffset = -40+12.5*1
+                                    yOffset = 0
+                                }
+                                //14
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(14*tmPrStp)) {
+                                    xOffset = -40
+                                    yOffset = 6
+                                }
+                                //15
+                                withAnimation(Animation.linear(duration: tmPrStp).delay(15*tmPrStp)) {
+                                    xOffset = -40
+                                    xScale = -1
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + totalTime) {
+                                    animationCycle()
+                                }
+                            }
+                            animationCycle()
             }
-                                    ,completion: { _ in
-                uiView.transform = CGAffineTransform(scaleX: -1, y: 1)
-            })
-        }
-    }
-}
-
-extension View {
-    func throwAnimation( isAnimating: Binding<Bool>) -> some View {
-        modifier(ThrowAnimationViewModifier(isAnimating: isAnimating))
-    }
-}
-struct ThrowAnimationViewModifier: ViewModifier {
-    @Binding var isAnimating: Bool
-    func body(content: Content) -> some View {
-        ThrowAnimationWrapper(content: {
-            content
-        }, isAnimating: $isAnimating)
+        }.ignoresSafeArea()
     }
 }
 
