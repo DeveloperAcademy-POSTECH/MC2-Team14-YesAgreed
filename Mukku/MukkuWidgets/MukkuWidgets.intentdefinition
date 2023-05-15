@@ -107,6 +107,109 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>ColorEnum</string>
+			<key>INEnumDisplayNameID</key>
+			<string>7EKojr</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>ColorEnum</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>unknown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>IgiBbC</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>red</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>wkEVBC</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>Red</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>orange</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>ixhEX0</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>Orange</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>yellow</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>fOkYMM</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>Yellow</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>green</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>9plC1O</string>
+					<key>INEnumValueIndex</key>
+					<integer>4</integer>
+					<key>INEnumValueName</key>
+					<string>Green</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>blue</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>QFIdFO</string>
+					<key>INEnumValueIndex</key>
+					<integer>5</integer>
+					<key>INEnumValueName</key>
+					<string>Blue</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>purple</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>CoAq0F</string>
+					<key>INEnumValueIndex</key>
+					<integer>6</integer>
+					<key>INEnumValueName</key>
+					<string>Purple</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>gray</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>PpHnCn</string>
+					<key>INEnumValueIndex</key>
+					<integer>7</integer>
+					<key>INEnumValueName</key>
+					<string>Gray</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>black</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>4hp3U7</string>
+					<key>INEnumValueIndex</key>
+					<integer>8</integer>
+					<key>INEnumValueName</key>
+					<string>Black</string>
+				</dict>
+			</array>
+		</dict>
 	</array>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.2</string>
@@ -130,7 +233,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>2</integer>
+			<integer>5</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
@@ -191,6 +294,65 @@
 					<true/>
 					<key>INIntentParameterTag</key>
 					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Select Background Color</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>3pfC42</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>ColorEnum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterName</key>
+					<string>colorEnum</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${colorEnum}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>ka1FOk</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${colorEnum}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>CoLnWE</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>5</integer>
 					<key>INIntentParameterType</key>
 					<string>Integer</string>
 				</dict>
