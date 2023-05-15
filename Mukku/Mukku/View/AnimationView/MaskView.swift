@@ -1,10 +1,3 @@
-//
-//  MaskView.swift
-//  Mukku
-//
-//  Created by polyappledev on 2023/05/10.
-//
-
 import SwiftUI
 
 let maskPositions: [CGPoint] = [

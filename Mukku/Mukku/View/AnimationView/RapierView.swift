@@ -1,11 +1,3 @@
-//
-//  RapierView.swift
-//  Mukku
-//
-//  Created by polyappledev on 2023/05/12.
-//
-
-
 import SwiftUI
 
 
@@ -18,8 +10,6 @@ struct RapierViewElement: View {
 
     var body: some View {
         ZStack{
-//            GeometryReader{ geometry in
-
                     ZStack{
                         Image("rapier1")
                             .resizable()
@@ -49,9 +39,6 @@ struct RapierViewElement: View {
                             }
                     }
                     Spacer()
-                
-                
-//            }
         }
         .ignoresSafeArea()
     }

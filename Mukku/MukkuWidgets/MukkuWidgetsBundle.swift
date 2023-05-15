@@ -1,10 +1,3 @@
-//
-//  MukkuWidgetsBundle.swift
-//  MukkuWidgets
-//
-//  Created by Kihyun Roh on 2023/05/04.
-//
-
 import WidgetKit
 import SwiftUI
 
