@@ -62,6 +62,7 @@ struct ManOfLaManchaItem: View {
                     .resizable()
                     .scaledToFit()
                 Text("The Impossible Dream")
+                    .font(.system(size: 15))
                 Spacer()
             }
             .padding(.leading, 6)

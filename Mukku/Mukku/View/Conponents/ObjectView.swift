@@ -1,10 +1,3 @@
-//
-//  ObjectView.swift
-//  Main
-//
-//  Created by 김혜린 on 2023/05/08.
-//
-
 import SwiftUI
 
 struct ObjectView: View {
@@ -25,7 +18,6 @@ struct ObjectView: View {
                 )
             Text(text)
                 .font(.caption)
-//                .font(.system(size: 15))
                 .foregroundColor(Color("color_font_black"))
                 .textCase(nil)
         }

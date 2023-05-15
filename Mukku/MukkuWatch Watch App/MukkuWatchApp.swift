@@ -1,10 +1,3 @@
-//
-//  MukkuWatchApp.swift
-//  MukkuWatch Watch App
-//
-//  Created by Jae Ho Yoon on 2023/05/08.
-//
-
 import SwiftUI
 
 @main
