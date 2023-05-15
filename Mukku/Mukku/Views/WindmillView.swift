@@ -29,11 +29,8 @@ struct WindmillViewElement: View {
 struct WindMillView: View {
     var body: some View {
         VStack{
-            HStack(spacing: 60){
-                WindmillViewElement()
-                WindmillViewElement()
-            }
-        Spacer()
+            WindmillViewElement()
+            Spacer()
         }.edgesIgnoringSafeArea(.all)
     }
 }
