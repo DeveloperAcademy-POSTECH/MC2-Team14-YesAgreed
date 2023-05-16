@@ -20,7 +20,7 @@ struct ManOfLaManchaItemLock: View {
                     .resizable()
                     .scaledToFit()
                 Text("The Impossible Dream")
-                    .font(.system(size: 15))
+                    .font(.system(size: 13))
                 Spacer()
             }
             .padding(.leading, 6)
