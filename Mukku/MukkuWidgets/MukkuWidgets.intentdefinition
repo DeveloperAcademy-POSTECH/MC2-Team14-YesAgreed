@@ -410,7 +410,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>아이템 선택</string>
+					<string>오브젝트 선택</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>Mj8LwZ</string>
 					<key>INIntentParameterDisplayPriority</key>
