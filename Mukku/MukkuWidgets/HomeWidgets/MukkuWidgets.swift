@@ -12,7 +12,7 @@ struct MukkuWidgets: Widget {
             provider: Provider()) { entry in
                 MukkuWidgetsEntryView(entry: entry)
             }
-            .configurationDisplayName("My Widget")
+            .configurationDisplayName("Mukku Widget")
             .description("This is an example widget.")
             .supportedFamilies([.systemSmall, .systemMedium])
     }
