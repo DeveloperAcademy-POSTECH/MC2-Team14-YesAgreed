@@ -97,9 +97,9 @@ struct MainView: View {
                             }
                     }
                     Section(header: Text("Instruction")) {
-                        NavigationLink(destination: InstructionView(instruction: "Widget")){Text("Widget")}
-                        NavigationLink(destination: InstructionView(instruction: "Dynamic Island")){Text("Dynamic Island")}
-                        NavigationLink(destination: InstructionView(instruction: "Watch")){Text("Apple Watch")}
+                        NavigationLink(destination: WidgetInstructionView()){Text("Widget")}
+                        NavigationLink(destination: WidgetInstructionView()){Text("Dynamic Island")}
+                        NavigationLink(destination: WidgetInstructionView()){Text("Apple Watch")}
                     }
                     
                     Section(header: Text("위젯 배경 설정")) {
