@@ -31,15 +31,7 @@ struct MainView: View {
         NavigationStack{
             ZStack{
                 Form {
-                    Section (header:
-                                VStack {
-                                    Text("Dynamic Island")
-                    .bold()
-                    .foregroundColor(Color("color_font_black"))
-                    .font(.system(.title))
-                    .textCase(nil)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
+                    Section (header: VStack {
                         ForEach(MusicalModel.musicalModels, id:\.self){ musical in
                             Text(LocalizedStringKey(musical.title))
                                 .bold()
@@ -66,9 +58,15 @@ struct MainView: View {
                                 }
                             }
                         }
+                        Text("위에서 선택한 오브젝트가 다이나믹 아일랜드에 표시됩니다.")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(Color("color_font_black"))
+                            .padding(.bottom)
+                        
                     }
                         .frame(width: screenWidth * 0.85) // 그리드 폭 조절
                         .padding(.bottom, -20)
+                             
                     ){
                     }
                     Section(footer: Text("토글 시 선택한 오브젝트가 홈 화면 다이나믹 아일랜드에서 보입니다.")) {
