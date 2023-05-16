@@ -15,13 +15,6 @@ struct MainView: View {
     @State var dynamicEnabled: Bool = true
     @State var dynamicIslandScene: String = ""
     @State var selectedScene: String = ""
-    @State var selectedItems: [PhotosPickerItem] = []
-    @State var data: Data?
-    @EnvironmentObject var imageManager: ImageManager
-    @State private var showImagePicker = false
-    @State private var image = UIImage()
-    @State var backgroundEnabled: Bool = false
-
     
     let screenWidth = UIScreen.main.bounds.size.width
     let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 10), count: 4) // 그리드 여백

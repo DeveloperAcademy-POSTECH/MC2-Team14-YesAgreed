@@ -16,16 +16,24 @@ struct SimpleEntry: TimelineEntry {
         self.configuration = ConfigurationIntent()
         self.count = 1
         self.imageID = [""]
-        self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        if UIDevice.current.name == "iPhone 14 Pro Max" {
+            self.position = ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+        } else {
+            self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+        }
         self.bgColor = UIColor(Color.clear)
     }
-    init(imageID:String?) {
+    init(imageID:[String]?) {
         self.date = Date()
         self.scene = "mask"
         self.configuration = ConfigurationIntent()
         self.count = 1
         self.imageID = [""]
-        self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        if UIDevice.current.name == "iPhone 14 Pro Max" {
+            self.position = ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+        } else {
+            self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+        }
         self.bgColor = UIColor(Color.clear)
     }
     init(scene:String){
@@ -34,7 +42,11 @@ struct SimpleEntry: TimelineEntry {
         self.configuration = ConfigurationIntent()
         self.count = 1
         self.imageID = [""]
-        self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        if UIDevice.current.name == "iPhone 14 Pro Max" {
+            self.position = ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+        } else {
+            self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+        }
         self.bgColor = UIColor(Color.clear)
     }
     init(date: Date, scene : String, configuration: ConfigurationIntent, count: Int, imageID: [String]?, position: Dictionary<String, Int>, bgColor: UIColor) {

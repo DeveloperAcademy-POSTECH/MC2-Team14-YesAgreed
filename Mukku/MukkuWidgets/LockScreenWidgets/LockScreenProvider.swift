@@ -58,12 +58,11 @@ struct LockScreenProvider: IntentTimelineProvider {
         case.red: return UIColor(Color.red)
         case.orange: return UIColor(Color.orange)
         case.yellow: return UIColor(Color.yellow)
-        case .green: return UIColor(Color.green)
-        case .blue: return UIColor(Color.blue)
-        case .purple: return UIColor(Color.purple)
-        case .gray: return UIColor(Color.gray)
-        case .black: return UIColor(Color.black)
-        case .defaultTheme: return UIColor(Color.clear)
+        case.green: return UIColor(Color.green)
+        case.blue: return UIColor(Color.blue)
+        case.purple: return UIColor(Color.purple)
+        case.gray: return UIColor(Color.gray)
+        case.black: return UIColor(Color.black)
         case.unknown: return UIColor(Color.clear)
         }
     }
