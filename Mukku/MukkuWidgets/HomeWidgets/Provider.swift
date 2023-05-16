@@ -68,6 +68,7 @@ struct Provider: IntentTimelineProvider {
             switch mC2BackgroundEnum {
             case.transparent: return imageIds
             case.defaultTheme: return [""]
+            case.singleColor: return [""]
             case.unknown: return [""]
             }
         }
@@ -148,7 +149,6 @@ struct Provider: IntentTimelineProvider {
         case .purple: return UIColor(Color.purple)
         case .gray: return UIColor(Color.gray)
         case .black: return UIColor(Color.black)
-        case .defaultTheme: return UIColor(Color.clear)
         case.unknown: return UIColor(Color.clear)
         }
     }

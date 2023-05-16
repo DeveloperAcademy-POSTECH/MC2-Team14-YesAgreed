@@ -31,7 +31,6 @@ struct PhantomOfOperaItem: View {
                         .frame(width: 120, height: 120)
                         .scaledToFit()
                         .offset(y: -15)
-
                 } else {
                     Image("phantom_bg_small")
                         .resizable()

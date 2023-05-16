@@ -208,16 +208,6 @@
 					<key>INEnumValueName</key>
 					<string>Black</string>
 				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
-					<string>기본 배경</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>xWO8jM</string>
-					<key>INEnumValueIndex</key>
-					<integer>9</integer>
-					<key>INEnumValueName</key>
-					<string>DefaultTheme</string>
-				</dict>
 			</array>
 		</dict>
 		<dict>
@@ -260,6 +250,16 @@
 					<integer>2</integer>
 					<key>INEnumValueName</key>
 					<string>DefaultTheme</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>single color</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>ihedPj</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>SingleColor</string>
 				</dict>
 			</array>
 		</dict>
@@ -474,75 +474,11 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>배경색 선택</string>
-					<key>INIntentParameterDisplayNameID</key>
-					<string>3pfC42</string>
-					<key>INIntentParameterDisplayPriority</key>
-					<integer>2</integer>
-					<key>INIntentParameterEnumType</key>
-					<string>ColorEnum</string>
-					<key>INIntentParameterEnumTypeNamespace</key>
-					<string>88xZPY</string>
-					<key>INIntentParameterMetadata</key>
-					<dict>
-						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>DefaultTheme</string>
-					</dict>
-					<key>INIntentParameterName</key>
-					<string>colorEnum</string>
-					<key>INIntentParameterPromptDialogs</key>
-					<array>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Configuration</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Primary</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>There are ${count} options matching ‘${colorEnum}’.</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>ka1FOk</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>DisambiguationIntroduction</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogFormatString</key>
-							<string>Just to confirm, you wanted ‘${colorEnum}’?</string>
-							<key>INIntentParameterPromptDialogFormatStringID</key>
-							<string>CoLnWE</string>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Confirmation</string>
-						</dict>
-					</array>
-					<key>INIntentParameterSupportsResolution</key>
-					<true/>
-					<key>INIntentParameterTag</key>
-					<integer>5</integer>
-					<key>INIntentParameterType</key>
-					<string>Integer</string>
-				</dict>
-				<dict>
-					<key>INIntentParameterConfigurable</key>
-					<true/>
-					<key>INIntentParameterCustomDisambiguation</key>
-					<true/>
-					<key>INIntentParameterDisplayName</key>
 					<string>Select widget background</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>pUHZ8F</string>
 					<key>INIntentParameterDisplayPriority</key>
-					<integer>3</integer>
+					<integer>2</integer>
 					<key>INIntentParameterEnumType</key>
 					<string>BackgroundEnum</string>
 					<key>INIntentParameterEnumTypeNamespace</key>
@@ -606,7 +542,7 @@
 					<key>INIntentParameterDisplayNameID</key>
 					<string>BU4Cz2</string>
 					<key>INIntentParameterDisplayPriority</key>
-					<integer>4</integer>
+					<integer>3</integer>
 					<key>INIntentParameterEnumType</key>
 					<string>PositionEnum</string>
 					<key>INIntentParameterEnumTypeNamespace</key>
@@ -666,6 +602,79 @@
 					<true/>
 					<key>INIntentParameterTag</key>
 					<integer>9</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>배경색 선택</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>3pfC42</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>4</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>ColorEnum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>Black</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>colorEnum</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${colorEnum}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>ka1FOk</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${colorEnum}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>CoLnWE</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
+					<key>INIntentParameterRelationship</key>
+					<dict>
+						<key>INIntentParameterRelationshipParentName</key>
+						<string>backgroundEnum</string>
+						<key>INIntentParameterRelationshipPredicateName</key>
+						<string>EnumHasExactValue</string>
+						<key>INIntentParameterRelationshipPredicateValue</key>
+						<string>SingleColor</string>
+					</dict>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>5</integer>
 					<key>INIntentParameterType</key>
 					<string>Integer</string>
 				</dict>
