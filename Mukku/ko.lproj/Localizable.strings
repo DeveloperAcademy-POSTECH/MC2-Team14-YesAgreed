@@ -1,0 +1,24 @@
+/*
+  Localizable.strings
+  Mukku
+
+  Created by Kihyun Roh on 2023/05/16.
+  
+*/
+
+"You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window." =
+"홈 화면 위젯과 잠금 화면 위젯을 화면에 길게 눌러 직접 추가할 수 있습니다. 위젯 편집 창에서 개체 및 배경을 선택할 수 있습니다.";
+"Dynamic Island" = "다이나믹 아일랜드";
+"Dynamic Island Setting" = "다이나믹 아일랜드 설정";
+"Home Screen Dynamic Island" = "홈 화면 다이나믹 아일랜드";
+"Widget Instruction" = "위젯 설명";
+"Phantom of the Opera" = "오페라의 유령";
+"Mask" = "마스크";
+"Man of La Mancha" = "맨 오브 라만차";
+"Chandelier" = "샹들리에";
+"Boat" = "배";
+"Rose" = "장미";
+"Sunflower" = "해바라기";
+"Rapier" = "레이피어";
+"Windmill" = "풍차";
+

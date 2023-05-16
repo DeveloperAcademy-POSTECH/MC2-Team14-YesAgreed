@@ -16,7 +16,7 @@ struct ObjectView: View {
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(isSelected ? Color.green: Color.clear, lineWidth: 3)
                 )
-            Text(text)
+            Text(LocalizedStringKey(text))
                 .font(.caption)
                 .foregroundColor(Color("color_font_black"))
                 .textCase(nil)

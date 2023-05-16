@@ -16,13 +16,22 @@ struct MainView: View {
     var body: some View {
         ZStack{
         Form {
+            
             Section (header:
                         VStack {
+                Text("Dynamic Island")
+                    .bold()
+                    .foregroundColor(.black)
+                    .font(.system(.title))
+                    .textCase(nil)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
+                
                 ForEach(MusicalModel.musicalModels, id:\.self){ musical in
-                    Text(musical.title)
+                    Text(LocalizedStringKey(musical.title))
                         .bold()
                         .foregroundColor(.black)
-                        .font(.system(size: 23))
+                        .font(.system(.title3))
                         .textCase(nil)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
@@ -51,9 +60,9 @@ struct MainView: View {
             ){
             }
             
-            Section(header: Text("Dynamic Island Setting")) {
+            Section(footer: Text("Dynamic Island Setting")) {
                 Toggle(
-                    "Dynamic Island",
+                    "Home Screen Dynamic Island",
                     isOn: $isTrackingTime).onChange(of:isTrackingTime) { _ in
                         if isTrackingTime {
                             startTime = .now
@@ -114,6 +123,7 @@ struct MainView_Previews: PreviewProvider {
         MainView()
             .previewDevice("iPhone 14 Pro")
             .previewDisplayName("iPhone 14 Pro")
+            .environment(\.locale, .init(identifier: "ko"))
         
         MainView()
             .previewDevice("iPhone 14 Pro Max")
