@@ -70,8 +70,9 @@
 		B4A209342A091C2200D3042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD02A089C1000BE37FE /* Assets.xcassets */; };
 		B4A209392A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
 		B4A2093A2A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
+		B4C45D642A13B341002C3D3D /* InstructionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C45D632A13B341002C3D3D /* InstructionModel.swift */; };
+		B4C45D662A13F6AA002C3D3D /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C45D652A13F6AA002C3D3D /* InstructionView.swift */; };
 		C41BC51B2A1342500049BC44 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51A2A1342500049BC44 /* BackgroundView.swift */; };
-		C41BC51D2A1372040049BC44 /* WidgetInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51C2A1372040049BC44 /* WidgetInstructionView.swift */; };
 		C41BC51F2A13724B0049BC44 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51E2A13724B0049BC44 /* ObjectView.swift */; };
 		C41BC5222A1375100049BC44 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC5212A1375100049BC44 /* UIImage.swift */; };
 		C41BC5232A1375280049BC44 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC5212A1375100049BC44 /* UIImage.swift */; };
@@ -197,8 +198,9 @@
 		B4A209242A08A65C00D3042A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A209262A08A65C00D3042A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
+		B4C45D632A13B341002C3D3D /* InstructionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionModel.swift; sourceTree = "<group>"; };
+		B4C45D652A13F6AA002C3D3D /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		C41BC51A2A1342500049BC44 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Mukku/BackgroundView.swift; sourceTree = SOURCE_ROOT; };
-		C41BC51C2A1372040049BC44 /* WidgetInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInstructionView.swift; sourceTree = "<group>"; };
 		C41BC51E2A13724B0049BC44 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectView.swift; path = ../ObjectView.swift; sourceTree = "<group>"; };
 		C41BC5212A1375100049BC44 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C421C1572A0C896F000D0461 /* Mukku.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mukku.entitlements; sourceTree = "<group>"; };
@@ -417,14 +419,6 @@
 			path = WatchView;
 			sourceTree = "<group>";
 		};
-		B4C45D612A13AF58002C3D3D /* InstructionView */ = {
-			isa = PBXGroup;
-			children = (
-				C41BC51C2A1372040049BC44 /* WidgetInstructionView.swift */,
-			);
-			path = InstructionView;
-			sourceTree = "<group>";
-		};
 		C421C15A2A0C920B000D0461 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,9 +433,9 @@
 			isa = PBXGroup;
 			children = (
 				CDCAE1692A11B98700ED9A06 /* AnimationView */,
-				B4C45D612A13AF58002C3D3D /* InstructionView */,
 				CDCAE1682A11B97400ED9A06 /* Components */,
 				C5CF645E2A09E60300D24B61 /* MainView.swift */,
+				B4C45D652A13F6AA002C3D3D /* InstructionView.swift */,
 				C41BC51A2A1342500049BC44 /* BackgroundView.swift */,
 			);
 			path = View;
@@ -451,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				C5CF64602A09E62400D24B61 /* MusicalModel.swift */,
+				B4C45D632A13B341002C3D3D /* InstructionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -652,13 +647,14 @@
 				953C60D42A0DED5200E56DD5 /* ChandelierView.swift in Sources */,
 				953C60D22A0DEBAD00E56DD5 /* MaskView.swift in Sources */,
 				B469E4CB2A132DC9005DEFD8 /* LockScreenWidgetEntryView.swift in Sources */,
-				C41BC51D2A1372040049BC44 /* WidgetInstructionView.swift in Sources */,
 				953C60D62A0DED6300E56DD5 /* BoatView.swift in Sources */,
 				953C60CD2A0DEBAD00E56DD5 /* SunFlowerView.swift in Sources */,
 				C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */,
 				C41BC51F2A13724B0049BC44 /* ObjectView.swift in Sources */,
+				B4C45D642A13B341002C3D3D /* InstructionModel.swift in Sources */,
 				73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
 				953C60D02A0DEBAD00E56DD5 /* RoseView.swift in Sources */,
+				B4C45D662A13F6AA002C3D3D /* InstructionView.swift in Sources */,
 				73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
 				953C60CE2A0DEBAD00E56DD5 /* WindmillView.swift in Sources */,
 				CDCAE16B2A11BC6700ED9A06 /* WidgetInstruction.swift in Sources */,
