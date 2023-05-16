@@ -25,11 +25,32 @@ struct PhantomOfOperaItem: View {
                 if entry.imageID != [""] && entry.imageID!.last != nil{
                         let imageID = entry.imageID?.last!
                         let image = Helper.getImageFromUserDefaults(key: imageID!)
-                        let newImage = image.resized(toWidth: 120)
-                        
-                        Image(uiImage: newImage!)
-                            .resizable()
-                            .scaledToFit()
+                        let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                        let sideLength = 158
+//                        let imageSize = newImage.size
+                        // left top
+                        let xOffset = 28// 273*2
+                        let yOffset = 90// 26*2
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: sideLength, height: sideLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+//                        let newImage = image.resized(toWidth: 120)
+                        Image(uiImage: croppedImage)
+//                        Image(uiImage: newImage!)
+//                            .resizable()
+//                            .scaledToFit()
+                    
+//                    GeometryReader { geo in
+//                        Image(uiImage: newImage!).resizable().scaledToFit()
+//                        HStack{
+//                            Text(geo.size.width)
+//                            Text(geo.size.height)
+//                        }
+//
+//                    }
 //                    }
                     
 
