@@ -69,8 +69,11 @@
 		B4A209342A091C2200D3042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD02A089C1000BE37FE /* Assets.xcassets */; };
 		B4A209392A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
 		B4A2093A2A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
-		C41BC5192A1342300049BC44 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC5182A1342300049BC44 /* InstructionView.swift */; };
 		C41BC51B2A1342500049BC44 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51A2A1342500049BC44 /* BackgroundView.swift */; };
+		C41BC51D2A1372040049BC44 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51C2A1372040049BC44 /* InstructionView.swift */; };
+		C41BC51F2A13724B0049BC44 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51E2A13724B0049BC44 /* ObjectView.swift */; };
+		C41BC5222A1375100049BC44 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC5212A1375100049BC44 /* UIImage.swift */; };
+		C41BC5232A1375280049BC44 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC5212A1375100049BC44 /* UIImage.swift */; };
 		C421C15C2A0C9216000D0461 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15B2A0C9216000D0461 /* Helper.swift */; };
 		C421C15E2A0C927D000D0461 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15D2A0C927D000D0461 /* ImagePicker.swift */; };
 		C421C1602A0C92DA000D0461 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15F2A0C92DA000D0461 /* ImageManager.swift */; };
@@ -78,7 +81,6 @@
 		C421C1642A0C9760000D0461 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15B2A0C9216000D0461 /* Helper.swift */; };
 		C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF645E2A09E60300D24B61 /* MainView.swift */; };
 		C5CF64612A09E62400D24B61 /* MusicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64602A09E62400D24B61 /* MusicalModel.swift */; };
-		C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64632A09E68100D24B61 /* ObjectView.swift */; };
 		CDCAE16B2A11BC6700ED9A06 /* WidgetInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCAE16A2A11BC6700ED9A06 /* WidgetInstruction.swift */; };
 /* End PBXBuildFile section */
 
@@ -192,8 +194,10 @@
 		B4A209242A08A65C00D3042A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A209262A08A65C00D3042A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
-		C41BC5182A1342300049BC44 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 		C41BC51A2A1342500049BC44 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Mukku/BackgroundView.swift; sourceTree = SOURCE_ROOT; };
+		C41BC51C2A1372040049BC44 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		C41BC51E2A13724B0049BC44 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectView.swift; path = ../ObjectView.swift; sourceTree = "<group>"; };
+		C41BC5212A1375100049BC44 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C421C1572A0C896F000D0461 /* Mukku.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mukku.entitlements; sourceTree = "<group>"; };
 		C421C15B2A0C9216000D0461 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C421C15D2A0C927D000D0461 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -203,7 +207,6 @@
 		C4C570802A11B5BF009C6349 /* MukkuWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MukkuWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C5CF645E2A09E60300D24B61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C5CF64602A09E62400D24B61 /* MusicalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalModel.swift; sourceTree = "<group>"; };
-		C5CF64632A09E68100D24B61 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		CDCAE16A2A11BC6700ED9A06 /* WidgetInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInstruction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -330,6 +333,7 @@
 		73472F402A0354B100389862 /* WidgetsView */ = {
 			isa = PBXGroup;
 			children = (
+				C41BC5212A1375100049BC44 /* UIImage.swift */,
 				73472F412A0354CC00389862 /* PhantomOfOperaItem.swift */,
 				73A32C212A0BA9D10065A73B /* ManOfLaManchaItem.swift */,
 			);
@@ -419,16 +423,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-
 		C5CF64622A09E66900D24B61 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CDCAE1692A11B98700ED9A06 /* AnimationView */,
 				CDCAE1682A11B97400ED9A06 /* Components */,
 				C5CF645E2A09E60300D24B61 /* MainView.swift */,
-				C5CF64632A09E68100D24B61 /* ObjectView.swift */,
-				C41BC5182A1342300049BC44 /* InstructionView.swift */,
 				C41BC51A2A1342500049BC44 /* BackgroundView.swift */,
+				C41BC51C2A1372040049BC44 /* InstructionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,7 +446,7 @@
 		CDCAE1682A11B97400ED9A06 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C5CF64632A09E68100D24B61 /* ObjectView.swift */,
+				C41BC51E2A13724B0049BC44 /* ObjectView.swift */,
 				CDCAE16A2A11BC6700ED9A06 /* WidgetInstruction.swift */,
 			);
 			path = Components;
@@ -636,9 +638,11 @@
 				953C60D42A0DED5200E56DD5 /* ChandelierView.swift in Sources */,
 				953C60D22A0DEBAD00E56DD5 /* MaskView.swift in Sources */,
 				B469E4CB2A132DC9005DEFD8 /* LockScreenWidgetEntryView.swift in Sources */,
+				C41BC51D2A1372040049BC44 /* InstructionView.swift in Sources */,
 				953C60D62A0DED6300E56DD5 /* BoatView.swift in Sources */,
 				953C60CD2A0DEBAD00E56DD5 /* SunFlowerView.swift in Sources */,
 				C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */,
+				C41BC51F2A13724B0049BC44 /* ObjectView.swift in Sources */,
 				73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
 				953C60D02A0DEBAD00E56DD5 /* RoseView.swift in Sources */,
 				73472F4A2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
@@ -646,9 +650,9 @@
 				CDCAE16B2A11BC6700ED9A06 /* WidgetInstruction.swift in Sources */,
 				73472F0A2A034BB900389862 /* MukkuApp.swift in Sources */,
 				B469E4CA2A132D7D005DEFD8 /* LockScreenSimpleEntry.swift in Sources */,
-				C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */,
 				B469E4D12A132E55005DEFD8 /* PhantomOfOperaItemLock.swift in Sources */,
 				953C60D12A0DEBAD00E56DD5 /* RapierView.swift in Sources */,
+				C41BC5222A1375100049BC44 /* UIImage.swift in Sources */,
 				73472F3F2A034F4A00389862 /* SimpleEntry.swift in Sources */,
 				73A32C222A0BA9D10065A73B /* ManOfLaManchaItem.swift in Sources */,
 				953C60CF2A0DEBAD00E56DD5 /* TypoView.swift in Sources */,
@@ -657,7 +661,6 @@
 				73472F422A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */,
 				73472F3E2A034EE200389862 /* MukkuWidgetsEntryView.swift in Sources */,
 				C421C1602A0C92DA000D0461 /* ImageManager.swift in Sources */,
-				C41BC5192A1342300049BC44 /* InstructionView.swift in Sources */,
 				B469E4D22A132E58005DEFD8 /* ManOfLaManchaItemLock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +685,7 @@
 				73472F4B2A035E0300389862 /* MukkuWidgetsAttributes.swift in Sources */,
 				B469E4C52A13255A005DEFD8 /* LockScreenWidgetEntryView.swift in Sources */,
 				B469E4C32A132509005DEFD8 /* LockScreenWidget.swift in Sources */,
+				C41BC5232A1375280049BC44 /* UIImage.swift in Sources */,
 				73472F272A034C2700389862 /* MukkuWidgets.swift in Sources */,
 				C421C1632A0C975F000D0461 /* Helper.swift in Sources */,
 			);
@@ -858,7 +862,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mukku/Preview Content\"";
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
@@ -892,7 +896,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mukku/Preview Content\"";
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
@@ -924,7 +928,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWidgets;
@@ -952,7 +956,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWidgets;
@@ -982,7 +986,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MukkuWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatch;
@@ -1044,7 +1048,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWatchExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWatchExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatchExtension;
@@ -1075,7 +1079,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWatchExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V5NZ4978W9;
+				DEVELOPMENT_TEAM = A84HQ97N4T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWatchExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatchExtension;
