@@ -5,12 +5,12 @@ import Intents
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         //return SimpleEntry()
-        SimpleEntry(imageID:nil)
+        SimpleEntry()
     }
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""])
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""], position: ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158])
         completion(entry)
     }
 
@@ -24,6 +24,8 @@ struct Provider: IntentTimelineProvider {
         
         // bg
         let bg = backgrounding(by: configuration.backgroundEnum)
+        let position = positioning(by: configuration.positionEnum)
+        
 //        let bg = matching(by: configuration.transparentEnum)
 //        if bg
         print("bg:", bg)
@@ -42,7 +44,7 @@ struct Provider: IntentTimelineProvider {
         //120 개에 가까운 img 생성
         for imgCount in 0 ..< (120/imgNum)*imgNum {
             let entryDate = Calendar.current.date(byAdding: .second, value: imgCount, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg)
+            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg, position: position)
             entries.append(entry)
         }
         //print("Done in \(Date())")
@@ -72,13 +74,27 @@ struct Provider: IntentTimelineProvider {
     }
     fileprivate func backgrounding(by mC2BackgroundEnum: BackgroundEnum)->[String]{
         let imageIds = Helper.getImageIdsFromUserDefault()
-        print("imageIds:", imageIds)
-//        print("imageIds last:", imageIds.last!)
+//        print("imageIds:", imageIds)
         switch mC2BackgroundEnum {
         case.transparent: return imageIds
         case.topicDefault: return [""]
         case.unknown: return [""]
         }
-
     }
+    fileprivate func positioning(by mC2PositionEnum: PositionEnum)->Dictionary<String, Int>{
+        switch mC2PositionEnum {
+        // xOffSet, yOffSet, widthLength, heightLength
+        case.topSmallLeft: return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        case.topSmallRight: return ["xOffset":158+28+22, "yOffset":90, "widthLength":158, "heightLength":158]
+        case.topMedium: return ["xOffset":28, "yOffset":90, "widthLength":338, "heightLength":158]
+        case.middleSmallLeft: return ["xOffset":28, "yOffset":90+38+158, "widthLength":158, "heightLength":158]
+        case.middleSmallRight: return ["xOffset":158+28+22, "yOffset":90+38+158, "widthLength":158, "heightLength":158]
+        case.middleMedium: return ["xOffset":28, "yOffset":90+38+158, "widthLength":338, "heightLength":158]
+        case.bottomSmallLeft: return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158]
+        case.bottomSmallRight: return ["xOffset":158+28+22, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158]
+        case.bottomMedium: return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":338, "heightLength":158]
+        case.unknown:return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        }
+    }
+    
 }
