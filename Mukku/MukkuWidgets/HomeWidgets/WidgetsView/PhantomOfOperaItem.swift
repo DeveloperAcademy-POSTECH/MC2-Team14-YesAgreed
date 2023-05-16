@@ -36,6 +36,7 @@ struct PhantomOfOperaItem: View {
                 Image("phantom_bg_medium")
                     .resizable()
                     .scaledToFit()
+                Color(entry.bgColor)
                 Image("\(entry.scene)\(entry.count)")
                     .resizable()
                     .frame(width: 120, height: 120)
