@@ -51,6 +51,8 @@
 		B4A209342A091C2200D3042A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B402EFD02A089C1000BE37FE /* Assets.xcassets */; };
 		B4A209392A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
 		B4A2093A2A0922D000D3042A /* PhantomOfOperaMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */; };
+		C41BC5192A1342300049BC44 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC5182A1342300049BC44 /* InstructionView.swift */; };
+		C41BC51B2A1342500049BC44 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BC51A2A1342500049BC44 /* BackgroundView.swift */; };
 		C421C15C2A0C9216000D0461 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15B2A0C9216000D0461 /* Helper.swift */; };
 		C421C15E2A0C927D000D0461 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15D2A0C927D000D0461 /* ImagePicker.swift */; };
 		C421C1602A0C92DA000D0461 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15F2A0C92DA000D0461 /* ImageManager.swift */; };
@@ -157,6 +159,8 @@
 		B4A209242A08A65C00D3042A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A209262A08A65C00D3042A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4A209372A0922BB00D3042A /* PhantomOfOperaMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhantomOfOperaMask.swift; sourceTree = "<group>"; };
+		C41BC5182A1342300049BC44 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		C41BC51A2A1342500049BC44 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Mukku/BackgroundView.swift; sourceTree = SOURCE_ROOT; };
 		C421C1572A0C896F000D0461 /* Mukku.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mukku.entitlements; sourceTree = "<group>"; };
 		C421C15B2A0C9216000D0461 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C421C15D2A0C927D000D0461 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 			children = (
 				C5CF645E2A09E60300D24B61 /* MainView.swift */,
 				C5CF64632A09E68100D24B61 /* ObjectView.swift */,
+				C41BC5182A1342300049BC44 /* InstructionView.swift */,
+				C41BC51A2A1342500049BC44 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41BC51B2A1342500049BC44 /* BackgroundView.swift in Sources */,
 				C421C15C2A0C9216000D0461 /* Helper.swift in Sources */,
 				C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */,
 				73472F2D2A034C2800389862 /* MukkuWidgets.intentdefinition in Sources */,
@@ -547,6 +554,7 @@
 				73472F422A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */,
 				73472F3E2A034EE200389862 /* MukkuWidgetsEntryView.swift in Sources */,
 				C421C1602A0C92DA000D0461 /* ImageManager.swift in Sources */,
+				C41BC5192A1342300049BC44 /* InstructionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,6 +32,9 @@ struct MainView: View {
     
     
     var body: some View {
+        NavigationStack{
+            
+        
         Form {
             
             Section (header:
@@ -60,9 +63,6 @@ struct MainView: View {
 
                             } label: {
                                 ObjectView(isSelected : dynamicIslandScene == musical.title + scene.name, text: scene.name, imageName: scene.icon)}
-                            //                                    .onTapGesture{
-                            //                                        feedbackGenerator.impactOccurred()
-                            //                                    }
 
                         }
                     }
@@ -97,86 +97,17 @@ struct MainView: View {
                         }
                   }
             }
-            Section() {
-                ZStack{
-                    HStack{
-                        Image(systemName: "info.circle")
-                            .foregroundColor(.blue)
-                        Spacer()
-                    }
-                    HStack{
-                        Text("      Widget Instruction")
-                            .foregroundColor(.blue)
-                        Spacer()
-                    }
-                }
-                Text("You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window.")
-                    .font(.system(size: 15))
+            Section(header: Text("Instruction")) {
+                NavigationLink(destination: InstructionView(instruction: "Widget")){Text(Image(systemName: "info.circle")).foregroundColor(.blue)+Text(" Widget").foregroundColor(.blue)}
+                NavigationLink(destination: InstructionView(instruction: "Dynamic Island")){Text(Image(systemName: "info.circle")).foregroundColor(.blue)+Text(" Dynamic Island").foregroundColor(.blue)}
+                NavigationLink(destination: InstructionView(instruction: "Watch")){Text(Image(systemName: "info.circle")).foregroundColor(.blue)+Text(" Watch").foregroundColor(.blue)}
             }
-            /**
-             VStack {
-                 if let data = data, let uiimage = UIImage(data:data){
-                     Image(uiImage: uiimage).resizable().scaledToFit()
-                 }
-                 Spacer()
-                 PhotosPicker(selection: $selectedItems,
-                              maxSelectionCount: 1,
-                              matching: .images
-                              // matching: .any(of:[.panoramas])로 대체 가능함
-                 ) {
-                     Text("Pick Background Photo")
-                 }
-                 .onChange(of: selectedItems) { newValue in
-                     guard let item = selectedItems.first else {
-                         return
-                     }
-                     item.loadTransferable(type: Data.self) { result in
-                         switch result {
-                         case .success(let data):
-                             if let data = data {
-                                 self.data = data
-                                 print(data)
-                             } else {
-                                 print("Data is nil")
-                             }
-                         case .failure(let failure):
-                             fatalError("\(failure)")
-                         }
-                     }
-                 }
-             }
-             */
-//            Section(header: Text("Use custom Background Image")) {
-//                Toggle("Custom Background Image", isOn: $backgroundEnabled)
-//                
-//            }
-            // 저장도 한개만 하도록 변경 필요함
-            ZStack(alignment: .bottom){
-                    VStack {
-                        if (imageManager.photos.count != 0){
-                            let photo = imageManager.photos.last!
-                            Image(uiImage: Helper.getImageFromUserDefaults(key: photo))
-                                .resizable()
-                                .scaledToFit()
-                        }
-                    }
-
-                Button {
-                    self.showImagePicker.toggle()
-                } label: {
-                    Text("Upload Image")
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(15)
-                }
-                .sheet(isPresented: $showImagePicker, content:{
-                    ImagePicker(selectedImage: self.$image)
-                })
-                .onChange(of:image){
-                    _ in imageManager.appendImage(image: image)
-                }
-
+            
+            Section(header: Text("Customization")) {
+                NavigationLink(destination: BackgroundView()){Text("Transparent Widget Background")}
             }
+
+        }
         }
         
     }
