@@ -381,6 +381,11 @@
 					<string>PositionEnum</string>
 					<key>INIntentParameterEnumTypeNamespace</key>
 					<string>88xZPY</string>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>TopSmallLeft</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>positionEnum</string>
 					<key>INIntentParameterPromptDialogs</key>
@@ -418,6 +423,15 @@
 							<string>Confirmation</string>
 						</dict>
 					</array>
+					<key>INIntentParameterRelationship</key>
+					<dict>
+						<key>INIntentParameterRelationshipParentName</key>
+						<string>backgroundEnum</string>
+						<key>INIntentParameterRelationshipPredicateName</key>
+						<string>EnumHasExactValue</string>
+						<key>INIntentParameterRelationshipPredicateValue</key>
+						<string>Transparent</string>
+					</dict>
 					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>
