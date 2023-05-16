@@ -24,15 +24,21 @@ final class ImageManager: NSObject, ObservableObject {
         // Save image in userdefaults
         if let userDefaults = UserDefaults(suiteName: appGroupName) {
             
-            if let jpegRepresentation = image.jpegData(compressionQuality: 0.5) {
+            if let jpegRepresentation = image.jpegData(compressionQuality: 0.7) {
                 
                 let id = UUID().uuidString
+                userDefaults.dictionaryRepresentation().keys.forEach { key in
+                    userDefaults.removeObject(forKey: key)
+                }
                 userDefaults.set(jpegRepresentation, forKey: id)
-                
+
                 // Append the list and save
+//                photos = []
+
+//                print("photos prev:", photos)
                 photos.append(id)
                 saveIntoUserDefaults()
-                
+//                print("photos post:", photos)
                 // Notify the widget to reload all items
                 WidgetCenter.shared.reloadAllTimelines()
             }
