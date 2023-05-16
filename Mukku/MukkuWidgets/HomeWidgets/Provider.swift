@@ -10,7 +10,7 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, bgColor: UIColor.black)
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, bgColor: UIColor(Color.clear))
         completion(entry)
     }
 
