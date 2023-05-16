@@ -6,10 +6,10 @@ struct SimpleEntry: TimelineEntry {
     let scene: String   //Scene 장면
     let configuration: ConfigurationIntent
     let count: Int      //몇번째 이미지인지 체크해야함
-//    let imageID: [String]? = Helper.getImageIdsFromUserDefault() // UserDefault에 저장된 imageID
     let imageID: [String]? // UserDefault에 저장된 imageID
-    let position: Dictionary<String, Int>
-
+    let position: Dictionary<String, Int> // Widget position
+    let bgColor: UIColor
+    
     init() {
         self.date = Date()
         self.scene = "mask"
@@ -17,6 +17,7 @@ struct SimpleEntry: TimelineEntry {
         self.count = 1
         self.imageID = [""]
         self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        self.bgColor = UIColor(Color.clear)
     }
     init(imageID:String?) {
         self.date = Date()
@@ -25,6 +26,7 @@ struct SimpleEntry: TimelineEntry {
         self.count = 1
         self.imageID = [""]
         self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        self.bgColor = UIColor(Color.clear)
     }
     init(scene:String){
         self.date = Date()
@@ -33,13 +35,15 @@ struct SimpleEntry: TimelineEntry {
         self.count = 1
         self.imageID = [""]
         self.position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        self.bgColor = UIColor(Color.clear)
     }
-    init(date: Date, scene : String, configuration: ConfigurationIntent, count: Int, imageID: [String]?, position: Dictionary<String, Int>) {
+    init(date: Date, scene : String, configuration: ConfigurationIntent, count: Int, imageID: [String]?, position: Dictionary<String, Int>, bgColor: UIColor) {
         self.date = date
         self.scene = scene
         self.configuration = configuration
         self.count = count
         self.imageID = imageID
         self.position = position
+        self.bgColor = bgColor
     }
 }

@@ -1,10 +1,3 @@
-//
-//  ObjectView.swift
-//  Main
-//
-//  Created by 김혜린 on 2023/05/08.
-//
-
 import SwiftUI
 
 struct ObjectView: View {
@@ -14,21 +7,25 @@ struct ObjectView: View {
     var imageName: String
     
     var body: some View {
-        VStack{
+        VStack(alignment: .center){
             Image(imageName)
                 .resizable()
-                .frame(width: 60, height: 60)
+                .scaledToFit()
                 .cornerRadius(14)
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(isSelected ? Color.green: Color.clear, lineWidth: 3)
                 )
             Text(text)
-                .font(.system(size: 15))
+                .font(.caption)
                 .foregroundColor(Color("color_font_black"))
-                .multilineTextAlignment(.center)
                 .textCase(nil)
         }
-        .frame(width: 75, height: 80)
+    }
+}
+
+struct MainView2_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
     }
 }

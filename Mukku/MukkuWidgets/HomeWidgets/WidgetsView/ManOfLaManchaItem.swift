@@ -11,17 +11,16 @@ extension UIImage {
     }
   }
 }
-struct PhantomOfOperaItem: View {
-    var entry : SimpleEntry = SimpleEntry()
-//    var imageID: String?
-    @Environment(\.widgetFamily) var widgetFamily
+
+struct ManOfLaManchaItem: View {
     
+    @Environment(\.widgetFamily) var widgetFamily
+    var entry : SimpleEntry = SimpleEntry()
     var body: some View {
         
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                // Transparent background
                 if entry.imageID != [""] && entry.imageID!.last != nil{
                     let imageID = entry.imageID?.last!
                     let image = Helper.getImageFromUserDefaults(key: imageID!)
@@ -38,29 +37,21 @@ struct PhantomOfOperaItem: View {
                     let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
                     
                     Image(uiImage: croppedImage)
-                    
-
                 } else {
-                    Image("phantom_bg_small")
+                    Image("lamancha_bg_small")
                         .resizable()
                         .scaledToFit()
+                    Color(entry.bgColor)
                 }
-
-                Image("\(entry.scene)\(entry.count)")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .scaledToFit()
-                    .offset(y: -15)
+                VStack{
+                    Spacer().frame(height: 20)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                }
                 LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
-                
-                VStack {
-                    Spacer()
-                    Text("Check this out")
-                    Text("Sing For Me!")
-                        .foregroundColor(.white)
-                        .font(.system(size: 10))
-                }
-                .padding(.bottom, 20)
             }
             .unredacted()
             
@@ -83,48 +74,29 @@ struct PhantomOfOperaItem: View {
                     
                     Image(uiImage: croppedImage)
                 } else {
-                    Image("phantom_bg_medium")
-                        .resizable()
-                        .scaledToFit()
-                }
-                Image("\(entry.scene)\(entry.count)")
+                    Image("lamancha_bg_medium")
                     .resizable()
-                    .frame(width: 120, height: 120)
                     .scaledToFit()
-                    .offset(y: -15)
+                    Color(entry.bgColor)
+                }
+                VStack{
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                }
                 LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 
                 VStack {
                     Spacer()
-//                    Text(String(isTransparent))
-                    Text("Sing For Me!")
+                    Text("The Impossible Dream")
                         .foregroundColor(.white)
                         .font(.system(size: 10))
                 }
                 .padding(.bottom, 20)
             }
             .unredacted()
-            
-        case .accessoryCircular:
-            Image("\(entry.scene)\(entry.count)")
-                .resizable()
-                .scaledToFit()
-                .unredacted()
-            
-        case .accessoryRectangular:
-            HStack {
-                Image("\(entry.scene)\(entry.count)")
-                    .resizable()
-                    .scaledToFit()
-                Text("Sing For Me!")
-                Spacer()
-            }
-            .padding(.leading, 6)
-            .unredacted()
-            
-        case .accessoryInline:
-            Text("|  Sing For Me!")
-                .unredacted()
             
         default:
             Text("Widget Not Supported)")
@@ -135,18 +107,12 @@ struct PhantomOfOperaItem: View {
 }
 
 
-//struct PhantomOfOperaItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground: nil, isTransparent: false)
-//            .previewContext(WidgetPreviewContext(family: .systemSmall))
-//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
-//            .previewContext(WidgetPreviewContext(family: .systemMedium))
-//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
-//            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
-//            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-//        PhantomOfOperaItem(entry:SimpleEntry(), transparentBackground:nil, isTransparent: false)
-//            .previewContext(WidgetPreviewContext(family: .accessoryInline))
-//    }
-//}
-
+struct ManOfLaManchaItem_Previews: PreviewProvider {
+    static var previews: some View {
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
+    }
+}

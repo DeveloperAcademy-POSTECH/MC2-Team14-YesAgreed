@@ -10,7 +10,7 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""], position: ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158])
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""], position: ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158], bgColor: UIColor(Color.clear))
         completion(entry)
     }
 
@@ -22,29 +22,14 @@ struct Provider: IntentTimelineProvider {
         let topic =  matching(by: configuration.mc2Enum)
         let imgNum = countImgNum(name : topic)
         
-        // bg
+        let bgColor = coloring(by: configuration.colorEnum)
         let bg = backgrounding(by: configuration.backgroundEnum)
         let position = positioning(by: configuration.positionEnum)
-        
-//        let bg = matching(by: configuration.transparentEnum)
-//        if bg
-        print("bg:", bg)
-//        switch bg{
-//        case.upperright
-//        }
-        
-        // transparentbackground 정보
-//        let imageIds = Helper.getImageIdsFromUserDefault()
-//        print("ho")
-//        print("this is imageIds", imageIds)
-//        if !imageIds.isEmpty{
-//            print("this is imageIds last", imageIds.last!)
-//        }
-        
+                                   
         //120 개에 가까운 img 생성
         for imgCount in 0 ..< (120/imgNum)*imgNum {
             let entryDate = Calendar.current.date(byAdding: .second, value: imgCount, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg, position: position)
+            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg, position: position, bgColor: bgColor)
             entries.append(entry)
         }
         //print("Done in \(Date())")
@@ -73,14 +58,13 @@ struct Provider: IntentTimelineProvider {
         }
     }
     fileprivate func backgrounding(by mC2BackgroundEnum: BackgroundEnum)->[String]{
-        let imageIds = Helper.getImageIdsFromUserDefault()
-//        print("imageIds:", imageIds)
-        switch mC2BackgroundEnum {
-        case.transparent: return imageIds
-        case.topicDefault: return [""]
-        case.unknown: return [""]
+            let imageIds = Helper.getImageIdsFromUserDefault()
+            switch mC2BackgroundEnum {
+            case.transparent: return imageIds
+            case.topicDefault: return [""]
+            case.unknown: return [""]
+            }
         }
-    }
     fileprivate func positioning(by mC2PositionEnum: PositionEnum)->Dictionary<String, Int>{
         switch mC2PositionEnum {
         // xOffSet, yOffSet, widthLength, heightLength
@@ -96,5 +80,18 @@ struct Provider: IntentTimelineProvider {
         case.unknown:return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
         }
     }
-    
+    fileprivate func coloring(by colorWidgetEnum: ColorEnum)->UIColor{
+        switch colorWidgetEnum {
+        case.red: return UIColor(Color.red)
+        case.orange: return UIColor(Color.orange)
+        case.yellow: return UIColor(Color.yellow)
+        case .green: return UIColor(Color.green)
+        case .blue: return UIColor(Color.blue)
+        case .purple: return UIColor(Color.purple)
+        case .gray: return UIColor(Color.gray)
+        case .black: return UIColor(Color.black)
+        case .defaultTheme: return UIColor(Color.clear)
+        case.unknown: return UIColor(Color.clear)
+        }
+    }
 }

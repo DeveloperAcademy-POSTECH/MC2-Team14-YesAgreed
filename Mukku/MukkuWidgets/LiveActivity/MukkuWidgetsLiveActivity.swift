@@ -7,14 +7,6 @@ struct MukkuWidgetsLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MukkuWidgetsAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                Image("\(context.state.scene)_dynamic")
-                    .resizable()
-                    .scaledToFit()
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
-
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
@@ -23,30 +15,27 @@ struct MukkuWidgetsLiveActivity: Widget {
                     Image("\(context.state.scene)_dynamic")
                         .resizable()
                         .scaledToFit()
-                }
-                DynamicIslandExpandedRegion(.trailing) {
-                    Image("\(context.state.scene)_dynamic")
-                        .resizable()
-                        .scaledToFit()
-                }
-                DynamicIslandExpandedRegion(.bottom) {
-                    Image("\(context.state.scene)_dynamic")
-                        .resizable()
-                        .scaledToFit()
-                    // more content
+                        .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                        .clipShape(Circle())
                 }
             } compactLeading: {
                 Image("\(context.state.scene)_dynamic")
                     .resizable()
                     .scaledToFit()
+                    .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                    .clipShape(Circle())
             } compactTrailing: {
                 Image("\(context.state.scene)_dynamic")
                     .resizable()
                     .scaledToFit()
+                    .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                    .clipShape(Circle())
             } minimal: {
                 Image("\(context.state.scene)_dynamic")
                     .resizable()
                     .scaledToFit()
+                    .background(context.state.scene == "typo" ? Color.yellow : Color.clear)
+                    .clipShape(Circle())
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -64,7 +53,7 @@ struct TimeTrackingWidgetView : View {
 
 struct MukkuWidgetsLiveActivity_Previews: PreviewProvider {
     static let attributes = MukkuWidgetsAttributes()
-    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date(), scene:"mask")
+    static let contentState = MukkuWidgetsAttributes.ContentState(startTime: Date(), scene:"typo")
 
     static var previews: some View {
         attributes

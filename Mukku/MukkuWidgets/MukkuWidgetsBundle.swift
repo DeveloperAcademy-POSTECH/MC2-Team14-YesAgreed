@@ -1,10 +1,3 @@
-//
-//  MukkuWidgetsBundle.swift
-//  MukkuWidgets
-//
-//  Created by Kihyun Roh on 2023/05/04.
-//
-
 import WidgetKit
 import SwiftUI
 
@@ -12,6 +5,7 @@ import SwiftUI
 struct MukkuWidgetsBundle: WidgetBundle {
     var body: some Widget {
         MukkuWidgets()
+        MukkuLockScreenWidgets()
         MukkuWidgetsLiveActivity()
     }
 }
