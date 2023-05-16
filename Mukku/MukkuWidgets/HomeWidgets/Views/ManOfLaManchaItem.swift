@@ -2,7 +2,7 @@ import SwiftUI
 import WidgetKit
 
 struct ManOfLaManchaItem: View {
-    var entry : SimpleEntry = SimpleEntry(scene: "sunflower")
+    var entry : SimpleEntry = SimpleEntry()
 //    var imageID: String?
     @Environment(\.widgetFamily) var widgetFamily
     
@@ -13,13 +13,41 @@ struct ManOfLaManchaItem: View {
             ZStack {
                 if entry.imageID != [""] && entry.imageID!.last != nil{
 //                    if {
-                        let imageID = entry.imageID!.last!
-                        let image = Helper.getImageFromUserDefaults(key: imageID)
+                    let imageID = entry.imageID!.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID)
+                    if image.size.width > image.size.height{
+                        let newImage = image.resized(toWidth: image.size.width*120/image.size.height)
+                        
+//                        GeometryReader { geo in
+//                            Image(uiImage: newImage!)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: geo.size.width)
+//                        }
+                        Image(uiImage: newImage!)
+                            .resizable()
+                            .scaledToFill()
+//                        Text("width bigger")
+                        Text(imageID)
+                    } else {
                         let newImage = image.resized(toWidth: 120)
                         
                         Image(uiImage: newImage!)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
+//                        GeometryReader { geo in
+//                            Image(uiImage: image)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: geo.size.width*0.5)
+//                        }
+//                        Text("height bigger")
+                        Text(imageID)
+                    }
+                            
+                        
+//                            .frame(width: 120, height: 120)
+                    
 //                    }
                     
 
