@@ -14,7 +14,7 @@ struct MukkuWidgets: Widget {
             }
             .configurationDisplayName("My Widget")
             .description("This is an example widget.")
-            .supportedFamilies([.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular])
+            .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 

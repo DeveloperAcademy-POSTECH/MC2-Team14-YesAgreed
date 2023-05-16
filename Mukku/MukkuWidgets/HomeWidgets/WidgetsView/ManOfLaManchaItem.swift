@@ -51,28 +51,6 @@ struct ManOfLaManchaItem: View {
             }
             .unredacted()
             
-        case .accessoryCircular:
-            Image("\(entry.scene)\(entry.count)")
-                .resizable()
-                .scaledToFit()
-                .unredacted()
-            
-        case .accessoryRectangular:
-            HStack {
-                Image("\(entry.scene)\(entry.count)")
-                    .resizable()
-                    .scaledToFit()
-                Text("The Impossible Dream")
-                    .font(.system(size: 13))
-                Spacer()
-            }
-            .padding(.leading, 6)
-            .unredacted()
-            
-        case .accessoryInline:
-            Text("|  The Impossible Dream")
-                .unredacted()
-            
         default:
             Text("Widget Not Supported)")
         }
@@ -89,11 +67,6 @@ struct ManOfLaManchaItem_Previews: PreviewProvider {
         ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
             .previewContext(WidgetPreviewContext(family: .systemMedium))
         ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
-            .previewContext(WidgetPreviewContext(family: .accessoryInline))
     }
 }
 
