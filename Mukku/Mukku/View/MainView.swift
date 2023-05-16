@@ -33,14 +33,20 @@ struct MainView: View {
                 Form {
                     Section (header:
                                 VStack {
+                                    Text("Dynamic Island")
+                    .bold()
+                    .foregroundColor(Color("color_font_black"))
+                    .font(.system(.title))
+                    .textCase(nil)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom)
                         ForEach(MusicalModel.musicalModels, id:\.self){ musical in
-                            Text(musical.title)
+                            Text(LocalizedStringKey(musical.title))
                                 .bold()
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("color_font_black"))
                                 .font(.system(size: 23))
                                 .textCase(nil)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            
+                                .frame(maxWidth: .infinity, alignment: .leading)       
                             LazyVGrid(columns: columns) {
                                 ForEach(musical.scene, id:\.self) { scene in
                                     Button {
@@ -65,17 +71,17 @@ struct MainView: View {
                         .padding(.bottom, -20)
                     ){
                     }
-                    Section(header: Text("Dynamic Island Setting")) {
-                        Toggle(
-                            "Dynamic Island",
-                            isOn: $isTrackingTime).onChange(of:isTrackingTime) { _ in
-                                if isTrackingTime {
-                                    startTime = .now
-                                    //Start the live Activity
-                                    let attributes = MukkuWidgetsAttributes()
-                                    let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
-                                    let content =
-                                    ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
+                    Section(footer: Text("토글 시 선택한 오브젝트가 홈 화면 다이나믹 아일랜드에서 보입니다.")) {
+                Toggle(
+                    "Home Screen Dynamic Island",
+                    isOn: $isTrackingTime).onChange(of:isTrackingTime) { _ in
+                        if isTrackingTime {
+                            startTime = .now
+                            //Start the live Activity
+                            let attributes = MukkuWidgetsAttributes()
+                            let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
+                            let content =
+                            ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
                                     
                                     activity = try? Activity<MukkuWidgetsAttributes>.request(
                                         attributes: attributes,
@@ -91,17 +97,14 @@ struct MainView: View {
                             }
                     }
                     Section(header: Text("Instruction")) {
-                        NavigationLink(destination: InstructionView(instruction: "Widget")){Text(Image(systemName: "info.circle")).foregroundColor(.blue)+Text(" Widget").foregroundColor(.blue)}
-                        NavigationLink(destination: InstructionView(instruction: "Dynamic Island")){Text(Image(systemName: "info.circle")).foregroundColor(.blue)+Text(" Dynamic Island").foregroundColor(.blue)}
-                        NavigationLink(destination: InstructionView(instruction: "Watch")){Text(Image(systemName: "info.circle")).foregroundColor(.blue)+Text(" Watch").foregroundColor(.blue)}
+                        NavigationLink(destination: InstructionView(instruction: "Widget")){Text("Widget")}
+                        NavigationLink(destination: InstructionView(instruction: "Dynamic Island")){Text("Dynamic Island")}
+                        NavigationLink(destination: InstructionView(instruction: "Watch")){Text("Apple Watch")}
                     }
                     
-                    Section(header: Text("Customization")) {
-                        NavigationLink(destination: BackgroundView()){Text("Transparent Widget Background")}
+                    Section(header: Text("위젯 배경 설정")) {
+                        NavigationLink(destination: BackgroundView()){Text("투명한 위젯 배경")}
                     }
-
-                    // 위젯 설정 방법
-                    //                    WidgetInstruction()
                 }
                 // Dynamic Object 애니메이션
                 switch dynamicIslandScene {
@@ -140,6 +143,7 @@ struct MainView_Previews: PreviewProvider {
             .environmentObject(ImageManager())
             .previewDevice("iPhone 14 Pro")
             .previewDisplayName("iPhone 14 Pro")
+            .environment(\.locale, .init(identifier: "ko"))
         
         MainView()
             .environmentObject(ImageManager())
