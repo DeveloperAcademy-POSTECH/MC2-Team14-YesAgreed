@@ -26,12 +26,12 @@ struct PhantomOfOperaItem: View {
                     let imageID = entry.imageID?.last!
                     let image = Helper.getImageFromUserDefaults(key: imageID!)
                     let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
-                    // small size
-                    let sideLength = 158
-                    // 좌측 상단
-                    let xOffset = 28// 273*2
-                    let yOffset = 90// 26*2
-                    let cropRect = CGRect(x:xOffset, y:yOffset, width: sideLength, height: sideLength).integral
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
                     let sourceCGIamge = newImage.cgImage!
                     let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
                     
@@ -66,19 +66,27 @@ struct PhantomOfOperaItem: View {
             
         case .systemMedium:
             ZStack {
-//                if entry.imageID != "" {
-//                    let imageID = entry.imageID
-//                    let image = Helper.getImageFromUserDefaults(key: imageID)
-//                    let newImage = image.resized(toWidth: 120)
-//                    
-//                    Image(uiImage: newImage!)
-//                        .resizable()
-//                        .scaledToFit()
-//
-//                }
-                Image("phantom_bg_medium")
-                    .resizable()
-                    .scaledToFit()
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
+                } else {
+                    Image("phantom_bg_medium")
+                        .resizable()
+                        .scaledToFit()
+                }
                 Image("\(entry.scene)\(entry.count)")
                     .resizable()
                     .frame(width: 120, height: 120)

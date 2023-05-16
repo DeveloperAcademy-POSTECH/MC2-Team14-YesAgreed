@@ -15,22 +15,18 @@ struct ManOfLaManchaItem: View {
                     let imageID = entry.imageID?.last!
                     let image = Helper.getImageFromUserDefaults(key: imageID!)
                     let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
-                    // small size
-                    let sideLength = 158
-                    // 우측 상단
-                    let xOffset = 158+28+22// 273*2
-                    let yOffset = 90// 26*2
-                    let cropRect = CGRect(x:xOffset, y:yOffset, width: sideLength, height: sideLength).integral
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
                     let sourceCGIamge = newImage.cgImage!
                     let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
                     
                     let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
                     
                     Image(uiImage: croppedImage)
-                    
-
-                    
-                            
                 } else {
                     Image("lamancha_bg_small")
                         .resizable()
@@ -51,15 +47,22 @@ struct ManOfLaManchaItem: View {
             
         case .systemMedium:
             ZStack {
-                if entry.imageID != [""] {
-                    let imageID = entry.imageID!.last!
-                    let image = Helper.getImageFromUserDefaults(key: imageID)
-                    let newImage = image.resized(toWidth: 120)
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
                     
-                    Image(uiImage: newImage!)
-                        .resizable()
-                        .scaledToFit()
-
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
                 } else {
                     Image("lamancha_bg_medium")
                         .resizable()
