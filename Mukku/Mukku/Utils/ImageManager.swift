@@ -24,7 +24,8 @@ final class ImageManager: NSObject, ObservableObject {
         // Save image in userdefaults
         if let userDefaults = UserDefaults(suiteName: appGroupName) {
             
-            if let jpegRepresentation = image.jpegData(compressionQuality: 0.7) {
+            // 이부분 compressionQuality가 높으면 이미지가 로딩되지 않음
+            if let jpegRepresentation = image.jpegData(compressionQuality: 0.5) {
                 
                 let id = UUID().uuidString
                 userDefaults.dictionaryRepresentation().keys.forEach { key in
@@ -33,7 +34,7 @@ final class ImageManager: NSObject, ObservableObject {
                 userDefaults.set(jpegRepresentation, forKey: id)
 
                 // Append the list and save
-//                photos = []
+                photos = []
 
 //                print("photos prev:", photos)
                 photos.append(id)
