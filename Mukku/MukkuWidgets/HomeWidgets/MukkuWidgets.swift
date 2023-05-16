@@ -12,8 +12,8 @@ struct MukkuWidgets: Widget {
             provider: Provider()) { entry in
                 MukkuWidgetsEntryView(entry: entry)
             }
-            .configurationDisplayName("My Widget")
-            .description("This is an example widget.")
+            .configurationDisplayName("Mukku Widget")
+            .description("Select your scene")
             .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
