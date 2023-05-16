@@ -61,7 +61,7 @@ struct Provider: IntentTimelineProvider {
             let imageIds = Helper.getImageIdsFromUserDefault()
             switch mC2BackgroundEnum {
             case.transparent: return imageIds
-            case.topicDefault: return [""]
+            case.defaultTheme: return [""]
             case.unknown: return [""]
             }
         }
