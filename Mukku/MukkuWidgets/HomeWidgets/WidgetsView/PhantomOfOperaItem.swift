@@ -13,7 +13,7 @@ struct PhantomOfOperaItem: View {
                 if entry.imageID != [""] && entry.imageID!.last != nil{
                     let imageID = entry.imageID?.last!
                     let image = Helper.getImageFromUserDefaults(key: imageID!)
-                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    let newImage = image.resized(toWidth: CGFloat(entry.position["resizeWidth"]!))! // sketch는 390 실제는 393
                     
                     let xOffset = entry.position["xOffset"]!// 273*2
                     let yOffset = entry.position["yOffset"]!// 26*2
@@ -60,7 +60,7 @@ struct PhantomOfOperaItem: View {
                 if entry.imageID != [""] && entry.imageID!.last != nil{
                     let imageID = entry.imageID?.last!
                     let image = Helper.getImageFromUserDefaults(key: imageID!)
-                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    let newImage = image.resized(toWidth: CGFloat(entry.position["resizeWidth"]!))!
                     
                     let xOffset = entry.position["xOffset"]!// 273*2
                     let yOffset = entry.position["yOffset"]!// 26*2

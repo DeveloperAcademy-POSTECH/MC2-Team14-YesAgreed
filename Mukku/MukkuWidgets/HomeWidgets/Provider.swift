@@ -10,7 +10,13 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""], position: ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158], bgColor: UIColor(Color.clear))
+        var position: Dictionary<String, Int>
+        if UIDevice.current.name == "iPhone 14 Pro Max" {
+            position = ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+        } else {
+            position = ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+        }
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""], position: position, bgColor: UIColor(Color.clear))
         completion(entry)
     }
 
@@ -68,16 +74,68 @@ struct Provider: IntentTimelineProvider {
     fileprivate func positioning(by mC2PositionEnum: PositionEnum)->Dictionary<String, Int>{
         switch mC2PositionEnum {
         // xOffSet, yOffSet, widthLength, heightLength
-        case.topSmallLeft: return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
-        case.topSmallRight: return ["xOffset":158+28+22, "yOffset":90, "widthLength":158, "heightLength":158]
-        case.topMedium: return ["xOffset":28, "yOffset":90, "widthLength":338, "heightLength":158]
-        case.middleSmallLeft: return ["xOffset":28, "yOffset":90+38+158, "widthLength":158, "heightLength":158]
-        case.middleSmallRight: return ["xOffset":158+28+22, "yOffset":90+38+158, "widthLength":158, "heightLength":158]
-        case.middleMedium: return ["xOffset":28, "yOffset":90+38+158, "widthLength":338, "heightLength":158]
-        case.bottomSmallLeft: return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158]
-        case.bottomSmallRight: return ["xOffset":158+28+22, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158]
-        case.bottomMedium: return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":338, "heightLength":158]
-        case.unknown:return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        case.topSmallLeft:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+            
+        case.topSmallRight:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33+170+24, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":158+28+22, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+        case.topMedium:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94, "widthLength":364, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90, "widthLength":338, "heightLength":158, "resizeWidth":393]
+            }
+        case.middleSmallLeft:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90+38+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+        case.middleSmallRight:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33+170+24, "yOffset":94+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":158+28+22, "yOffset":90+38+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+        case.middleMedium:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94+170+42, "widthLength":364, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90+38+158, "widthLength":338, "heightLength":158, "resizeWidth":393]
+            }
+        case.bottomSmallLeft:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94+170+42+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+        case.bottomSmallRight:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33+170+24, "yOffset":94+170+42+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":158+28+22, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+        case.bottomMedium:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94+170+42+170+42, "widthLength":364, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":338, "heightLength":158, "resizeWidth":393]
+            }
+        case.unknown:
+            if UIDevice.current.name == "iPhone 14 Pro Max" {
+                return ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
+            } else {
+                return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
+            }
+            
         }
     }
     fileprivate func coloring(by colorWidgetEnum: ColorEnum)->UIColor{
