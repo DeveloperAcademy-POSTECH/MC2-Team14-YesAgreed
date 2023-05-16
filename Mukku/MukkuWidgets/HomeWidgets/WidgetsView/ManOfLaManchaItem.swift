@@ -27,20 +27,29 @@ struct ManOfLaManchaItem: View {
                     let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
                     
                     Image(uiImage: croppedImage)
-                } else {
-                    Image("lamancha_bg_small")
-                        .resizable()
-                        .scaledToFit()
                     Color(entry.bgColor)
-                }
-                VStack{
-                    Spacer().frame(height: 20)
                     Image("\(entry.scene)\(entry.count)")
                         .resizable()
                         .frame(width: 120, height: 120)
                         .scaledToFit()
                         .offset(y: -15)
+                } else {
+                    Image("lamancha_bg_small")
+                        .resizable()
+                        .scaledToFit()
+                    Color(entry.bgColor)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 }
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
                 LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
             }
             .unredacted()
@@ -63,20 +72,26 @@ struct ManOfLaManchaItem: View {
                     let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
                     
                     Image(uiImage: croppedImage)
-                } else {
-                    Image("lamancha_bg_medium")
-                    .resizable()
-                    .scaledToFit()
                     Color(entry.bgColor)
-                }
-                VStack{
                     Image("\(entry.scene)\(entry.count)")
                         .resizable()
                         .frame(width: 120, height: 120)
                         .scaledToFit()
                         .offset(y: -15)
+                } else {
+                    Image("lamancha_bg_medium")
+                    .resizable()
+                    .scaledToFit()
+                    Color(entry.bgColor)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                    
+                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 }
-                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
+                
                 
                 VStack {
                     Spacer()

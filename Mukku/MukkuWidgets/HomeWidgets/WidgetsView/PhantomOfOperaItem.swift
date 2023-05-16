@@ -26,20 +26,24 @@ struct PhantomOfOperaItem: View {
                     let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
                     
                     Image(uiImage: croppedImage)
-                    
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
 
                 } else {
                     Image("phantom_bg_small")
                         .resizable()
                         .scaledToFit()
                     Color(entry.bgColor)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 }
-                Image("\(entry.scene)\(entry.count)")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .scaledToFit()
-                    .offset(y: -15)
-                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 
                 VStack {
                     Spacer()
@@ -69,18 +73,24 @@ struct PhantomOfOperaItem: View {
                     let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
                     
                     Image(uiImage: croppedImage)
+                    Color(entry.bgColor)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
                 } else {
                     Image("phantom_bg_medium")
                         .resizable()
                         .scaledToFit()
                     Color(entry.bgColor)
+                    Image("\(entry.scene)\(entry.count)")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .scaledToFit()
+                        .offset(y: -15)
+                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 }
-                Image("\(entry.scene)\(entry.count)")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .scaledToFit()
-                    .offset(y: -15)
-                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 
                 VStack {
                     Spacer()
