@@ -56,7 +56,6 @@
 		C421C1602A0C92DA000D0461 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15F2A0C92DA000D0461 /* ImageManager.swift */; };
 		C421C1632A0C975F000D0461 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15B2A0C9216000D0461 /* Helper.swift */; };
 		C421C1642A0C9760000D0461 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C421C15B2A0C9216000D0461 /* Helper.swift */; };
-		C471A83A2A0DD55100BF35DE /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471A8392A0DD55100BF35DE /* UIImage.swift */; };
 		C5CF645F2A09E60300D24B61 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF645E2A09E60300D24B61 /* MainView.swift */; };
 		C5CF64612A09E62400D24B61 /* MusicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64602A09E62400D24B61 /* MusicalModel.swift */; };
 		C5CF64642A09E68100D24B61 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CF64632A09E68100D24B61 /* ObjectView.swift */; };
@@ -164,7 +163,6 @@
 		C421C15F2A0C92DA000D0461 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C421C1612A0C96C0000D0461 /* MukkuWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MukkuWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		C421C1622A0C96D1000D0461 /* MukkuWatchExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MukkuWatchExtensionExtension.entitlements; sourceTree = "<group>"; };
-		C471A8392A0DD55100BF35DE /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C4C570802A11B5BF009C6349 /* MukkuWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MukkuWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		C5CF645E2A09E60300D24B61 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C5CF64602A09E62400D24B61 /* MusicalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalModel.swift; sourceTree = "<group>"; };
@@ -357,7 +355,6 @@
 				C421C15B2A0C9216000D0461 /* Helper.swift */,
 				C421C15D2A0C927D000D0461 /* ImagePicker.swift */,
 				C421C15F2A0C92DA000D0461 /* ImageManager.swift */,
-				C471A8392A0DD55100BF35DE /* UIImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -550,7 +547,6 @@
 				73472F422A0354CC00389862 /* PhantomOfOperaItem.swift in Sources */,
 				73472F3E2A034EE200389862 /* MukkuWidgetsEntryView.swift in Sources */,
 				C421C1602A0C92DA000D0461 /* ImageManager.swift in Sources */,
-				C471A83A2A0DD55100BF35DE /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
