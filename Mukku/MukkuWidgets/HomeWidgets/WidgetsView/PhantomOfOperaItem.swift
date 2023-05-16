@@ -10,10 +10,30 @@ struct PhantomOfOperaItem: View {
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                Image("phantom_bg_small")
-                    .resizable()
-                    .scaledToFit()
-                Color(entry.bgColor)
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
+                    
+
+                } else {
+                    Image("phantom_bg_small")
+                        .resizable()
+                        .scaledToFit()
+                    Color(entry.bgColor)
+                }
                 Image("\(entry.scene)\(entry.count)")
                     .resizable()
                     .frame(width: 120, height: 120)
@@ -33,10 +53,28 @@ struct PhantomOfOperaItem: View {
             
         case .systemMedium:
             ZStack {
-                Image("phantom_bg_medium")
-                    .resizable()
-                    .scaledToFit()
-                Color(entry.bgColor)
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
+                } else {
+                    Image("phantom_bg_medium")
+                        .resizable()
+                        .scaledToFit()
+                    Color(entry.bgColor)
+                }
                 Image("\(entry.scene)\(entry.count)")
                     .resizable()
                     .frame(width: 120, height: 120)
@@ -71,4 +109,3 @@ struct PhantomOfOperaItem_Previews: PreviewProvider {
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
-

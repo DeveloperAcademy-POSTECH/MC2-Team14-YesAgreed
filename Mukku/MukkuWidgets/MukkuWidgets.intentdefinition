@@ -220,6 +220,162 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>Background Enum</string>
+			<key>INEnumDisplayNameID</key>
+			<string>3vNfan</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>BackgroundEnum</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>unknown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>NJjDq9</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>transparent</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>5viRv0</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>Transparent</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>default theme</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>QexQ24</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>DefaultTheme</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>Position Enum</string>
+			<key>INEnumDisplayNameID</key>
+			<string>2zvzwu</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>PositionEnum</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>unknown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>Kp1Lfb</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>top small left</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>xLUEaY</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>TopSmallLeft</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>top small right</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>rSgYNZ</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>TopSmallRight</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>top medium</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>85l1Zq</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>TopMedium</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>middle small left</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>UQ1QlZ</string>
+					<key>INEnumValueIndex</key>
+					<integer>4</integer>
+					<key>INEnumValueName</key>
+					<string>MiddleSmallLeft</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>middle small right</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>yKwmZf</string>
+					<key>INEnumValueIndex</key>
+					<integer>5</integer>
+					<key>INEnumValueName</key>
+					<string>MiddleSmallRight</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>middle medium</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>sSfVRa</string>
+					<key>INEnumValueIndex</key>
+					<integer>6</integer>
+					<key>INEnumValueName</key>
+					<string>MiddleMedium</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>bottom small left</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>5K2cAS</string>
+					<key>INEnumValueIndex</key>
+					<integer>7</integer>
+					<key>INEnumValueName</key>
+					<string>BottomSmallLeft</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>bottom small right</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>lnpFUf</string>
+					<key>INEnumValueIndex</key>
+					<integer>8</integer>
+					<key>INEnumValueName</key>
+					<string>BottomSmallRight</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>bottom medium</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>5SFppO</string>
+					<key>INEnumValueIndex</key>
+					<integer>9</integer>
+					<key>INEnumValueName</key>
+					<string>BottomMedium</string>
+				</dict>
+			</array>
+		</dict>
 	</array>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.2</string>
@@ -243,7 +399,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>5</integer>
+			<integer>9</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
 			<key>INIntentParameters</key>
@@ -373,6 +529,143 @@
 					<true/>
 					<key>INIntentParameterTag</key>
 					<integer>5</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Select widget background</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>pUHZ8F</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>3</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>BackgroundEnum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>DefaultTheme</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>backgroundEnum</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${backgroundEnum}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>0zp1Bk</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${backgroundEnum}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>8bMHwI</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>7</integer>
+					<key>INIntentParameterType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterCustomDisambiguation</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>Select widget position</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>BU4Cz2</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>4</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>PositionEnum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>88xZPY</string>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>TopSmallLeft</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>positionEnum</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${positionEnum}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>NdKkGR</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${positionEnum}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>1QTJ1Y</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
+					</array>
+					<key>INIntentParameterRelationship</key>
+					<dict>
+						<key>INIntentParameterRelationshipParentName</key>
+						<string>backgroundEnum</string>
+						<key>INIntentParameterRelationshipPredicateName</key>
+						<string>EnumHasExactValue</string>
+						<key>INIntentParameterRelationshipPredicateValue</key>
+						<string>Transparent</string>
+					</dict>
+					<key>INIntentParameterSupportsResolution</key>
+					<true/>
+					<key>INIntentParameterTag</key>
+					<integer>9</integer>
 					<key>INIntentParameterType</key>
 					<string>Integer</string>
 				</dict>

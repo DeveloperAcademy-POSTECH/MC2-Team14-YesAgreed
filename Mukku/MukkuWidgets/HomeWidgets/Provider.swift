@@ -10,7 +10,7 @@ struct Provider: IntentTimelineProvider {
 
     // Config 설정가능한 곳
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, bgColor: UIColor(Color.clear))
+        let entry = SimpleEntry(date: Date(), scene: "mask", configuration: configuration, count: 1, imageID: [""], position: ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158], bgColor: UIColor(Color.clear))
         completion(entry)
     }
 
@@ -23,11 +23,13 @@ struct Provider: IntentTimelineProvider {
         let imgNum = countImgNum(name : topic)
         
         let bgColor = coloring(by: configuration.colorEnum)
-        
+        let bg = backgrounding(by: configuration.backgroundEnum)
+        let position = positioning(by: configuration.positionEnum)
+                                   
         //120 개에 가까운 img 생성
         for imgCount in 0 ..< (120/imgNum)*imgNum {
             let entryDate = Calendar.current.date(byAdding: .second, value: imgCount, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), bgColor: bgColor)
+            let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg, position: position, bgColor: bgColor)
             entries.append(entry)
         }
         //print("Done in \(Date())")
@@ -53,6 +55,29 @@ struct Provider: IntentTimelineProvider {
         case.manOfLaMancha3: return "windmill"
         case.manOfLaMancha4: return "typo"
         case.unknown: return "mask"
+        }
+    }
+    fileprivate func backgrounding(by mC2BackgroundEnum: BackgroundEnum)->[String]{
+            let imageIds = Helper.getImageIdsFromUserDefault()
+            switch mC2BackgroundEnum {
+            case.transparent: return imageIds
+            case.defaultTheme: return [""]
+            case.unknown: return [""]
+            }
+        }
+    fileprivate func positioning(by mC2PositionEnum: PositionEnum)->Dictionary<String, Int>{
+        switch mC2PositionEnum {
+        // xOffSet, yOffSet, widthLength, heightLength
+        case.topSmallLeft: return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
+        case.topSmallRight: return ["xOffset":158+28+22, "yOffset":90, "widthLength":158, "heightLength":158]
+        case.topMedium: return ["xOffset":28, "yOffset":90, "widthLength":338, "heightLength":158]
+        case.middleSmallLeft: return ["xOffset":28, "yOffset":90+38+158, "widthLength":158, "heightLength":158]
+        case.middleSmallRight: return ["xOffset":158+28+22, "yOffset":90+38+158, "widthLength":158, "heightLength":158]
+        case.middleMedium: return ["xOffset":28, "yOffset":90+38+158, "widthLength":338, "heightLength":158]
+        case.bottomSmallLeft: return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158]
+        case.bottomSmallRight: return ["xOffset":158+28+22, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158]
+        case.bottomMedium: return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":338, "heightLength":158]
+        case.unknown:return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158]
         }
     }
     fileprivate func coloring(by colorWidgetEnum: ColorEnum)->UIColor{

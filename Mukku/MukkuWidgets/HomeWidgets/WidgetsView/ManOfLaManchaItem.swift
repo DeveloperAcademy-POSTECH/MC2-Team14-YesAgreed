@@ -1,6 +1,7 @@
 import SwiftUI
 import WidgetKit
 
+
 struct ManOfLaManchaItem: View {
     
     @Environment(\.widgetFamily) var widgetFamily
@@ -10,10 +11,28 @@ struct ManOfLaManchaItem: View {
         switch widgetFamily {
         case .systemSmall:
             ZStack {
-                Image("lamancha_bg_small")
-                    .resizable()
-                    .scaledToFit()
-                Color(entry.bgColor)
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
+                } else {
+                    Image("lamancha_bg_small")
+                        .resizable()
+                        .scaledToFit()
+                    Color(entry.bgColor)
+                }
                 VStack{
                     Spacer().frame(height: 20)
                     Image("\(entry.scene)\(entry.count)")
@@ -28,10 +47,28 @@ struct ManOfLaManchaItem: View {
             
         case .systemMedium:
             ZStack {
-                Image("lamancha_bg_medium")
+                if entry.imageID != [""] && entry.imageID!.last != nil{
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    
+                    let xOffset = entry.position["xOffset"]!// 273*2
+                    let yOffset = entry.position["yOffset"]!// 26*2
+                    let widthLength = entry.position["widthLength"]!
+                    let heightLength = entry.position["heightLength"]!
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: widthLength, height: heightLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
+                    
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
+                } else {
+                    Image("lamancha_bg_medium")
                     .resizable()
                     .scaledToFit()
-                Color(entry.bgColor)
+                    Color(entry.bgColor)
+                }
                 VStack{
                     Image("\(entry.scene)\(entry.count)")
                         .resizable()
@@ -69,4 +106,3 @@ struct ManOfLaManchaItem_Previews: PreviewProvider {
         ManOfLaManchaItem(entry:SimpleEntry(scene: "sunflower"))
     }
 }
-
