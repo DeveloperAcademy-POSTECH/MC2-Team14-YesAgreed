@@ -164,10 +164,10 @@ struct MainView: View {
                 Button {
                     self.showImagePicker.toggle()
                 } label: {
-                    Text("Add Photo")
+                    Text("Upload Image")
                         .padding()
                         .background(Color.white)
-                        .cornerRadius(25)
+                        .cornerRadius(15)
                 }
                 .sheet(isPresented: $showImagePicker, content:{
                     ImagePicker(selectedImage: self.$image)
