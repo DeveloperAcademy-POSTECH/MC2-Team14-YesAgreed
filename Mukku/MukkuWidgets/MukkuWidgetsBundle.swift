@@ -5,6 +5,7 @@ import SwiftUI
 struct MukkuWidgetsBundle: WidgetBundle {
     var body: some Widget {
         MukkuWidgets()
+        MukkuLockScreenWidgets()
         MukkuWidgetsLiveActivity()
     }
 }
