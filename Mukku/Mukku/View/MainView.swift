@@ -21,7 +21,7 @@ struct MainView: View {
                         VStack {
                 Text("Dynamic Island")
                     .bold()
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("color_font_black"))
                     .font(.system(.title))
                     .textCase(nil)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -30,7 +30,7 @@ struct MainView: View {
                 ForEach(MusicalModel.musicalModels, id:\.self){ musical in
                     Text(LocalizedStringKey(musical.title))
                         .bold()
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("color_font_black"))
                         .font(.system(.title3))
                         .textCase(nil)
                         .frame(maxWidth: .infinity, alignment: .leading)
