@@ -12,45 +12,25 @@ struct ManOfLaManchaItem: View {
         case .systemSmall:
             ZStack {
                 if entry.imageID != [""] && entry.imageID!.last != nil{
-//                    if {
-                    let imageID = entry.imageID!.last!
-                    let image = Helper.getImageFromUserDefaults(key: imageID)
-                    if image.size.width > image.size.height{
-                        let newImage = image.resized(toWidth: image.size.width*120/image.size.height)
-                        
-//                        GeometryReader { geo in
-//                            Image(uiImage: newImage!)
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: geo.size.width)
-//                        }
-                        Image(uiImage: newImage!)
-                            .resizable()
-                            .scaledToFill()
-//                        Text("width bigger")
-                        Text(imageID)
-                    } else {
-                        let newImage = image.resized(toWidth: 120)
-                        
-                        Image(uiImage: newImage!)
-                            .resizable()
-                            .scaledToFill()
-//                        GeometryReader { geo in
-//                            Image(uiImage: image)
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: geo.size.width*0.5)
-//                        }
-//                        Text("height bigger")
-                        Text(imageID)
-                    }
-                            
-                        
-//                            .frame(width: 120, height: 120)
+                    let imageID = entry.imageID?.last!
+                    let image = Helper.getImageFromUserDefaults(key: imageID!)
+                    let newImage = image.resized(toWidth: 393)! // sketch는 390 실제는 393
+                    // small size
+                    let sideLength = 158
+                    // 우측 상단
+                    let xOffset = 158+28+22// 273*2
+                    let yOffset = 90// 26*2
+                    let cropRect = CGRect(x:xOffset, y:yOffset, width: sideLength, height: sideLength).integral
+                    let sourceCGIamge = newImage.cgImage!
+                    let croppedCGImage = sourceCGIamge.cropping(to: cropRect)!
                     
-//                    }
+                    let croppedImage = UIImage(cgImage: croppedCGImage, scale: newImage.imageRendererFormat.scale, orientation: newImage.imageOrientation)
+                    
+                    Image(uiImage: croppedImage)
                     
 
+                    
+                            
                 } else {
                     Image("lamancha_bg_small")
                         .resizable()
