@@ -36,10 +36,8 @@ final class ImageManager: NSObject, ObservableObject {
                 // Append the list and save
                 photos = []
 
-//                print("photos prev:", photos)
                 photos.append(id)
                 saveIntoUserDefaults()
-//                print("photos post:", photos)
                 // Notify the widget to reload all items
                 WidgetCenter.shared.reloadAllTimelines()
             }
