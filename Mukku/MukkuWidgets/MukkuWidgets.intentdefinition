@@ -27,7 +27,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 가면</string>
+					<string>The Phantom of the Opera - mask</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>eVNTPc</string>
 					<key>INEnumValueIndex</key>
@@ -37,7 +37,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 배</string>
+					<string>The Phantom of the Opera - boat</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>qo3yrH</string>
 					<key>INEnumValueIndex</key>
@@ -47,7 +47,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 샹들리에</string>
+					<string>The Phantom of the Opera - chandelier</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>BfQySt</string>
 					<key>INEnumValueIndex</key>
@@ -57,7 +57,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 장미</string>
+					<string>Phantom of the Opera - rose</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CurjRx</string>
 					<key>INEnumValueIndex</key>
@@ -67,7 +67,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 해바라기</string>
+					<string>Man of La Mancha - sunflower</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>INbm6h</string>
 					<key>INEnumValueIndex</key>
@@ -77,7 +77,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 휘어진 칼</string>
+					<string>Man of La Mancha - rapier</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>BwzkAN</string>
 					<key>INEnumValueIndex</key>
@@ -87,7 +87,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 풍차</string>
+					<string>Man of La Mancha - rapier</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>z9uEcb</string>
 					<key>INEnumValueIndex</key>
@@ -97,7 +97,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 로고</string>
+					<string>Man of La Mancha - logo</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>aqIzoK</string>
 					<key>INEnumValueIndex</key>
@@ -130,7 +130,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>빨간색</string>
+					<string>Red</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>wkEVBC</string>
 					<key>INEnumValueIndex</key>
@@ -140,7 +140,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>주황색</string>
+					<string>Orange</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>ixhEX0</string>
 					<key>INEnumValueIndex</key>
@@ -150,7 +150,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>노란색</string>
+					<string>Yellow</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>fOkYMM</string>
 					<key>INEnumValueIndex</key>
@@ -160,7 +160,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>초록색</string>
+					<string>Green</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>9plC1O</string>
 					<key>INEnumValueIndex</key>
@@ -170,7 +170,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>파란색</string>
+					<string>Blue</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>QFIdFO</string>
 					<key>INEnumValueIndex</key>
@@ -180,7 +180,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>보라색</string>
+					<string>Purple</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CoAq0F</string>
 					<key>INEnumValueIndex</key>
@@ -190,7 +190,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>회색</string>
+					<string>Gray</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>PpHnCn</string>
 					<key>INEnumValueIndex</key>
@@ -200,7 +200,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>검정색</string>
+					<string>Black</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>4hp3U7</string>
 					<key>INEnumValueIndex</key>
@@ -725,7 +725,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>아이템 선택</string>
+					<string>Select Item</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>XNpGCD</string>
 					<key>INIntentParameterDisplayPriority</key>
