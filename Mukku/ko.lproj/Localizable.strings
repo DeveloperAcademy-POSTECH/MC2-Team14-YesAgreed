@@ -48,3 +48,11 @@
 // 애플 워치 설명
 "With the watch face showing, touch and hold the display, then tap Edit." = "시계 페이스가 보이는 상태에서 디스플레이를 길게 터치한 다음, 편집을 탭하세요.";
 "Swipe left all the way to the end. Tap a complication to select it, then turn the Digital Crown to choose Mukku complication. There are four different types of Mukku complications." = "왼쪽으로 쓸어넘겨 컴플리케이션을 탭한 후 Digital Crown을 돌려 Mukku 컴플리케이션을 선택하세요. Mukku는 4가지 종류의 컴플리케이션이 있습니다.";
+
+//
+"1. Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page." =
+"1. 앱이 흔들리기 시작할 때까지 홈 스크린 배경을 길게 누릅니다. 그런 다음 맨 오른쪽으로 스크롤하여 빈 페이지로 이동합니다.";
+"2. Press the side button and the volume up button at the same time and quickly release both buttons to take a screenshot of the empty page." = "2. 사이드 버튼과 볼륨업 버튼을 동시에 누르고, 두 버튼을 빠르게 해제하여 빈 페이지의 스크린샷을 클릭합니다.";
+"3. Tap the “Choose Image” button below and choose the screenshot." = "3. 아래의 “이미지 선택” 버튼을 누르고 스크린샷을 선택합니다.";
+"4. In the Edit widget, select background to “Transparent” and choose the widget position." =
+"4. 위젯 편집창에서 “투명“ 배경을 선택하고 위젯 위치를 선택합니다.";
