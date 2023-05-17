@@ -1,10 +1,3 @@
-//
-//  InstructionModel.swift
-//  Mukku
-//
-//  Created by Jae Ho Yoon on 2023/05/16.
-//
-
 import SwiftUI
 
 struct Instruction: Hashable {

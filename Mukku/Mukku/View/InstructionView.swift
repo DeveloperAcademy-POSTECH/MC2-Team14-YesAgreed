@@ -1,10 +1,3 @@
-//
-//  InstructionTabView.swift
-//  Mukku
-//
-//  Created by Jae Ho Yoon on 2023/05/17.
-//
-
 import SwiftUI
 
 struct InstructionView: View {
