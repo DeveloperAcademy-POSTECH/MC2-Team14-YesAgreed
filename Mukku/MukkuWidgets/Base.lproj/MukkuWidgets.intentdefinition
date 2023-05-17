@@ -27,7 +27,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 가면</string>
+					<string>Phantom of the Opera - Mask</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>eVNTPc</string>
 					<key>INEnumValueIndex</key>
@@ -37,7 +37,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 배</string>
+					<string>Phantom of the Opera - Boat</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>qo3yrH</string>
 					<key>INEnumValueIndex</key>
@@ -47,7 +47,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 샹들리에</string>
+					<string>Phantom of the Opera - Chandelier</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>BfQySt</string>
 					<key>INEnumValueIndex</key>
@@ -57,7 +57,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>오페라의 유령 - 장미</string>
+					<string>Phantom of the Opera - Rose</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CurjRx</string>
 					<key>INEnumValueIndex</key>
@@ -67,7 +67,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 해바라기</string>
+					<string>Man of La Mancha - Sunflower</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>INbm6h</string>
 					<key>INEnumValueIndex</key>
@@ -77,7 +77,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 휘어진 칼</string>
+					<string>Man of La Mancha - Rapier</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>BwzkAN</string>
 					<key>INEnumValueIndex</key>
@@ -87,7 +87,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 풍차</string>
+					<string>Man of La Mancha - Windmill</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>z9uEcb</string>
 					<key>INEnumValueIndex</key>
@@ -97,7 +97,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>맨 오브 라만차 - 로고</string>
+					<string>Man of La Mancha - Typo</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>aqIzoK</string>
 					<key>INEnumValueIndex</key>
@@ -130,7 +130,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>빨간색</string>
+					<string>Red</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>wkEVBC</string>
 					<key>INEnumValueIndex</key>
@@ -140,7 +140,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>주황색</string>
+					<string>Orange</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>ixhEX0</string>
 					<key>INEnumValueIndex</key>
@@ -150,7 +150,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>노란색</string>
+					<string>Yellow</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>fOkYMM</string>
 					<key>INEnumValueIndex</key>
@@ -160,7 +160,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>초록색</string>
+					<string>Green</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>9plC1O</string>
 					<key>INEnumValueIndex</key>
@@ -170,7 +170,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>파란색</string>
+					<string>Blue</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>QFIdFO</string>
 					<key>INEnumValueIndex</key>
@@ -180,7 +180,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>보라색</string>
+					<string>Purple</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>CoAq0F</string>
 					<key>INEnumValueIndex</key>
@@ -190,7 +190,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>회색</string>
+					<string>Gray</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>PpHnCn</string>
 					<key>INEnumValueIndex</key>
@@ -200,7 +200,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>검정색</string>
+					<string>Black</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>4hp3U7</string>
 					<key>INEnumValueIndex</key>
@@ -233,7 +233,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>투명</string>
+					<string>Transparent</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>5viRv0</string>
 					<key>INEnumValueIndex</key>
@@ -243,7 +243,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>기본 테마</string>
+					<string>Default Theme</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>QexQ24</string>
 					<key>INEnumValueIndex</key>
@@ -253,7 +253,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>단색</string>
+					<string>Single Color</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>ihedPj</string>
 					<key>INEnumValueIndex</key>
@@ -286,7 +286,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>좌 상단 작은 위젯</string>
+					<string>Small Top Left</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>xLUEaY</string>
 					<key>INEnumValueIndex</key>
@@ -296,7 +296,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>우 상단 작은 위젯</string>
+					<string>Small Top Right</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>rSgYNZ</string>
 					<key>INEnumValueIndex</key>
@@ -306,7 +306,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>상단 중간 위젯</string>
+					<string>Medium Top</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>85l1Zq</string>
 					<key>INEnumValueIndex</key>
@@ -316,7 +316,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>좌 중단 작은 위젯</string>
+					<string>Small Middle Left</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>UQ1QlZ</string>
 					<key>INEnumValueIndex</key>
@@ -326,7 +326,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>우 중단 작은 위젯</string>
+					<string>Small Middle Right</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>yKwmZf</string>
 					<key>INEnumValueIndex</key>
@@ -336,7 +336,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>중단 중간 위젯</string>
+					<string>Medium Middle</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>sSfVRa</string>
 					<key>INEnumValueIndex</key>
@@ -346,7 +346,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>좌 하단 작은 위젯</string>
+					<string>Small Bottom Left</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>5K2cAS</string>
 					<key>INEnumValueIndex</key>
@@ -356,7 +356,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>우 하단 작은 위젯</string>
+					<string>Small Bottom Right</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>lnpFUf</string>
 					<key>INEnumValueIndex</key>
@@ -366,7 +366,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>하단 중간 위젯</string>
+					<string>Medium Bottom</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>5SFppO</string>
 					<key>INEnumValueIndex</key>
@@ -410,7 +410,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>아이템</string>
+					<string>Select Object</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>Mj8LwZ</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -474,7 +474,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>배경화면</string>
+					<string>Select Background</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>pUHZ8F</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -538,7 +538,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>위젯 위치</string>
+					<string>Widget Position</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>BU4Cz2</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -611,7 +611,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>배경색</string>
+					<string>Background Color</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>3pfC42</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -725,7 +725,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Select Item</string>
+					<string>Select Object</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>XNpGCD</string>
 					<key>INIntentParameterDisplayPriority</key>
