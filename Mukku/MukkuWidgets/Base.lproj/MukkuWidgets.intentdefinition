@@ -393,7 +393,7 @@
 			<key>INIntentCategory</key>
 			<string>information</string>
 			<key>INIntentDescription</key>
-			<string>Here's some description to pass through the issues : ITMS-90626: Invalid Siri Support</string>
+			<string>Here's some description to pass through the issues : ITMS-90626</string>
 			<key>INIntentDescriptionID</key>
 			<string>tVvJ9c</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -706,7 +706,7 @@
 			<key>INIntentCategory</key>
 			<string>information</string>
 			<key>INIntentDescription</key>
-			<string>Here's some description to pass through the issues : ITMS-90626: Invalid Siri Support</string>
+			<string>Here's some description to pass through the issues : ITMS-90626</string>
 			<key>INIntentDescriptionID</key>
 			<string>SiyBpH</string>
 			<key>INIntentEligibleForWidgets</key>
