@@ -38,8 +38,7 @@ struct Provider: IntentTimelineProvider {
             let entry = SimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationIntent(), count: (imgCount%imgNum+1), imageID: bg, position: position, bgColor: bgColor)
             entries.append(entry)
         }
-        //print("Done in \(Date())")
-        //print(entries.count) //이건 매번 갱신됨, 항상 120개가 되는 것을 알 수 있다.
+        //이건 매번 갱신됨, 항상 120개가 되는 것을 알 수 있다.
 
         let timeline = Timeline(entries: entries, policy: .after(.now.advanced(by: 120)))
         completion(timeline)
@@ -74,64 +73,66 @@ struct Provider: IntentTimelineProvider {
         }
     fileprivate func positioning(by mC2PositionEnum: PositionEnum)->Dictionary<String, Int>{
         switch mC2PositionEnum {
+            
         // xOffSet, yOffSet, widthLength, heightLength
         case.topSmallLeft:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            // Test Device가 iPhone 14 Pro Max임에도 불구하고 UIDevice.current.name이 iPhone으로 인식되므로 아래와 같이 처리
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
             }
             
         case.topSmallRight:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33+170+24, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":158+28+22, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]
             }
         case.topMedium:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94, "widthLength":364, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90, "widthLength":338, "heightLength":158, "resizeWidth":393]
             }
         case.middleSmallLeft:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90+38+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
             }
         case.middleSmallRight:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33+170+24, "yOffset":94+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":158+28+22, "yOffset":90+38+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
             }
         case.middleMedium:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94+170+42, "widthLength":364, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90+38+158, "widthLength":338, "heightLength":158, "resizeWidth":393]
             }
         case.bottomSmallLeft:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94+170+42+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
             }
         case.bottomSmallRight:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33+170+24, "yOffset":94+170+42+170+42, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":158+28+22, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158, "resizeWidth":393]
             }
         case.bottomMedium:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94+170+42+170+42, "widthLength":364, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":338, "heightLength":158, "resizeWidth":393]
             }
         case.unknown:
-            if UIDevice.current.name == "iPhone 14 Pro Max" {
+            if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                 return ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":430]
             } else {
                 return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":393]

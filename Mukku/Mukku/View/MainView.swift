@@ -102,7 +102,7 @@ struct MainView: View {
                 case let scene where scene.contains("Mask"):
                     MaskView()
                 case let scene where scene.contains("Chandelier"):
-                    if UIDevice.current.name == "iPhone 14 Pro Max" {
+                    if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
                         ChandelierView()
                             .offset(y: -42)
                     } else {
