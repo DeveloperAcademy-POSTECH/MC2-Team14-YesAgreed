@@ -30,10 +30,10 @@ struct InstructionView: View {
                         }
                         
                         VStack(alignment: .leading) {
-                            Text(instruction.title)
+                            Text(LocalizedStringKey(instruction.title))
                                 .font(.system(size: 22, weight: .black))
                             
-                            Text(instruction.description)
+                            Text(LocalizedStringKey(instruction.description))
                                 .font(.system(size: 15))
                                 .lineSpacing(4)
                                 .multilineTextAlignment(.leading)
