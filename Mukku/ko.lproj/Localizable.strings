@@ -24,6 +24,9 @@
 "AppleWatch Instruction" = "애플 워치 설정 방법";
 "Home Widget" = "홈 위젯";
 "Lock Screen Widget" = "잠금 위젯";
+"Widget Background Instruction" = "위젯 배경 설정";
+"Transparent Widget Background Instruction" = "투명한 위젯 배경";
+
 
 // 홈 위젯 설명
 "Swipe left all the way to the end. Tap a complication to select it, then turn the Digital Crown to choose Mukku complication. There are four different types of Mukku complications." = "위젯을 추가하려는 홈 화면 페이지로 이동하여 앱이 흔들릴 때까지 홈 화면 배경을 길게 터치한 다음, 화면 상단의 +을 탭하여 위젯 갤러리를 여세요.";

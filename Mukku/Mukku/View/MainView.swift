@@ -94,8 +94,8 @@ struct MainView: View {
                         NavigationLink(destination: InstructionView(target: appleWatchInstructions)){Text("Apple Watch")}
                     }
                     
-                    Section(header: Text("위젯 배경 설정")) {
-                        NavigationLink(destination: BackgroundView()){Text("투명한 위젯 배경")}
+                    Section(header: Text("Widget Background Instruction")) {
+                        NavigationLink(destination: BackgroundView()){Text("Transparent Widget Background Instruction")}
                     }
                 }
                 // Dynamic Object 애니메이션
