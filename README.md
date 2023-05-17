@@ -129,7 +129,7 @@
 ## 5. 📹 프로젝트 소개 영상
 
 <br />
-
-[![썸네일](https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/ccf975af-4208-4895-903f-6ae2cbc0de0c)](https://youtu.be/CwdsGAYcoGM)
+   
+[![Video Label](http://img.youtube.com/vi/CwdsGAYcoGM/0.jpg)](https://youtu.be/CwdsGAYcoGM)
 
 <br />
