@@ -80,62 +80,62 @@ struct Provider: IntentTimelineProvider {
         // xOffSet, yOffSet, widthLength, heightLength
         case.topSmallLeft:
             // Test Device가 iPhone 14 Pro Max임에도 불구하고 UIDevice.current.name이 iPhone으로 인식되므로 아래와 같이 처리
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
             
         case.topSmallRight:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33+170+24, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":158+28+22, "yOffset":90, "widthLength":158, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.topMedium:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94, "widthLength":364, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90, "widthLength":338, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.middleSmallLeft:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94+170+42, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90+38+158, "widthLength":158, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.middleSmallRight:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33+170+24, "yOffset":94+170+42, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":158+28+22, "yOffset":90+38+158, "widthLength":158, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.middleMedium:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94+170+42, "widthLength":364, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90+38+158, "widthLength":338, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.bottomSmallLeft:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94+170+42+170+42, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.bottomSmallRight:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33+170+24, "yOffset":94+170+42+170+42, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":158+28+22, "yOffset":90+38+38+158+158, "widthLength":158, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.bottomMedium:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94+170+42+170+42, "widthLength":364, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90+38+38+158+158, "widthLength":338, "heightLength":158, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             }
         case.unknown:
-            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430) {
+            if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                 return ["xOffset":33, "yOffset":94, "widthLength":170, "heightLength":170, "resizeWidth":Int(UIScreen.main.bounds.size.width)]
             } else {
                 return ["xOffset":28, "yOffset":90, "widthLength":158, "heightLength":Int(UIScreen.main.bounds.size.height), "resizeWidth":Int(UIScreen.main.bounds.size.width)]
