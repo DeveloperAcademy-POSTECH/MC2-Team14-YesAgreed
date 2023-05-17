@@ -16,18 +16,30 @@ struct BackgroundView: View {
         VStack{
             
             VStack(alignment: .leading) {
-//                Text(" Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.")
-                Text("1. Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.").font(.system(size: 18))
-                Spacer().frame(height:20)
-                Text("2. Press the side button and the volume up button at the same time and quickly release both buttons to take a screenshot of the empty page.").font(.system(size: 18))
-                Spacer().frame(height:20)
-                Text("3. Tap the “Choose Image” button below and choose the screenshot.").font(.system(size: 18))
-                Spacer().frame(height:20)
-                Text("4. In the Edit widget, select background to “Transparent” and choose the widget position.").font(.system(size: 18))
+                if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932){
+                    Text("1. Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.").font(.system(size: 19))
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.013)
+                    Text("2. Press the side button and the volume up button at the same time and quickly release both buttons to take a screenshot of the empty page.").font(.system(size: 19))
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.013)
+                    Text("3. Tap the “Choose Image” button below and choose the screenshot.").font(.system(size: 19))
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.013)
+                    Text("4. In the Edit widget, select background to “Transparent” and choose the widget position.").font(.system(size: 19))
+                } else {
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.03)
+                    
+                    Text("1. Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.").font(.system(size: 18))
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.013)
+                    Text("2. Press the side button and the volume up button at the same time and quickly release both buttons to take a screenshot of the empty page.").font(.system(size: 18))
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.013)
+                    Text("3. Tap the “Choose Image” button below and choose the screenshot.").font(.system(size: 18))
+                    Spacer().frame(height:UIScreen.main.bounds.size.height*0.013)
+                    Text("4. In the Edit widget, select background to “Transparent” and choose the widget position.").font(.system(size: 18))
+                }
+                
 
 
-            }.padding(.leading, 34).padding(.trailing, 34).padding(.top, UIScreen.main.bounds.size.height*0.008)
-            Spacer().frame(height:UIScreen.main.bounds.size.height*0.05)
+            }.padding(.leading, UIScreen.main.bounds.size.width*0.08).padding(.trailing, UIScreen.main.bounds.size.width*0.08)
+            Spacer().frame(height:UIScreen.main.bounds.size.height*0.04)
 //                Text(Image(systemName: "1.circle.fill")).foregroundColor(.blue) + Text(" Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.")
 ////
 //                Text(Image(systemName: "1.circle.fill")).foregroundColor(.blue) + Text(" Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.")
@@ -44,7 +56,9 @@ struct BackgroundView: View {
                 Button {
                     self.showImagePicker.toggle()
                 } label: {
-                    Text("Choose Image")
+                    (
+                        Text(Image(systemName: "photo"))+Text(" Choose Image")
+                    )
                         .foregroundColor(Color.blue)
                         .cornerRadius(15)
                 }
@@ -57,7 +71,7 @@ struct BackgroundView: View {
                     _ in imageManager.appendImage(image: image)
                 }
                 .navigationBarTitle("Transparent Widget Background")
-                Spacer().frame(width: 20)
+                Spacer().frame(width: UIScreen.main.bounds.size.width*0.03)
                 ZStack(alignment: .bottom){
                         VStack {
                             if (imageManager.photos.count != 0){
@@ -71,7 +85,7 @@ struct BackgroundView: View {
                         }
                 }
             }
-            Spacer().frame(height:UIScreen.main.bounds.size.height*0.08)
+            Spacer().frame(height:UIScreen.main.bounds.size.height*0.15)
         }
         
         
