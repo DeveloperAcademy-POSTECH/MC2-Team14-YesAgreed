@@ -88,13 +88,14 @@ struct MainView: View {
                             }
                     }
                     Section(header: Text("Instruction")) {
-                        NavigationLink(destination: InstructionView(target: widgetInstructions)){Text("Widget")}
+                        NavigationLink(destination: InstructionView(target: widgetInstructions)){Text("Home Widget")}
+                        NavigationLink(destination: InstructionView(target: lockScreenWidgetInstructions)){Text("Lock Screen Widget")}
                         NavigationLink(destination: InstructionView(target: dynamicIslandInstructions)){Text("Dynamic Island")}
                         NavigationLink(destination: InstructionView(target: appleWatchInstructions)){Text("Apple Watch")}
                     }
                     
-                    Section(header: Text("위젯 배경 설정")) {
-                        NavigationLink(destination: BackgroundView()){Text("투명한 위젯 배경")}
+                    Section(header: Text("Widget Background Instruction")) {
+                        NavigationLink(destination: BackgroundView()){Text("Transparent Widget Background Instruction")}
                     }
                 }
                 // Dynamic Object 애니메이션
