@@ -23,9 +23,6 @@ struct InstructionView: View {
                         }
                         
                         VStack(alignment: .leading) {
-                            Text(LocalizedStringKey(instruction.title))
-                                .font(.system(size: 22, weight: .black))
-                            
                             Text(LocalizedStringKey(instruction.description))
                                 .font(.system(size: 15))
                                 .lineSpacing(4)
