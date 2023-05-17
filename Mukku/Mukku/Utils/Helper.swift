@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-let appGroupName = "group.com.ada2023.Mukku"
+let appGroupName = "group.com.appleDeveloperAca.Mukku"
 let userDefaultsPhotosKey = "photos"
 
 
