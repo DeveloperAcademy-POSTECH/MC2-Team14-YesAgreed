@@ -884,7 +884,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mukku/Preview Content\"";
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
@@ -900,7 +900,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -918,7 +918,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mukku/Preview Content\"";
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mukku/Info.plist;
@@ -934,7 +934,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -950,7 +950,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWidgets;
@@ -961,7 +961,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.MukkuWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku.MukkuWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -978,7 +978,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWidgets;
@@ -989,7 +989,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.MukkuWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku.MukkuWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1008,18 +1008,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MukkuWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ada2023.Mukku;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.appleDeveloperAca.Mukku;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1040,18 +1040,18 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MukkuWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ada2023.Mukku;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.appleDeveloperAca.Mukku;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1070,7 +1070,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWatchExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWatchExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatchExtension;
@@ -1082,7 +1082,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp.MukkuWatchExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku.watchkitapp.MukkuWatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1101,7 +1101,7 @@
 				CODE_SIGN_ENTITLEMENTS = MukkuWatchExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A84HQ97N4T;
+				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukkuWatchExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatchExtension;
@@ -1113,7 +1113,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ada2023.Mukku.watchkitapp.MukkuWatchExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAca.Mukku.watchkitapp.MukkuWatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
