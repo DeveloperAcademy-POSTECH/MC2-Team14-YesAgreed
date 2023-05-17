@@ -30,7 +30,7 @@ struct InstructionView: View {
                                 .font(.system(size: 15))
                                 .lineSpacing(4)
                                 .multilineTextAlignment(.leading)
-                                .padding(.top, -5)
+                                .padding(.top, 55)
                         }
                         .frame(width: geometry.size.width * 0.84)
                         Spacer()
