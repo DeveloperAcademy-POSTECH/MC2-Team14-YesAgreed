@@ -26,7 +26,7 @@ struct BackgroundView: View {
                 Text("4. In the Edit widget, select background to “Transparent” and choose the widget position.").font(.system(size: 18))
 
 
-            }.padding(.leading, 34).padding(.trailing, 34).padding(.top, 25)
+            }.padding(.leading, 34).padding(.trailing, 34).padding(.top, UIScreen.main.bounds.size.height*0.008)
             Spacer().frame(height:UIScreen.main.bounds.size.height*0.05)
 //                Text(Image(systemName: "1.circle.fill")).foregroundColor(.blue) + Text(" Touch and hold the Home Screen background until the apps begin to jiggle. Then scroll furthest right to empty page.")
 ////
