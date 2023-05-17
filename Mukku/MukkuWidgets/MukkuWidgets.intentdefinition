@@ -233,7 +233,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>transparent</string>
+					<string>투명</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>5viRv0</string>
 					<key>INEnumValueIndex</key>
@@ -243,7 +243,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>default theme</string>
+					<string>기본 테마</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>QexQ24</string>
 					<key>INEnumValueIndex</key>
@@ -253,7 +253,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>single color</string>
+					<string>단색</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>ihedPj</string>
 					<key>INEnumValueIndex</key>
@@ -286,7 +286,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>top small left</string>
+					<string>좌 상단 작은 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>xLUEaY</string>
 					<key>INEnumValueIndex</key>
@@ -296,7 +296,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>top small right</string>
+					<string>우 상단 작은 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>rSgYNZ</string>
 					<key>INEnumValueIndex</key>
@@ -306,7 +306,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>top medium</string>
+					<string>상단 중간 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>85l1Zq</string>
 					<key>INEnumValueIndex</key>
@@ -316,7 +316,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>middle small left</string>
+					<string>좌 중단 작은 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>UQ1QlZ</string>
 					<key>INEnumValueIndex</key>
@@ -326,7 +326,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>middle small right</string>
+					<string>우 중단 작은 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>yKwmZf</string>
 					<key>INEnumValueIndex</key>
@@ -336,7 +336,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>middle medium</string>
+					<string>중단 중간 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>sSfVRa</string>
 					<key>INEnumValueIndex</key>
@@ -346,7 +346,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>bottom small left</string>
+					<string>좌 하단 작은 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>5K2cAS</string>
 					<key>INEnumValueIndex</key>
@@ -356,7 +356,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>bottom small right</string>
+					<string>우 하단 작은 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>lnpFUf</string>
 					<key>INEnumValueIndex</key>
@@ -366,7 +366,7 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>bottom medium</string>
+					<string>하단 중간 위젯</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>5SFppO</string>
 					<key>INEnumValueIndex</key>
@@ -410,7 +410,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>오브젝트 선택</string>
+					<string>아이템</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>Mj8LwZ</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -474,7 +474,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Select widget background</string>
+					<string>배경화면</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>pUHZ8F</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -538,7 +538,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Select widget position</string>
+					<string>위젯 위치</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>BU4Cz2</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -611,7 +611,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>배경색 선택</string>
+					<string>배경색</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>3pfC42</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -725,7 +725,7 @@
 					<key>INIntentParameterCustomDisambiguation</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>아이템 선택</string>
+					<string>Select Item</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>XNpGCD</string>
 					<key>INIntentParameterDisplayPriority</key>

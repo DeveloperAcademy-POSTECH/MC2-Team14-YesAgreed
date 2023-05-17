@@ -45,12 +45,6 @@ struct ManOfLaManchaItem: View {
                         .offset(y: -15)
                     LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
                 }
-                    Image("\(entry.scene)\(entry.count)")
-                        .resizable()
-                        .frame(width: 120, height: 120)
-                        .scaledToFit()
-                        .offset(y: -15)
-                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.3), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .top)
             }
             .unredacted()
             
