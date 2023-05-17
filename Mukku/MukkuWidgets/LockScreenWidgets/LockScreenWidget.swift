@@ -12,7 +12,7 @@ struct MukkuLockScreenWidgets: Widget {
             provider: LockScreenProvider()) { entry in
                 MukkuLockScreenWidgetsEntryView(entry: entry)
             }
-            .configurationDisplayName("뮤꾸")
+            .configurationDisplayName("Mukku")
             .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
     }
 }
