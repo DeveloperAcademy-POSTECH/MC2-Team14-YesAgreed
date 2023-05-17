@@ -171,6 +171,7 @@
 		73BA50D32A14E22E00BDE272 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MukkuWidgets.strings; sourceTree = "<group>"; };
 		73BA8ACB2A13669D000DE925 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		73BA8ACD2A1366A0000DE925 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		73BF05432A150BA60042602D /* MukkuWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MukkuWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		953C60C72A0DEBAC00E56DD5 /* SunFlowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunFlowerView.swift; sourceTree = "<group>"; };
 		953C60C82A0DEBAC00E56DD5 /* WindmillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindmillView.swift; sourceTree = "<group>"; };
 		953C60C92A0DEBAC00E56DD5 /* TypoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypoView.swift; sourceTree = "<group>"; };
@@ -360,6 +361,7 @@
 		B402EFCB2A089C0F00BE37FE /* MukkuWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				73BF05432A150BA60042602D /* MukkuWatch-Watch-App-Info.plist */,
 				C4C570802A11B5BF009C6349 /* MukkuWatch Watch App.entitlements */,
 				B402EFCC2A089C0F00BE37FE /* MukkuWatchApp.swift */,
 				B402EFCE2A089C0F00BE37FE /* ContentView.swift */,
@@ -1023,6 +1025,7 @@
 				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MukkuWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.appleDeveloperAca.Mukku;
@@ -1055,6 +1058,7 @@
 				DEVELOPMENT_TEAM = 3YTM76FTHB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MukkuWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MukkuWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.appleDeveloperAca.Mukku;
