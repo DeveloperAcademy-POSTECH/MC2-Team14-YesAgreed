@@ -103,7 +103,7 @@ struct MainView: View {
                 case let scene where scene.contains("Mask"):
                     MaskView()
                 case let scene where scene.contains("Chandelier"):
-                    if UIDevice.current.name == "iPhone 14 Pro Max" || UIDevice.current.name == "iPhone"{
+                    if (UIDevice.current.name == "iPhone 14 Pro Max") || (UIDevice.current.name == "iPhone" && Int(UIScreen.main.bounds.size.width) == 430 && Int(UIScreen.main.bounds.size.height) == 932) {
                         ChandelierView()
                             .offset(y: -42)
                     } else {
