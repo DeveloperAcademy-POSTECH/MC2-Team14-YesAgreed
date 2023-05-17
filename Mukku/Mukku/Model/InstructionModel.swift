@@ -46,14 +46,8 @@ let dynamicIslandInstructions = [
 let appleWatchInstructions = [
     Instruction(target: "AppleWatch Instruction",
                 step: 1, image: "widgetInstruction1",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요."),
+                description: "With the watch face showing, touch and hold the display, then tap Edit."),
     Instruction(target: "AppleWatch Instruction",
                 step: 2, image: "widgetInstruction2",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요."),
-    Instruction(target: "AppleWatch Instruction",
-                step: 3, image: "widgetInstruction3",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요."),
-    Instruction(target: "AppleWatch Instruction",
-                step: 4, image: "widgetInstruction4",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요.")
+                description: "Swipe left all the way to the end. Tap a complication to select it, then turn the Digital Crown to choose Mukku complication. There are four different types of Mukku complications.")
 ]
