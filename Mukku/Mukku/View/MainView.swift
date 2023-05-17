@@ -88,7 +88,8 @@ struct MainView: View {
                             }
                     }
                     Section(header: Text("Instruction")) {
-                        NavigationLink(destination: InstructionView(target: widgetInstructions)){Text("Widget")}
+                        NavigationLink(destination: InstructionView(target: widgetInstructions)){Text("Home Widget")}
+                        NavigationLink(destination: InstructionView(target: lockScreenWidgetInstructions)){Text("Lock Screen Widget")}
                         NavigationLink(destination: InstructionView(target: dynamicIslandInstructions)){Text("Dynamic Island")}
                         NavigationLink(destination: InstructionView(target: appleWatchInstructions)){Text("Apple Watch")}
                     }
