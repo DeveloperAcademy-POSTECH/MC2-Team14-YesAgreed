@@ -10,37 +10,37 @@ struct Instruction: Hashable {
 let widgetInstructions = [
     Instruction(target: "Widget Instruction",
                 step: 1, image: "widgetInstruction1",
-                description: "위젯을 추가하려는 홈 화면 페이지로 이동하여 앱이 흔들릴 때까지 홈 화면 배경을 길게 터치한 다음, 화면 상단의 +을 탭하여 위젯 갤러리를 여세요."),
+                description: "Swipe left all the way to the end. Tap a complication to select it, then turn the Digital Crown to choose Mukku complication. There are four different types of Mukku complications."),
     Instruction(target: "Widget Instruction",
                 step: 2, image: "widgetInstruction2",
-                description: "스크롤하거나 검색으로 Mukku 위젯을 찾고 탭한 다음, 좌우로 쓸어넘겨 크기 옵션을 둘러보고 위젯 추가를 탭하세요. Mukku는 2가지 크기의 홈 화면 위젯이 있습니다."),
+                description: "Scroll or search to find Mukku widget, tap it, then swipe left and right through the size options. When you see the size you want, tap Add Widget. There are two different sizes of Mukku widgets."),
     Instruction(target: "Widget Instruction",
                 step: 3, image: "widgetInstruction3",
-                description: "위젯을 편집하려면, 홈 화면에서 Mukku 위젯을 길게 터치한 다음 위젯 편집을 탭하세요."),
+                description: "You can customize widgets. On your Home Screen, touch and hold Mukku widget, then tap Edit Widget."),
     Instruction(target: "Widget Instruction",
                 step: 4, image: "widgetInstruction4",
-                description: "원하는 뮤지컬 오브젝트와 배경을 선택하세요.")
+                description: "Choose options to select the musical object and the widget background.")
 ]
 
 let lockScreenWidgetInstructions = [
     Instruction(target: "Widget Instruction",
                 step: 1, image: "widgetInstruction1",
-                description: "화면 하단에 사용자화 버튼이 표시될 때까지 잠금화면을 길게 터치한 다음 사용자화를 탭하고 좌측 잠금화면을 탭하세요."),
+                description: "Touch and hold the Lock Screen until the Customize button appears at the bottom of the screen. Tap Customize, then tap Lock Screen on the left."),
     Instruction(target: "Widget Instruction",
                 step: 2, image: "widgetInstruction2",
-                description: "시간 아래에 있는 상자를 탭하고 Mukku 위젯을 찾아 탭하여 잠금 화면에 위젯을 추가하세요. Mukku는 2가지 크기의 잠금 화면 위젯이 있습니다."),
+                description: "Tap the box below the time. Find Mukku widget and tap it to add widgets to your Lock Screen. There are two different sizes of Mukku widgets."),
     Instruction(target: "Widget Instruction",
                 step: 3, image: "widgetInstruction3",
-                description: "위젯을 편집하려면, 추가한 위젯을 한번 더 탭하여 위젯의 오브젝트를 선택합니다.")
+                description: "You can customize widgets. On your Lock Screen, touch Mukku widget once more to edit widget.")
 ]
 
 let dynamicIslandInstructions = [
     Instruction(target: "Dynamic Island Instruction",
                 step: 1, image: "widgetInstruction1",
-                description: "iPhone 14 Pro 및 iPhone 14 Pro Max에서는 Mukku 앱 내에서 원하는 뮤지컬 오브젝트를 탭하면 다이나믹 아일랜드 부근에서 해당 애니메이션이 표시됩니다."),
+                description: "On iPhone 14 Pro and iPhone 14 Pro Max, you can see animations of musical objects around the Dynamic Island in Mukku app when you tap the object."),
     Instruction(target: "Dynamic Island Instruction",
                 step: 2, image: "widgetInstruction2",
-                description: "Mukku 앱에서 원하는 뮤지컬 오브젝트를 탭하고 다이나믹 아일랜드를 토글하면 홈 화면에서 다이나믹 아일랜드에서 해당 오브젝트를 볼 수 있습니다.")
+                description: "On iPhone 14 Pro and iPhone 14 Pro Max, you can see musical objects in the Dynamic Island on the Home Screen when you tap the object and toggle the dynamic island setting.")
 ]
 
 let appleWatchInstructions = [
