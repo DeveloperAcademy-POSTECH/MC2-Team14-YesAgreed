@@ -16,24 +16,10 @@ struct Helper {
     
     static func getImageIdsFromUserDefault() -> [String] {
         if let userDefaults = UserDefaults(suiteName: appGroupName) {
-//            print("===========================================")
-//            print("in Helper function")
-            
-//            print("userDefaults:", userDefaults)
-//            print("userDefaults data2:", userDefaults.data(forKey: "29F53808-0302-43BD-AEF6-420A6482B226"))
-//
-//            if userDefaults.data(forKey: userDefaultsPhotosKey) != nil{
-//                print("userDefaults data5:", userDefaults.data(forKey: userDefaultsPhotosKey)!)
-//            } else {
-//                print("data is nil")
-//            }
-//            print(userDefaults.data(forKey: userDefaultsPhotosKey))
+
             if let data = userDefaults.data(forKey: userDefaultsPhotosKey) {
-//                print("data:", data)
-                
                 return try! JSONDecoder().decode([String].self, from: data)
             } else {
-//                print("not exist")
             }
         }
         return [String]()
