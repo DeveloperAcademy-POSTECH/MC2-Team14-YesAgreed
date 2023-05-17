@@ -51,7 +51,7 @@ struct MainView: View {
                                 }
                             }
                         }
-                        Text("위에서 선택한 오브젝트가 다이나믹 아일랜드에 표시됩니다.")
+                        Text("The selected object is displayed on the dynamic island.")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundColor(Color("color_font_black"))
                             .padding(.bottom)
@@ -62,7 +62,7 @@ struct MainView: View {
                              
                     ){
                     }
-                    Section(footer: Text("토글 시 선택한 오브젝트가 홈 화면 다이나믹 아일랜드에서 보입니다.")) {
+                    Section(footer: Text("You can toggle the object on your dynamic island")) {
                 Toggle(
                     "Home Screen Dynamic Island",
                     isOn: $isTrackingTime).onChange(of:isTrackingTime) { _ in
