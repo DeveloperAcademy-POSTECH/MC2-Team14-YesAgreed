@@ -46,19 +46,11 @@ let dynamicIslandInstructions = [
     Instruction(target: "Dynamic Island Instruction",
                 step: 1, image: "widgetInstruction1",
                 title: "잠금 화면 개인 맞춤화하기",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요."),
+                description: "iPhone 14 Pro 및 iPhone 14 Pro Max에서는 Mukku 앱 내에서 원하는 뮤지컬 오브젝트를 탭하면 다이나믹 아일랜드 부근에서 해당 애니메이션이 표시됩니다."),
     Instruction(target: "Dynamic Island Instruction",
                 step: 2, image: "widgetInstruction2",
                 title: "잠금 화면 개인 맞춤화하기",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요."),
-    Instruction(target: "Dynamic Island Instruction",
-                step: 3, image: "widgetInstruction3",
-                title: "잠금 화면 개인 맞춤화하기",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요."),
-    Instruction(target: "Dynamic Island Instruction",
-                step: 4, image: "widgetInstruction4",
-                title: "잠금 화면 개인 맞춤화하기",
-                description: "즐겨찾는 사진을 추천받고, 색상 및 서체를 선택하고, 새로운 위젯을 추가해 보세요. 잠금 화면을 길게 터치한 다음 사용자화를 탭하거나 버튼을 탭하여 새로운 잠금 화면을 생성하세요.")
+                description: "Mukku 앱에서 원하는 뮤지컬 오브젝트를 탭하고 다이나믹 아일랜드를 토글하면 홈 화면에서 다이나믹 아일랜드에서 해당 오브젝트를 볼 수 있습니다.")
 ]
 
 let appleWatchInstructions = [
