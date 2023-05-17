@@ -1,11 +1,3 @@
-/*
-  Localizable.strings
-  Mukku
-
-  Created by Kihyun Roh on 2023/05/16.
-  
-*/
-
 "You can add the Home screen widget and the Lock screen widget directly with a long press gesture on the screen. You can select objects and backgrounds in the Edit Widgets window." =
 "홈 화면 위젯과 잠금 화면 위젯을 화면에 길게 눌러 직접 추가할 수 있습니다. 위젯 편집 창에서 개체 및 배경을 선택할 수 있습니다.";
 "Dynamic Island" = "다이나믹 아일랜드";
@@ -30,3 +22,29 @@
 "Widget Instruction" = "위젯 설정 방법";
 "Dynamic Island Instruction" = "다이나믹 아일랜드 설정 방법";
 "AppleWatch Instruction" = "애플 워치 설정 방법";
+" Choose Image" = " 이미지 선택";
+"Transparent Widget Background" = "투명한 위젯 배경 설정";
+"Home Widget" = "홈 위젯";
+"Lock Screen Widget" = "잠금 위젯";
+"Widget Background Instruction" = "위젯 배경 설정";
+"Transparent Widget Background Instruction" = "투명한 위젯 배경";
+
+
+// 홈 위젯 설명
+"Swipe left all the way to the end. Tap a complication to select it, then turn the Digital Crown to choose Mukku complication. There are four different types of Mukku complications." = "위젯을 추가하려는 홈 화면 페이지로 이동하여 앱이 흔들릴 때까지 홈 화면 배경을 길게 터치한 다음, 화면 상단의 +을 탭하여 위젯 갤러리를 여세요.";
+"Scroll or search to find Mukku widget, tap it, then swipe left and right through the size options. When you see the size you want, tap Add Widget. There are two different sizes of Mukku widgets." = "스크롤하거나 검색으로 Mukku 위젯을 찾고 탭한 다음, 좌우로 쓸어넘겨 크기 옵션을 둘러보고 위젯 추가를 탭하세요. Mukku는 2가지 크기의 홈 화면 위젯이 있습니다.";
+"You can customize widgets. On your Home Screen, touch and hold Mukku widget, then tap Edit Widget." = "위젯을 편집하려면, 홈 화면에서 Mukku 위젯을 길게 터치한 다음 위젯 편집을 탭하세요.";
+"Choose options to select the musical object and the widget background." = "원하는 뮤지컬 오브젝트와 배경을 선택하세요.";
+
+// 잠금 위젯 설명
+"Touch and hold the Lock Screen until the Customize button appears at the bottom of the screen. Tap Customize, then tap Lock Screen on the left." = "화면 하단에 사용자화 버튼이 표시될 때까지 잠금화면을 길게 터치한 다음 사용자화를 탭하고 좌측 잠금화면을 탭하세요.";
+"Tap the box below the time. Find Mukku widget and tap it to add widgets to your Lock Screen. There are two different sizes of Mukku widgets." = "시간 아래에 있는 상자를 탭하고 Mukku 위젯을 찾아 탭하여 잠금 화면에 위젯을 추가하세요. Mukku는 2가지 크기의 잠금 화면 위젯이 있습니다.";
+"You can customize widgets. On your Lock Screen, touch Mukku widget once more to edit widget." = "위젯을 편집하려면, 추가한 위젯을 한번 더 탭하여 위젯의 오브젝트를 선택합니다.";
+
+// 다이나믹 아일랜드 설명
+"On iPhone 14 Pro and iPhone 14 Pro Max, you can see animations of musical objects around the Dynamic Island in Mukku app when you tap the object." = "iPhone 14 Pro 및 iPhone 14 Pro Max에서는 Mukku 앱 내에서 원하는 뮤지컬 오브젝트를 탭하면 다이나믹 아일랜드 부근에서 해당 애니메이션이 표시됩니다.";
+"On iPhone 14 Pro and iPhone 14 Pro Max, you can see musical objects in the Dynamic Island on the Home Screen when you tap the object and toggle the dynamic island setting." = "Mukku 앱에서 원하는 뮤지컬 오브젝트를 탭하고 다이나믹 아일랜드를 토글하면 홈 화면에서 다이나믹 아일랜드에서 해당 오브젝트를 볼 수 있습니다.";
+
+// 애플 워치 설명
+"With the watch face showing, touch and hold the display, then tap Edit." = "시계 페이스가 보이는 상태에서 디스플레이를 길게 터치한 다음, 편집을 탭하세요.";
+"Swipe left all the way to the end. Tap a complication to select it, then turn the Digital Crown to choose Mukku complication. There are four different types of Mukku complications." = "왼쪽으로 쓸어넘겨 컴플리케이션을 탭한 후 Digital Crown을 돌려 Mukku 컴플리케이션을 선택하세요. Mukku는 4가지 종류의 컴플리케이션이 있습니다.";

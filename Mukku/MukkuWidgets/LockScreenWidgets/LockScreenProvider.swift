@@ -28,8 +28,7 @@ struct LockScreenProvider: IntentTimelineProvider {
             let entry = LockScreenSimpleEntry(date: entryDate, scene: topic, configuration: ConfigurationLockScreenIntent(), count: (imgCount%imgNum+1))
             entries.append(entry)
         }
-        //print("Done in \(Date())")
-        //print(entries.count) //이건 매번 갱신됨, 항상 120개가 되는 것을 알 수 있다.
+        //이건 매번 갱신됨, 항상 120개가 되는 것을 알 수 있다.
 
         let timeline = Timeline(entries: entries, policy: .after(.now.advanced(by: 120)))
         completion(timeline)

@@ -1,10 +1,3 @@
-//
-//  InstructionTabView.swift
-//  Mukku
-//
-//  Created by Jae Ho Yoon on 2023/05/17.
-//
-
 import SwiftUI
 
 struct InstructionView: View {
@@ -30,14 +23,11 @@ struct InstructionView: View {
                         }
                         
                         VStack(alignment: .leading) {
-                            Text(instruction.title)
-                                .font(.system(size: 22, weight: .black))
-                            
-                            Text(instruction.description)
+                            Text(LocalizedStringKey(instruction.description))
                                 .font(.system(size: 15))
                                 .lineSpacing(4)
                                 .multilineTextAlignment(.leading)
-                                .padding(.top, -5)
+                                .padding(.top, 55)
                         }
                         .frame(width: geometry.size.width * 0.84)
                         Spacer()
