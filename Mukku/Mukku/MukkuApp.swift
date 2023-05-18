@@ -4,7 +4,7 @@ import SwiftUI
 struct MukkuApp: App {
     var body: some Scene {
         WindowGroup {
-                MainView().environmentObject(ImageManager())
+            MainView().environmentObject(ImageManager())
         }
     }
 }
