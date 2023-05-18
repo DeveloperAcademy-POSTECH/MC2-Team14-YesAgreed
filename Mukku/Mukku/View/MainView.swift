@@ -26,12 +26,6 @@ struct MainView: View {
             ZStack{
                 Form {
                     Section (header: VStack {
-                        Button{
-                            if activity != nil {
-                                Task{await activity?.end(ActivityContent(state: MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene), staleDate: .now.advanced(by: 0.01)), dismissalPolicy: .immediate)}
-                            }} label:{
-                                Text("Press Me If There is Stock in First Time")
-                            }
                         ForEach(MusicalModel.musicalModels, id:\.self){ musical in
                             Text(LocalizedStringKey(musical.title))
                                 .bold()
@@ -86,21 +80,20 @@ struct MainView: View {
                                 let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
                                 let content =
                                 ActivityContent(state: state, staleDate: .now.advanced(by: 0.01))
-                                        
-                                        activity = try? Activity<MukkuWidgetsAttributes>.request(
-                                            attributes: attributes,
-                                            content: content )
+                                activity = try? Activity<MukkuWidgetsAttributes>.request(
+                                    attributes: attributes,
+                                    content: content
+                                )
                             }
-                                } else {
-                                    //End the live Activity
-                                    guard let startTime else{return}
-                                    let state = MukkuWidgetsAttributes.ContentState(startTime: startTime, scene: selectedScene)
-                                    let content = ActivityContent(state: state, staleDate: .now.advanced(by: 0.01))
-                                    Task{await activity?.end(content, dismissalPolicy: .immediate)}
-                                    self.startTime = nil
-                                }
-                            }
-                    }
+                        } else {
+                            //End the live Activity
+                            guard let startTime else{return}
+                            let state = MukkuWidgetsAttributes.ContentState(startTime: startTime, scene: selectedScene)
+                            let content = ActivityContent(state: state, staleDate: .now.advanced(by: 0.01))
+                            Task{await activity?.end(content, dismissalPolicy: .immediate)}
+                            self.startTime = nil
+                        }
+                    }}
                     Section(header: Text("Instruction")) {
                         NavigationLink(destination: InstructionView(target: widgetInstructions)){Text("Home Widget")}
                         NavigationLink(destination: InstructionView(target: lockScreenWidgetInstructions)){Text("Lock Screen Widget")}
