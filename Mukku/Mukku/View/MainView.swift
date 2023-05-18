@@ -9,8 +9,9 @@ extension UIScreen{
 private var twoColumnsGrid = [GridItem(.flexible()), GridItem(.flexible())]
 
 struct MainView: View {
+    @State private var isAppLaunchedFirstTime : Bool = true
     @State private var isTrackingTime : Bool = false
-    @State private var activity: Activity<MukkuWidgetsAttributes>? = nil
+    @State private var activity: Activity<MukkuWidgetsAttributes>? = Activity<MukkuWidgetsAttributes>.activities.first
     @State private var startTime: Date? = nil
     @State var dynamicEnabled: Bool = true
     @State var dynamicIslandScene: String = ""
@@ -40,7 +41,7 @@ struct MainView: View {
                                         selectedScene = scene.name.lowercased()
                                         // Dynamic island update
                                         let updatedState = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
-                                        let updatedContent = ActivityContent(state: updatedState, staleDate: .now.advanced(by: 1800.0))
+                                        let updatedContent = ActivityContent(state: updatedState, staleDate: .now.advanced(by: 0.01))
                                         Task {
                                             await activity?.update(updatedContent)
                                         }
@@ -68,25 +69,31 @@ struct MainView: View {
                     isOn: $isTrackingTime).onChange(of:isTrackingTime) { _ in
                         if isTrackingTime {
                             startTime = .now
-                            //Start the live Activity
-                            let attributes = MukkuWidgetsAttributes()
-                            let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
-                            let content =
-                            ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
-                                    
-                                    activity = try? Activity<MukkuWidgetsAttributes>.request(
-                                        attributes: attributes,
-                                        content: content )
-                                } else {
-                                    //End the live Activity
-                                    guard let startTime else{return}
-                                    let state = MukkuWidgetsAttributes.ContentState(startTime: startTime, scene: selectedScene)
-                                    let content = ActivityContent(state: state, staleDate: .now.advanced(by: 3600.0))
-                                    Task{await activity?.end(content, dismissalPolicy: .immediate)}
-                                    self.startTime = nil
+                            Task{
+                                //강제종료로 인한 에러 캐치및 처리
+                                if activity != nil && isAppLaunchedFirstTime{
+                                    await activity?.end(ActivityContent(state: MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene), staleDate: .now.advanced(by: 0.01)), dismissalPolicy: .immediate)
+                                    isAppLaunchedFirstTime = false
                                 }
+                                //Start the live Activity
+                                let attributes = MukkuWidgetsAttributes()
+                                let state = MukkuWidgetsAttributes.ContentState(startTime: .now, scene: selectedScene)
+                                let content =
+                                ActivityContent(state: state, staleDate: .now.advanced(by: 0.01))
+                                activity = try? Activity<MukkuWidgetsAttributes>.request(
+                                    attributes: attributes,
+                                    content: content
+                                )
                             }
-                    }
+                        } else {
+                            //End the live Activity
+                            guard let startTime else{return}
+                            let state = MukkuWidgetsAttributes.ContentState(startTime: startTime, scene: selectedScene)
+                            let content = ActivityContent(state: state, staleDate: .now.advanced(by: 0.01))
+                            Task{await activity?.end(content, dismissalPolicy: .immediate)}
+                            self.startTime = nil
+                        }
+                    }}
                     Section(header: Text("Instruction")) {
                         NavigationLink(destination: InstructionView(target: widgetInstructions)){Text("Home Widget")}
                         NavigationLink(destination: InstructionView(target: lockScreenWidgetInstructions)){Text("Lock Screen Widget")}
