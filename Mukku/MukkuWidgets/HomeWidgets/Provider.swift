@@ -72,9 +72,7 @@ struct Provider: IntentTimelineProvider {
             }
         }
     fileprivate func positioning(by mC2PositionEnum: PositionEnum)->Dictionary<String, Int>{
-        print("device name", UIDevice.current.name)
-        print(UIScreen.main.bounds.size.height)
-        print(Int(UIScreen.main.bounds.size.width))
+    
         switch mC2PositionEnum {
             
         // xOffSet, yOffSet, widthLength, heightLength
