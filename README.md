@@ -133,3 +133,13 @@
 [![Video Label](http://img.youtube.com/vi/CwdsGAYcoGM/0.jpg)](https://youtu.be/CwdsGAYcoGM)
 
 <br />
+
+## 6. ✈️ TestFlight 링크
+
+<br />
+
+<a href="https://testflight.apple.com/join/GSxeRGAH">
+  <img src="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/69492686/ab557e9f-d26e-49ae-a0d8-953edb6e2235" width = "200px">
+</a>
+
+<br />
