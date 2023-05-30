@@ -128,7 +128,7 @@
 ### 잠금 위젯
 - 세가지의 위젯 패밀리 지원
 - 움직이는 오브젝트 
-<img src="" />
+<img src="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/788bfc83-2b3e-4a6f-9828-0ae0e724df32" />
     
 ### 워치 위젯
 - 애플워치 컴플리케이션 설정
