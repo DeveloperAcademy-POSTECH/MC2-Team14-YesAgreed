@@ -5,7 +5,8 @@
     <img src ="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/db6d75c2-a835-4bc0-8aa9-74838798f3a8" width="300px" />
     <h3></h3>
     <br />
-    <h3> 뮤지컬 덕후가 위젯과 다이나믹 아일랜드를 활용해서 아이폰 화면을 꾸밀 수 있는 앱 </h3>
+    <h3> "좋아하는 것을 언제나 내 곁에" </h3>
+    <h4> 뮤지컬 덕후가 위젯과 다이나믹 아일랜드를 활용해서 아이폰 화면을 꾸밀 수 있는 앱 </h4>
     <p align="center">
 <br />
 
@@ -92,20 +93,20 @@
 
 | type | Emoji | Emoji Name | Description | Example |
 | --- | --- | --- | --- | --- |
-| feat | ✨ | :sparkles: | 새로운 기능 추가, 구현 | ✨ feat : 로그인 기능 구현 |
-| edit | ✏️ | :pencil2: | 단순 오타 수정 | ✏️ edit : 로그인 캐시 처리 방식 수정 |
-| style | 💄 | :lipstick: | UI작업, 스타일 관련 파일 추가 및 수정 | 💄 style : 폰트 등록 |
-| add | 🍱 | :bento: | asset 파일(이미지, 아이콘 등) 추가 | 🍱 add : 위젯 이미지 추가 |
-| chore | 🚚 | :truck: | 파일, 경로를 옮기거나 이름 변경 | 🚚 chore : feet -> feat 이름 변경 |
-| merge | 🔀 | :twisted\_rightwards\_arrows: | 브랜치 병합(merge) | 🔀 merge : feat-kihyun → main 브랜치 병합 |
-| fix | 🐛 | :bug: | 버그 픽스 | 🐛 fix : Color 버그 수정 |
-| docs | 📝 | :memo: | 문서 작업 | 📝 docs : Readme 작성 |
-| refactor | ♻️ | :recycle: | 코드 리팩토링 | ♻️ refactor : 변수명 수정 |
-| model | 🗃️ | :card\_file\_box: | 데이터베이스(모델) 작업 | 🗃️ model : 데이터 모델 생성 |
-| init | 🎉 | :tada: | 프로젝트 생성 | 🎉 init : 프로젝트 생성 |
+| feat | ✨ | sparkles | 새로운 기능 추가, 구현 | ✨ feat : 로그인 기능 구현 |
+| edit | ✏️ | pencil2 | 단순 오타 수정 | ✏️ edit : 로그인 캐시 처리 방식 수정 |
+| style | 💄 | lipstick | UI작업, 스타일 관련 파일 추가 및 수정 | 💄 style : 폰트 등록 |
+| add | 🍱 | bento | asset 파일(이미지, 아이콘 등) 추가 | 🍱 add : 위젯 이미지 추가 |
+| chore | 🚚 | truck | 파일, 경로를 옮기거나 이름 변경 | 🚚 chore : feet -> feat 이름 변경 |
+| merge | 🔀 | twisted\_rightwards\_arrows | 브랜치 병합(merge) | 🔀 merge : feat-kihyun → main 브랜치 병합 |
+| fix | 🐛 | bug | 버그 픽스 | 🐛 fix : Color 버그 수정 |
+| docs | 📝 | memo | 문서 작업 | 📝 docs : Readme 작성 |
+| refactor | ♻️ | recycle | 코드 리팩토링 | ♻️ refactor : 변수명 수정 |
+| model | 🗃️ | card\_file\_box | 데이터베이스(모델) 작업 | 🗃️ model : 데이터 모델 생성 |
+| init | 🎉 | tada | 프로젝트 생성 | 🎉 init : 프로젝트 생성 |
 | 빌드관련 |   |   |   |   |
-| build | 🔨 | :hammer: | 재빌드 | 🔨 build: 동일버전 재빌드(x.xx) |
-| version | 🏗️ | :building construction: | 버전 업 | 🏗️ version : 버전 업 |
+| build | 🔨 | hammer | 재빌드 | 🔨 build: 동일버전 재빌드(x.xx) |
+| version | 🏗️ | building construction | 버전 업 | 🏗️ version : 버전 업 |
 
 
 <br />
@@ -113,17 +114,29 @@
 <br />
 
 ## 4. 📂 기능 구현
+   
+### 다이나믹 아일랜드
+- 다이나믹 아일랜드 안에 나타나는 뮤지컬 오브젝트
+<img src="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/31942f34-6231-48c1-9f57-07fdf304ff91" />
+    
+### 홈 위젯
+- 원하는 오브젝트와 배경 커스트마이징
+- 움직이는 오브젝트
+<img src="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/3825f775-842e-4031-96f5-988901b61bee"/>
+    
+    
+### 잠금 위젯
+- 세가지의 위젯 패밀리 지원
+- 움직이는 오브젝트 
+<img src="" />
+    
+### 워치 위젯
+- 애플워치 컴플리케이션 설정
+- 네가지의 위젯 패밀리 지원
+- 워치 페이스 색상에 따른 위젯의 컬러 변화
 
-### 위젯
-
-<br />
-
-
-- 홈 위젯
-  <div>
-<img src="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/c301a26b-171e-450b-88bc-6f8e13a7cf63" width="300px" />
-<div>
-
+<img src="https://github.com/DeveloperAcademy-POSTECH/MC2-Team14-YesAgreed/assets/91946571/5a9041e1-c0a9-4d94-afbe-ff2d2126ebb2" width="290px" />
+    
 <br />
 
 ## 5. 📹 프로젝트 소개 영상
